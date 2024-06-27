@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background-color: #1E1E1E;
+  color: white;
+}
+
+h1 {
+  color: #d1d1d13c;
+  font-size: 6rem;
+  margin: 6px;
+}
+
+.h2 {
+  color: white;
+}
+
+p {
+  color: #808080;
+}
+
+button {
+  color: #D1D1D1;
+  background-color: #2C2C2C;
+  border-radius: 25px;
+  padding: 12px 24px;
+  border-style: none;
+  margin: 8px;
+}
+
+nav {
+  background-color: #1e1e1e86;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  
+  a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    text-wrap: nowrap;
+  }
+}
+
+#navScrollBar {
+  background-color: #3A9BD2;
+  border-radius: 10000px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 40px;
+  height: 5px;
+  z-index: 10000;
+  /*width is set as user scrolls via the variable*/
+  width: 0;
+}
