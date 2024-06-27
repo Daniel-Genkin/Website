@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref, Transition } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
 
 var scrollPosition = ref("0");
+var showNav = ref(false);
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
@@ -13,30 +14,49 @@ onUnmounted(() => {
 });
 
 function handleScroll(event: Event): void {
-  var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-  var scrollHeight = (document.documentElement.scrollHeight || document.body.scrollHeight) - (window.innerHeight);
+  const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = (document.documentElement.scrollHeight || document.body.scrollHeight) - (window.innerHeight);
+
+  if (!showNav.value && currentScroll > 200) {
+    showNav.value = true;
+  } else if (showNav.value && currentScroll <= 200) {
+    showNav.value = false;
+  }
 
   scrollPosition.value = `${100 / scrollHeight * currentScroll}%`;
-  console.log(scrollPosition.value);
 }
 </script>
 
 <template>
   <header>
-    <nav ref="nav">
-      <RouterLink to="/">Daniel Genkin</RouterLink>
-      <span style="width: 100%"></span>
-      <RouterLink to="/#Projects">Projects</RouterLink>
-      <RouterLink to="/#WorkExperience">WorkExperience</RouterLink>
-      <RouterLink to="/#Education">Education</RouterLink>
-      <RouterLink to="/#Awards">Awards</RouterLink>
-      <RouterLink to="/#Contact">Contact</RouterLink>
-      <span id="navScrollBar" :style="{width: scrollPosition}"></span>
-    </nav>
+    <Transition>
+      <nav ref="nav" v-if="showNav">
+        <RouterLink to="/">Daniel Genkin</RouterLink>
+        <span style="width: 100%"></span>
+        <RouterLink to="/#Projects">Projects</RouterLink>
+        <RouterLink to="/#WorkExperience">WorkExperience</RouterLink>
+        <RouterLink to="/#Education">Education</RouterLink>
+        <RouterLink to="/#Awards">Awards</RouterLink>
+        <RouterLink to="/#Contact">Contact</RouterLink>
+        <span id="navScrollBar" :style="{width: scrollPosition}"></span>
+      </nav>
+    </Transition>
   </header>
   <RouterView @scroll="handleScroll" />
 </template>
 
 <style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: all .5s ease;
+  height: 40px;
+  opacity: 1;
+  overflow: hidden;
+}
 
+.v-enter-from,
+.v-leave-to{
+  height: 0;
+  opacity: 0;
+}
 </style>
