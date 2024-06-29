@@ -18,17 +18,17 @@ export var ALL_PROJECTS: Project[] = [
             }
         ],
         pageDetails: {
-            projectLogo: "@/assets/projects/greenar/logo.png",
+            projectLogo: "projects/greenar/logo.png",
             projectLink: "TODO",
             accentColor: "#059B14",
             screenshots: [
-                "@/assets/projects/greenar/promo.mp4",
-                "@/assets/projects/greenar/0.png",
-                "@/assets/projects/greenar/1.png",
-                "@/assets/projects/greenar/2.png",
-                "@/assets/projects/greenar/3.png",
-                "@/assets/projects/greenar/4.png",
-                "@/assets/projects/greenar/5.png"
+                "projects/greenar/promo.mp4",
+                "projects/greenar/0.png",
+                "projects/greenar/1.png",
+                "projects/greenar/2.png",
+                "projects/greenar/3.png",
+                "projects/greenar/4.png",
+                "projects/greenar/5.png"
             ],
             technologiesUsed: [
                 {
@@ -168,7 +168,7 @@ export var ALL_PROJECTS: Project[] = [
             }
         ],
         pageDetails: {
-            projectLogo: "@/assets/projects/project-gameplan/logo.png",
+            projectLogo: "projects/project-gameplan/logo.png",
             projectLink: "TODO",
             accentColor: "#FEDF14",
             screenshots: [
@@ -218,13 +218,13 @@ export var ALL_PROJECTS: Project[] = [
             }
         ],
         pageDetails: {
-            projectLogo: "@/assets/projects/slappy-sandwich/logo.png",
+            projectLogo: "projects/slappy-sandwich/logo.png",
             projectLink: "TODO",
             accentColor: "#D8621A",
             screenshots: [
-                "@/assets/projects/slappy-sandwich/0.jpg",
-                "@/assets/projects/slappy-sandwich/1.jpg",
-                "@/assets/projects/slappy-sandwich/2.jpg",
+                "projects/slappy-sandwich/0.jpg",
+                "projects/slappy-sandwich/1.jpg",
+                "projects/slappy-sandwich/2.jpg",
             ],
             technologiesUsed: [
                 {
@@ -263,13 +263,13 @@ export var ALL_PROJECTS: Project[] = [
             }
         ],
         pageDetails: {
-            projectLogo: "@/assets/projects/slappy-sandwih/logo.png",
+            projectLogo: "projects/slappy-sandwih/logo.png",
             projectLink: "https://github.com/Daniel-Genkin/Spaceship-Simulator",
             accentColor: "#AEFFFF",
             screenshots: [
-                "@/assets/projects/spaceship-sim/0.png",
-                "@/assets/projects/spaceship-sim/1.png",
-                "@/assets/projects/spaceship-sim/2.png",
+                "projects/spaceship-sim/0.png",
+                "projects/spaceship-sim/1.png",
+                "projects/spaceship-sim/2.png",
             ],
             technologiesUsed: [
                 {
@@ -298,7 +298,7 @@ export var ALL_PROJECTS: Project[] = [
 export var WORK_EXPERIENCE: WorkExperience[] = [
     {
         title: "Software Engineer",
-        logo: "#assets/company-logos/microsoft.png",
+        logo: "company-logos/microsoft.png",
         organization: "Microsoft Corp.",
         startingDate: "Sept. 2023",
         endingDate: "ongoing",
@@ -306,7 +306,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
     },
     {
         title: "Software Engineer Intern",
-        logo: "#assets/company-logos/amazon.png",
+        logo: "company-logos/amazon.png",
         organization: "Amazon Inc.",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
@@ -314,7 +314,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
     },
     {
         title: "2x Software Engineer Intern",
-        logo: "#assets/company-logos/microsoft.png",
+        logo: "company-logos/microsoft.png",
         organization: "Microsoft Corp.",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
@@ -322,7 +322,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
     },
     {
         title: "Software Engineer Apprentice",
-        logo: "#assets/company-logos/teamviewer.png",
+        logo: "company-logos/teamviewer.png",
         organization: "TeamViewer Ambgh.",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
@@ -330,7 +330,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
     },
     {
         title: "Software Engineer",
-        logo: "#assets/company-logos/fyelabs.png",
+        logo: "company-logos/fyelabs.png",
         organization: "Fyelabs",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
@@ -338,7 +338,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
     },
     {
         title: "Explore Intern",
-        logo: "#assets/company-logos/microsoft.png",
+        logo: "company-logos/microsoft.png",
         organization: "Microsoft Corp.",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
