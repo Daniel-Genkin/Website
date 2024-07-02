@@ -9,6 +9,7 @@ defineProps<{
 
 <template>
   <div>
+    <h1>Education</h1>
     <div class="rows">
       <div v-for="(item, index) in content" :key="index">
         <straight-pill class="pill" :left-rounded="index == content.length - 1">{{ item.startingDate }} - {{ item.endingDate }}</straight-pill>

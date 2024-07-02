@@ -8,6 +8,7 @@ defineProps<{
 
 <template>
   <div>
+    <h1>Work Experience</h1>
     <div v-for="(item, index) in content" :key="index" class="rows">
       <div class="cols">
         <h2>{{ item.title }}</h2>
