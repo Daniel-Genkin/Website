@@ -19,7 +19,10 @@ export var ALL_PROJECTS: Project[] = [
         ],
         pageDetails: {
             projectLogo: "projects/greenar/logo.png",
-            projectLink: "TODO",
+            projectButton: {
+                link: "TODO",
+                caption: "View on Github"
+            },
             accentColor: "#059B14",
             screenshots: [
                 "projects/greenar/promo.mp4",
@@ -142,7 +145,7 @@ export var ALL_PROJECTS: Project[] = [
                 },
                 {
                     year: 2018,
-                    title: "People’s Choice Award",
+                    title: "People's Choice Award",
                     organization: "CONNECT Educational Technology Conference"
                 },
                 {
@@ -169,7 +172,10 @@ export var ALL_PROJECTS: Project[] = [
         ],
         pageDetails: {
             projectLogo: "projects/project-gameplan/logo.png",
-            projectLink: "TODO",
+            projectButton: {
+                link: "TODO",
+                caption: "View on Github"
+            },
             accentColor: "#FEDF14",
             screenshots: [
             ],
@@ -219,7 +225,10 @@ export var ALL_PROJECTS: Project[] = [
         ],
         pageDetails: {
             projectLogo: "projects/slappy-sandwich/logo.png",
-            projectLink: "TODO",
+            projectButton: {
+                link: "TODO",
+                caption: "View on Github"
+            },
             accentColor: "#D8621A",
             screenshots: [
                 "projects/slappy-sandwich/0.jpg",
@@ -263,8 +272,11 @@ export var ALL_PROJECTS: Project[] = [
             }
         ],
         pageDetails: {
-            projectLogo: "projects/slappy-sandwih/logo.png",
-            projectLink: "https://github.com/Daniel-Genkin/Spaceship-Simulator",
+            projectLogo: "projects/spaceship-sim/0.png",
+            projectButton: {
+                link: "https://github.com/Daniel-Genkin/Spaceship-Simulator",
+                caption: "View on Github"
+            },
             accentColor: "#AEFFFF",
             screenshots: [
                 "projects/spaceship-sim/0.png",

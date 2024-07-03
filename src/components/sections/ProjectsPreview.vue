@@ -35,7 +35,7 @@ function goToPage(pageName: string): void {
   <div>
     <h1>Projects</h1>
     <div id="root" class="rows">
-      <right-pill id="pill"/>
+      <right-pill id="pill" color="#3A9BD2" />
       <div class="cols">
         <h2>{{ item.title }}</h2>
         <p>{{ item.description }}</p>

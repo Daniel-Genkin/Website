@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import LeftPill from '@/components/elements/LeftPill.vue';
+import RightPill from '@/components/elements/RightPill.vue';
 withDefaults(defineProps<{
     center: boolean,
     caption: string,
-    includeLeftPill: boolean
+    pillColor: string | undefined
 }>(), {
     center: false,
-    includeLeftPill: false
+    pillColor: undefined
 });
 </script>
 
@@ -14,12 +14,11 @@ withDefaults(defineProps<{
   <div>
     <div id="card" :style="{
       justifyContent: center ? 'center' : 'start',
-      marginLeft: includeLeftPill ? '24px' : '24px'
+      marginLeft: pillColor ? '24px' : '0'
     }">
       <slot></slot>
       <h3>{{ caption }}</h3>
-
-      <left-pill class="pill"/>
+      <right-pill v-if="pillColor" class="pill" :color="pillColor"/>
     </div>
   </div>
 </template>
@@ -38,6 +37,6 @@ withDefaults(defineProps<{
 .pill {
   position: absolute;
   height: 250px;
-  left: -130px;
+  left: -50px;
 }
 </style>

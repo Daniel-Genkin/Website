@@ -33,11 +33,10 @@ function handleScroll(event: Event): void {
       <nav ref="nav" v-if="showNav">
         <RouterLink to="/">Daniel Genkin</RouterLink>
         <span style="width: 100%"></span>
-        <RouterLink to="/#Projects">Projects</RouterLink>
-        <RouterLink to="/#WorkExperience">WorkExperience</RouterLink>
-        <RouterLink to="/#Education">Education</RouterLink>
-        <RouterLink to="/#Awards">Awards</RouterLink>
-        <RouterLink to="/#Contact">Contact</RouterLink>
+        <a href="#projects">Projects</a>
+        <a href="#work-experience">Work Experience</a><!--TODO GENERATE THESE FROM THE PAGE-->
+        <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
         <span id="navScrollBar" :style="{width: scrollPosition}"></span>
       </nav>
     </Transition>

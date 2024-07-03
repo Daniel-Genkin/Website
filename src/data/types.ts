@@ -14,7 +14,10 @@ type Project = {
     }[],
     pageDetails: {
         projectLogo: string,
-        projectLink: string,
+        projectButton: {
+            link: string,
+            caption: string
+        }
         accentColor: string,
         screenshots: string[],
         technologiesUsed: {

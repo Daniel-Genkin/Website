@@ -19,8 +19,9 @@ withDefaults(defineProps<{
             borderBottomLeftRadius: leftRounded ? '100vmax' : '0',
             borderTopRightRadius: rightRounded ? '100vmax' : '0',
             borderBottomRightRadius: rightRounded ? '100vmax' : '0',
-            marginLeft: leftRounded ? '24px' : '-12px',
-            marginRight: rightRounded ? '24px' : '-12px'
+            marginLeft: leftRounded ? '0' : '-12px',
+            marginRight: rightRounded ? '0' : '-12px',
+            borderColor: `darken(${color}, 10%)`
         }">
         <slot ></slot>
     </div>
@@ -35,8 +36,8 @@ withDefaults(defineProps<{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 12px solid rgba(255, 255, 255, 0.25);
-  outline: 8px solid rgba(176, 176, 176, 0.25);
+  border: 7px solid #353535a8;
+  outline: 8px solid #2c2d2e;
   padding: 8px;
   height: 100%;
   width: 100%;

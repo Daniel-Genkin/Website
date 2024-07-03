@@ -27,6 +27,8 @@ defineProps<{
 .rows {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 }
 .cols {
   display: flex;
@@ -35,6 +37,7 @@ defineProps<{
 
 .pill {
   width: 50%;
+  max-width: 250px;
 }
 
 </style>

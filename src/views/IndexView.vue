@@ -9,11 +9,11 @@ import { ALL_PROJECTS, AWARDS, EDUCATION, WORK_EXPERIENCE } from '@/data/data';
 
 <template>
   <main>
-    <index-intro />
-    <projects-preview :content="ALL_PROJECTS"/>
-    <work-experience :content="WORK_EXPERIENCE" />
-    <education :content="EDUCATION" />
-    <awards :content="AWARDS" />
+    <index-intro id="top"/>
+    <projects-preview :content="ALL_PROJECTS" id="projects"/>
+    <work-experience :content="WORK_EXPERIENCE" id="work-experience"/>
+    <education :content="EDUCATION" id="education"/>
+    <awards :content="AWARDS" color="#3A9BD2" id="awards" />
     <!-- TODO ADD CONTACT SECTION? -->
   </main>
 </template>

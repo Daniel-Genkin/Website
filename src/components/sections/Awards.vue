@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import Card from '../elements/Card.vue';
 
-
 defineProps<{
-  content: Award[]
+  content: Award[],
+  color: string
 }>();
 </script>
 
@@ -12,8 +12,8 @@ defineProps<{
     <h1>Awards</h1>
     <div v-for="item in content">
       <div class="cols card">
-        <card :caption="item.organization" :includeLeftPill="true">
-          <h2 class="title">{{ item.title }}</h2>
+        <card :caption="item.organization" :pillColor="color">
+          <h2 :style="{color: color}">{{ item.title }}</h2>
         </card>
         <h1 class="date">{{ item.year }}</h1>
       </div>
@@ -36,8 +36,8 @@ defineProps<{
   position: relative;
 }
 
-.title {
-  color:#3A9BD2;
+.innerCard {
+  padding-right: 56px;
 }
 
 .date {

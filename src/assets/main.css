@@ -1,3 +1,11 @@
+* {
+  font-family: 'Roboto';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #1E1E1E;
@@ -28,7 +36,7 @@ button {
 }
 
 nav {
-  background-color: #1e1e1e86;
+  background-color: #1e1e1ebb;
   display: flex;
   position: fixed;
   width: 100%;
