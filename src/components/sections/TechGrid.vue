@@ -1,16 +1,16 @@
 <script setup lang="ts">
 defineProps<{
-  project: Project
+  technologies: TechnologyEntry[]
 }>();
 
 </script>
 
 <template>
   <div>
-    <h1 id="technologiesUsed">Techologies Used</h1>
+    <h1>Techologies Used</h1>
     <div class="techGrid">
       <div 
-        v-for="tech in project?.pageSections.technologiesUsed" 
+        v-for="tech in technologies" 
         :key="tech.technology"
         class="card"
         :data-title="tech.technology">

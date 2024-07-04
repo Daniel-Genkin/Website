@@ -2,6 +2,7 @@
 import AppPreviewIntro from "@/components/sections/AppPreviewIntro.vue";
 import Awards from '@/components/sections/Awards.vue';
 import ProjectHistory from "@/components/sections/ProjectHistory.vue";
+import Screenshots from "@/components/sections/Screenshots.vue";
 import TechGrid from '@/components/sections/TechGrid.vue';
 import { ALL_PROJECTS } from '@/data/data';
 import router from '@/router';
@@ -63,18 +64,26 @@ onMounted(() => {
     <div v-else>
       <app-preview-intro :project="project" />
       
-      <h1 id="screenshots" v-if="sectionExists('screenshots')" >Screenshots -- TODO</h1>
+      <screenshots id="screenshots" 
+                   v-if="sectionExists('screenshots')" 
+                   :content="project.pageSections.screenshots" 
+                   :color="project.accentColor"
+                   style="margin-top: 100px;"/>
       
       <project-history v-if="sectionExists('history')" 
-                       :project="project" />
+                       :history="project.pageSections.history"
+                       :color="project.accentColor"
+                       id="history" />
       
       <awards v-if="sectionExists('awards')"
               :content="project.pageSections.awards" 
-              :color="project.accentColor"/>
+              :color="project.accentColor"
+              id="awards"/>
 
       <tech-grid v-if="sectionExists('technologiesUsed')" 
-                 :project="project"
-                 style="margin-top: 100px;" />
+                 :technologies="project.pageSections.technologiesUsed"
+                 style="margin-top: 100px;"
+                 id="technologiesUsed" />
     </div>
   </main>
 </template>

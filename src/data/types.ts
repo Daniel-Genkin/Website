@@ -1,7 +1,17 @@
-type Award = {
+type AwardEntry = {
     year: number,
     title: string
     organization: string
+}
+
+type TechnologyEntry = {
+    icon: string,
+    technology: string
+}
+
+type HistoryEntry = {
+    year: string,
+    events: string[]
 }
 
 type Project = {
@@ -20,15 +30,9 @@ type Project = {
     accentColor: string,
     pageSections: {
         screenshots: string[],
-        history: {
-            year: string,
-            events: string[]
-        }[],
-        awards: Award[],
-        technologiesUsed: {
-            icon: string,
-            technology: string
-        }[],
+        history: HistoryEntry[],
+        awards: AwardEntry[],
+        technologiesUsed: TechnologyEntry[],
     }
 };
 
@@ -41,7 +45,7 @@ type WorkExperience = {
     description: string
 }
 
-type Education = {
+type EducationEntry = {
     startingDate: string,
     endingDate: string,
     achievements: string[]

@@ -2,20 +2,21 @@
 import StraightPill from '../elements/StraightPill.vue';
 
 defineProps<{
-  project: Project
+  history: HistoryEntry[],
+  color: string
 }>();
 
 </script>
 
 <template>
   <div>
-    <h1 id="history">History</h1>
-    <div v-for="(date, index) in project?.pageSections.history" 
+    <h1>History</h1>
+    <div v-for="(date, index) in history" 
         :key="date.year"
         class="cols"
         style="margin: 0 64px;">
       <div class="rows">
-        <straight-pill class="datePill" :color="project?.accentColor"/>
+        <straight-pill class="datePill" :color="color"/>
         <div class="cols">
           <h2 class="year">{{ date.year }}</h2>
           <ul>
@@ -23,7 +24,7 @@ defineProps<{
           </ul>
         </div>
       </div>
-      <chevron v-if="index === (project?.pageSections.history.length ?? 1) - 1" style="height: 45px; width: 45px;"></chevron>
+      <chevron v-if="index === (history.length ?? 1) - 1" style="height: 45px; width: 45px;"></chevron>
       <svg v-else xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 24" class="divider">
         <path d="M3.018 17.551a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6m0-8.4a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 1 1 0-5.6m0-8.401a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6Z"/>
       </svg>

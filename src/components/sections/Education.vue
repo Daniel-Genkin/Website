@@ -3,7 +3,7 @@ import StraightPill from "@/components/elements/StraightPill.vue";
 import Chevron from "../elements/Chevron.vue";
 
 defineProps<{
-  content: Education[]
+  content: EducationEntry[]
 }>();
 </script>
 

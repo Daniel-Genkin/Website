@@ -247,7 +247,7 @@ export var ALL_PROJECTS: Project[] = [
                     technology: "Unity3D"
                 },
                 {
-                    icon: "thumbnails/c#.png",
+                    icon: "thumbnails/csharp.png",
                     technology: "C#"
                 },
                 {
@@ -362,7 +362,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
     },
 ];
 
-export var EDUCATION: Education[] = [
+export var EDUCATION: EducationEntry[] = [
     {
         startingDate: "2015",
         endingDate: "2019",

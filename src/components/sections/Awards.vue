@@ -2,14 +2,14 @@
 import Card from '../elements/Card.vue';
 
 defineProps<{
-  content: Award[],
+  content: AwardEntry[],
   color: string
 }>();
 </script>
 
 <template>
   <div>
-    <h1 id="awards">Awards</h1>
+    <h1>Awards</h1>
     <div v-for="item in content">
       <div class="cols card">
         <card :caption="item.organization" :pillColor="color">
