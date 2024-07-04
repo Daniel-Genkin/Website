@@ -17,13 +17,13 @@ export var ALL_PROJECTS: Project[] = [
                 caption: "Open Source"
             }
         ],
-        pageDetails: {
-            projectLogo: "projects/greenar/logo.png",
-            projectButton: {
-                link: "TODO",
-                caption: "View on Github"
-            },
-            accentColor: "#059B14",
+        projectLogo: "projects/greenar/logo.png",
+        projectButton: {
+            link: "TODO",
+            caption: "View on Github"
+        },
+        accentColor: "#059B14",
+        pageSections: {
             screenshots: [
                 "projects/greenar/promo.mp4",
                 "projects/greenar/0.png",
@@ -32,68 +32,6 @@ export var ALL_PROJECTS: Project[] = [
                 "projects/greenar/3.png",
                 "projects/greenar/4.png",
                 "projects/greenar/5.png"
-            ],
-            technologiesUsed: [
-                {
-                    icon: "projects/thumbnails/opencv.png",
-                    technology: "OpenCV"
-                },
-                {
-                    icon: "projects/thumbnails/threejs.png",
-                    technology: "Three.js"
-                },
-                {
-                    icon: "projects/thumbnails/java.png",
-                    technology: "Java"
-                },
-                {
-                    icon: "projects/thumbnails/nodejs.png",
-                    technology: "NodeJS & NPM"
-                },
-                {
-                    icon: "projects/thumbnails/typescript.jpeg",
-                    technology: "TypeScript & JavaScript"
-                },
-                {
-                    icon: "projects/thumbnails/unity3d.png",
-                    technology: "Unity3D"
-                },
-                {
-                    icon: "projects/thumbnails/git.png",
-                    technology: "Git"
-                },
-                {
-                    icon: "projects/thumbnails/azure.png",
-                    technology: "Azure"
-                },
-                {
-                    icon: "projects/thumbnails/aws.png",
-                    technology: "AWS"
-                },
-                {
-                    icon: "projects/thumbnails/swift.png",
-                    technology: "Swift"
-                },
-                {
-                    icon: "projects/thumbnails/vscode.png",
-                    technology: "VS Code"
-                },
-                {
-                    icon: "projects/thumbnails/androidstudio.png",
-                    technology: "Android Studio"
-                },
-                {
-                    icon: "projects/thumbnails/xcode.png",
-                    technology: "XCode"
-                },
-                {
-                    icon: "projects/thumbnails/vuejs.png",
-                    technology: "VueJS"
-                },
-                {
-                    icon: "projects/thumbnails/stripe.png",
-                    technology: "Stripe"
-                }
             ],
             history: [
                 {
@@ -157,7 +95,69 @@ export var ALL_PROJECTS: Project[] = [
                     title: "Most Promising Start-up Award",
                     organization: "CONNECT Educational Technology Conference"
                 }
-            ]
+            ],
+            technologiesUsed: [
+                {
+                    icon: "projects/thumbnails/opencv.png",
+                    technology: "OpenCV"
+                },
+                {
+                    icon: "projects/thumbnails/threejs.png",
+                    technology: "Three.js"
+                },
+                {
+                    icon: "projects/thumbnails/java.png",
+                    technology: "Java"
+                },
+                {
+                    icon: "projects/thumbnails/nodejs.png",
+                    technology: "NodeJS & NPM"
+                },
+                {
+                    icon: "projects/thumbnails/typescript.jpeg",
+                    technology: "TypeScript & JavaScript"
+                },
+                {
+                    icon: "projects/thumbnails/unity3d.png",
+                    technology: "Unity3D"
+                },
+                {
+                    icon: "projects/thumbnails/git.png",
+                    technology: "Git"
+                },
+                {
+                    icon: "projects/thumbnails/azure.png",
+                    technology: "Azure"
+                },
+                {
+                    icon: "projects/thumbnails/aws.png",
+                    technology: "AWS"
+                },
+                {
+                    icon: "projects/thumbnails/swift.png",
+                    technology: "Swift"
+                },
+                {
+                    icon: "projects/thumbnails/vscode.png",
+                    technology: "VS Code"
+                },
+                {
+                    icon: "projects/thumbnails/androidstudio.png",
+                    technology: "Android Studio"
+                },
+                {
+                    icon: "projects/thumbnails/xcode.png",
+                    technology: "XCode"
+                },
+                {
+                    icon: "projects/thumbnails/vuejs.png",
+                    technology: "VueJS"
+                },
+                {
+                    icon: "projects/thumbnails/stripe.png",
+                    technology: "Stripe"
+                }
+            ],
         }
     },
     {
@@ -174,15 +174,17 @@ export var ALL_PROJECTS: Project[] = [
                 caption: "Gamification of ticketing systems"
             }
         ],
-        pageDetails: {
-            projectLogo: "projects/project-gameplan/logo.png",
-            projectButton: {
-                link: "TODO",
-                caption: "View on Github"
-            },
-            accentColor: "#FEDF14",
+        projectLogo: "projects/project-gameplan/logo.png",
+        projectButton: {
+            link: "TODO",
+            caption: "View on Github"
+        },
+        accentColor: "#FEDF14",
+        pageSections: {
             screenshots: [
             ],
+            history: [],
+            awards: [],
             technologiesUsed: [
                 {
                     icon: "projects/thumbnails/typescript.jpeg",
@@ -205,8 +207,6 @@ export var ALL_PROJECTS: Project[] = [
                     technology: "VueJS"
                 },
             ],
-            history: [],
-            awards: []
         }
     },
     {
@@ -227,18 +227,20 @@ export var ALL_PROJECTS: Project[] = [
                 caption: "Open Source"
             }
         ],
-        pageDetails: {
-            projectLogo: "projects/slappy-sandwich/logo.png",
-            projectButton: {
-                link: "TODO",
-                caption: "View on Github"
-            },
-            accentColor: "#D8621A",
+        projectLogo: "projects/slappy-sandwich/logo.png",
+        projectButton: {
+            link: "TODO",
+            caption: "View on Github"
+        },
+        accentColor: "#D8621A",
+        pageSections: {
             screenshots: [
                 "projects/slappy-sandwich/0.jpg",
                 "projects/slappy-sandwich/1.jpg",
                 "projects/slappy-sandwich/2.jpg",
             ],
+            history: [],
+            awards: [],
             technologiesUsed: [
                 {
                     icon: "projects/thumbnails/unity3d.png",
@@ -257,8 +259,6 @@ export var ALL_PROJECTS: Project[] = [
                     technology: "Visual Studio"
                 }
             ],
-            history: [],
-            awards: []
         }
     },
     {
@@ -275,18 +275,20 @@ export var ALL_PROJECTS: Project[] = [
                 caption: "Open Source"
             }
         ],
-        pageDetails: {
-            projectLogo: "projects/spaceship-sim/0.png",
-            projectButton: {
-                link: "https://github.com/Daniel-Genkin/Spaceship-Simulator",
-                caption: "View on Github"
-            },
-            accentColor: "#AEFFFF",
+        projectLogo: "projects/spaceship-sim/0.png",
+        projectButton: {
+            link: "https://github.com/Daniel-Genkin/Spaceship-Simulator",
+            caption: "View on Github"
+        },
+        accentColor: "#AEFFFF",
+        pageSections: {
             screenshots: [
                 "projects/spaceship-sim/0.png",
                 "projects/spaceship-sim/1.png",
                 "projects/spaceship-sim/2.png",
             ],
+            history: [],
+            awards: [],
             technologiesUsed: [
                 {
                     icon: "projects/thumbnails/opengl.png",
@@ -304,9 +306,7 @@ export var ALL_PROJECTS: Project[] = [
                     icon: "projects/thumbnails/vscode.png",
                     technology: "VS Code"
                 }
-            ],
-            history: [],
-            awards: []
+            ]
         }
     }
 ];

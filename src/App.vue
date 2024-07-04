@@ -4,6 +4,8 @@ import { RouterLink, RouterView } from 'vue-router';
 
 var scrollPosition = ref("0");
 var showNav = ref(false);
+var menuItems = ref<MenuItem[]>();
+var accentColor = ref<string>("#3A9BD2");
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
@@ -25,6 +27,15 @@ function handleScroll(event: Event): void {
 
   scrollPosition.value = `${100 / scrollHeight * currentScroll}%`;
 }
+
+function onLoaded(payload: OnLoadData): void {
+  menuItems.value = payload.menuItems;
+  accentColor.value = payload.accentColor ?? "#3A9BD2";
+}
+
+function goToHash(hash: string): void {
+  location.hash = hash;
+}
 </script>
 
 <template>
@@ -33,15 +44,12 @@ function handleScroll(event: Event): void {
       <nav ref="nav" v-if="showNav">
         <RouterLink to="/">Daniel Genkin</RouterLink>
         <span style="width: 100%"></span>
-        <a href="#projects">Projects</a>
-        <a href="#work-experience">Work Experience</a><!--TODO GENERATE THESE FROM THE PAGE-->
-        <a href="#education">Education</a>
-        <a href="#awards">Awards</a>
-        <span id="navScrollBar" :style="{width: scrollPosition}"></span>
+        <a v-for="menuItem in menuItems" :key="menuItem.link" @click="goToHash(menuItem.link)">{{ menuItem.label }}</a>
+        <span id="navScrollBar" :style="{width: scrollPosition, backgroundColor: accentColor}"></span>
       </nav>
     </Transition>
   </header>
-  <RouterView @scroll="handleScroll" />
+  <RouterView @scroll="handleScroll" @onLoaded="onLoaded"/>
 </template>
 
 <style scoped>

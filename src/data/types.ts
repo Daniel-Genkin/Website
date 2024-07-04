@@ -12,23 +12,23 @@ type Project = {
         icon: string,
         caption: string
     }[],
-    pageDetails: {
-        projectLogo: string,
-        projectButton: {
-            link: string,
-            caption: string
-        }
-        accentColor: string,
+    projectLogo: string,
+    projectButton: {
+        link: string,
+        caption: string
+    }
+    accentColor: string,
+    pageSections: {
         screenshots: string[],
-        technologiesUsed: {
-            icon: string,
-            technology: string
-        }[],
         history: {
             year: string,
             events: string[]
         }[],
-        awards: Award[]
+        awards: Award[],
+        technologiesUsed: {
+            icon: string,
+            technology: string
+        }[],
     }
 };
 
@@ -45,4 +45,15 @@ type Education = {
     startingDate: string,
     endingDate: string,
     achievements: string[]
+}
+
+type OnLoadData = {
+    menuItems: MenuItem[], 
+    accentColor?: string,
+    hasError: boolean
+}
+
+type MenuItem = {
+    label: string,
+    link: string
 }
