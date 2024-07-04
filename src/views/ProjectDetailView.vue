@@ -43,25 +43,42 @@ function goToPage(page: string): void {
         </div>
       </div>
     </div>
+    
     <h1>Screenshots</h1>
     TODO
+    
     <h1>History</h1>
     <div v-for="(date, index) in project?.pageDetails.history" 
         :key="date.year"
-        class="cols">
+        class="cols"
+        style="margin: 0 64px;">
       <div class="rows">
         <straight-pill class="datePill" :color="project?.pageDetails.accentColor"/>
-        <div class="rows">
-          <h3>{{ date.year }}</h3>
+        <div class="cols">
+          <h2 class="year">{{ date.year }}</h2>
           <ul>
             <li v-for="event in date.events">{{ event }}</li>
           </ul>
         </div>
       </div>
-      <chevron v-if="index === project?.pageDetails.history.length ?? 1 - 1" style="height: 45px; width: 45px;"></chevron>
-      <div v-else>...</div>
+      <chevron v-if="index === (project?.pageDetails.history.length ?? 1) - 1" style="height: 45px; width: 45px;"></chevron>
+      <svg v-else xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 24" class="divider">
+        <path d="M3.018 17.551a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6m0-8.4a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 1 1 0-5.6m0-8.401a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6Z"/>
+      </svg>
     </div>
+    
     <awards :content="project?.pageDetails.awards ?? []" :color="project?.pageDetails.accentColor ?? ''"/>
+
+    <h1>Techologies Used</h1>
+    <div class="techGrid">
+      <card 
+        v-for="tech in project?.pageDetails.technologiesUsed" 
+        :key="tech.technology"
+        :caption="tech.technology"
+        :center="true">
+        {{tech.icon}}
+      </card>
+    </div>
   </main>
 </template>
 
@@ -74,14 +91,39 @@ function goToPage(page: string): void {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 64px;
 }
-
+.year {
+  margin: 0;
+  font-size: 3rem;
+}
 .cardIcon {
   height: 45px;
+}
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10px;
+
+  * {
+    height: 350px;
+    width: 350px;
+  }
 }
 
 .datePill {
   margin: 8px;
+}
+
+.divider {
+  height: 45px;
+  width: 8px;
+  margin-left: 12px;
+  background-color: #464646;
+  border-radius: 50px;
+  padding: 6px;
+
+  path {
+    fill: #A3A3A3;
+  }
 }
 </style>

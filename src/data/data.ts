@@ -5,15 +5,15 @@ export var ALL_PROJECTS: Project[] = [
         pageLink: "/greenar",
         highlights: [
             {
-                icon: "trophy",
+                icon: "projects/icons/award.svg",
                 caption: "Connect Conference award winner"
             },
             {
-                icon: "3d",
+                icon: "projects/icons/3d.svg",
                 caption: "All-in-one augmented reality platform"
             },
             {
-                icon: "open-source",
+                icon: "projects/icons/github.svg",
                 caption: "Open Source"
             }
         ],
@@ -35,59 +35,63 @@ export var ALL_PROJECTS: Project[] = [
             ],
             technologiesUsed: [
                 {
-                    icon: "opencv",
+                    icon: "projects/thumbnails/opencv.png",
                     technology: "OpenCV"
                 },
                 {
-                    icon: "threejs",
+                    icon: "projects/thumbnails/threejs.png",
                     technology: "Three.js"
                 },
                 {
-                    icon: "java",
+                    icon: "projects/thumbnails/java.png",
                     technology: "Java"
                 },
                 {
-                    icon: "nodejs",
+                    icon: "projects/thumbnails/nodejs.png",
                     technology: "NodeJS & NPM"
                 },
                 {
-                    icon: "typescript-javascript",
+                    icon: "projects/thumbnails/typescript.jpeg",
                     technology: "TypeScript & JavaScript"
                 },
                 {
-                    icon: "unity",
+                    icon: "projects/thumbnails/unity3d.png",
                     technology: "Unity3D"
                 },
                 {
-                    icon: "git",
+                    icon: "projects/thumbnails/git.png",
                     technology: "Git"
                 },
                 {
-                    icon: "azure",
+                    icon: "projects/thumbnails/azure.png",
                     technology: "Azure"
                 },
                 {
-                    icon: "aws",
+                    icon: "projects/thumbnails/aws.png",
                     technology: "AWS"
                 },
                 {
-                    icon: "swift",
+                    icon: "projects/thumbnails/swift.png",
                     technology: "Swift"
                 },
                 {
-                    icon: "vs-code",
+                    icon: "projects/thumbnails/vscode.png",
                     technology: "VS Code"
                 },
                 {
-                    icon: "android-studio",
+                    icon: "projects/thumbnails/androidstudio.png",
                     technology: "Android Studio"
                 },
                 {
-                    icon: "xcode",
+                    icon: "projects/thumbnails/xcode.png",
                     technology: "XCode"
                 },
                 {
-                    icon: "stripe",
+                    icon: "projects/thumbnails/vuejs.png",
+                    technology: "VueJS"
+                },
+                {
+                    icon: "projects/thumbnails/stripe.png",
                     technology: "Stripe"
                 }
             ],
@@ -121,7 +125,7 @@ export var ALL_PROJECTS: Project[] = [
                     year: "2019",
                     events: [
                         "Started developing my own Augmented Reality framework to avoid the limitations of EasyAR. Namely, to gain the ability to convert the mobile app based platform to a progressive web app as user feedback indicated that users did not want to download an app.",
-                        "Most Promising Startup award and People’s Choice Award at the CONNECT educational technology conference"
+                        "Most Promising Startup award and People's Choice Award at the CONNECT educational technology conference"
                     ]
                 },
                 {
@@ -131,7 +135,7 @@ export var ALL_PROJECTS: Project[] = [
                     ]
                 },
                 {
-                    year: "present day",
+                    year: "Present",
                     events: [
                         "Working on implementing the custom augmented reality framework which will be released as open-source when completed. This custom framework will use OpenCV to recognize targets and and ThreeJS to display content."
                     ]
@@ -162,11 +166,11 @@ export var ALL_PROJECTS: Project[] = [
         pageLink: "/project-gameplan",
         highlights: [
             {
-                icon: "patent",
+                icon: "projects/icons/patent.svg",
                 caption: "Patent Pending"
             },
             {
-                icon: "checkmark",
+                icon: "projects/icons/task.svg",
                 caption: "Gamification of ticketing systems"
             }
         ],
@@ -181,23 +185,23 @@ export var ALL_PROJECTS: Project[] = [
             ],
             technologiesUsed: [
                 {
-                    icon: "typescript-javascript",
+                    icon: "projects/thumbnails/typescript.jpeg",
                     technology: "TypeScript & JavaScript"
                 },
                 {
-                    icon: "git",
+                    icon: "projects/thumbnails/git.png",
                     technology: "Git"
                 },
                 {
-                    icon: "azure",
+                    icon: "projects/thumbnails/azure.png",
                     technology: "Azure"
                 },
                 {
-                    icon: "vs-code",
+                    icon: "projects/thumbnails/vscode.png",
                     technology: "VS Code"
                 },
                 {
-                    icon: "vuejs",
+                    icon: "projects/thumbnails/vuejs.png",
                     technology: "VueJS"
                 },
             ],
@@ -211,15 +215,15 @@ export var ALL_PROJECTS: Project[] = [
         pageLink: "/slappy-sandwich",
         highlights: [
             {
-                icon: "multi-platform",
+                icon: "projects/icons/multi-platform.svg",
                 caption: "Multi-platform"
             },
             {
-                icon: "3d",
+                icon: "projects/icons/3d_alt.svg",
                 caption: "Built in Unity3D with C#"
             },
             {
-                icon: "open-source",
+                icon: "projects/icons/github.svg",
                 caption: "Open Source"
             }
         ],
@@ -237,19 +241,19 @@ export var ALL_PROJECTS: Project[] = [
             ],
             technologiesUsed: [
                 {
-                    icon: "unity",
+                    icon: "projects/thumbnails/unity3d.png",
                     technology: "Unity3D"
                 },
                 {
-                    icon: "c-sharp",
+                    icon: "projects/thumbnails/c#.png",
                     technology: "C#"
                 },
                 {
-                    icon: "git",
+                    icon: "projects/thumbnails/git.png",
                     technology: "Git"
                 },
                 {
-                    icon: "vs",
+                    icon: "projects/thumbnails/vs.png",
                     technology: "Visual Studio"
                 }
             ],
@@ -263,11 +267,11 @@ export var ALL_PROJECTS: Project[] = [
         pageLink: "/spaceship-simulator",
         highlights: [
             {
-                icon: "opengl",
+                icon: "projects/icons/cpp.svg",
                 caption: "Built in C++ and OpenGL"
             },
             {
-                icon: "open-source",
+                icon: "projects/icons/github.svg",
                 caption: "Open Source"
             }
         ],
@@ -285,19 +289,19 @@ export var ALL_PROJECTS: Project[] = [
             ],
             technologiesUsed: [
                 {
-                    icon: "opengl",
+                    icon: "projects/thumbnails/opengl.png",
                     technology: "OpenGL"
                 },
                 {
-                    icon: "c-plus-plus",
+                    icon: "projects/thumbnails/c++.png",
                     technology: "C++"
                 },
                 {
-                    icon: "git",
+                    icon: "projects/thumbnails/git.png",
                     technology: "Git"
                 },
                 {
-                    icon: "vs-code",
+                    icon: "projects/thumbnails/vscode.png",
                     technology: "VS Code"
                 }
             ],
