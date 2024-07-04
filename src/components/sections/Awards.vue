@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <div>
-    <h1>Awards</h1>
+    <h1 id="awards">Awards</h1>
     <div v-for="item in content">
       <div class="cols card">
         <card :caption="item.organization" :pillColor="color">
@@ -34,6 +34,7 @@ defineProps<{
 .card {
   width: 350px;
   position: relative;
+  z-index: -1;
 }
 
 .innerCard {

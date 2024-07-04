@@ -17,7 +17,7 @@ withDefaults(defineProps<{
       marginLeft: pillColor ? '24px' : '0'
     }">
       <slot></slot>
-      <h3>{{ caption }}</h3>
+      <h3 :style="{textAlign: center ? 'center' : 'left'}">{{ caption }}</h3>
       <right-pill v-if="pillColor" class="pill" :color="pillColor"/>
     </div>
   </div>

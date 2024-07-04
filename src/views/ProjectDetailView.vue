@@ -13,6 +13,7 @@ const emits = defineEmits({
 
 var project = ref<Project>();
 var error = ref(false);
+var menuItems = ref<MenuItem[]>([]);
 
 // Convert the non empty sections of the project detail page to a list of MenuItems
 function parseMenuItems(project: Project): MenuItem[] {
@@ -30,8 +31,13 @@ function parseMenuItems(project: Project): MenuItem[] {
   }, [] as MenuItem[]);
 }
 
+// Note that sectionName must start with a #
+function sectionExists(sectionId: string): boolean {
+  console.log(menuItems.value, sectionId);
+  return menuItems.value.findIndex(item => item.link === sectionId) !== -1;
+}
+
 onMounted(() => {
-  let menuItems: MenuItem[] = [];
   const targetProject = ALL_PROJECTS.find(x => x.pageLink === router.currentRoute.value.path);
   if (!targetProject) {
     error.value = true;
@@ -39,11 +45,11 @@ onMounted(() => {
   } else {
     project.value = targetProject;
 
-    menuItems = parseMenuItems(targetProject);
+    menuItems.value = parseMenuItems(targetProject);
   }
 
   emits('onLoaded', {
-    menuItems: menuItems, 
+    menuItems: menuItems.value, 
     accentColor: project.value?.accentColor, 
     hasError: error.value
   });
@@ -57,16 +63,18 @@ onMounted(() => {
     <div v-else>
       <app-preview-intro :project="project" />
       
-      <h1 id="screenshots">Screenshots</h1>
-      TODO
+      <h1 id="screenshots" v-if="sectionExists('screenshots')" >Screenshots -- TODO</h1>
       
-      <project-history :project="project" />
+      <project-history v-if="sectionExists('history')" 
+                       :project="project" />
       
-      <awards id="awards" 
+      <awards v-if="sectionExists('awards')"
               :content="project.pageSections.awards" 
               :color="project.accentColor"/>
-  
-      <tech-grid :project="project" />
+
+      <tech-grid v-if="sectionExists('technologiesUsed')" 
+                 :project="project"
+                 style="margin-top: 100px;" />
     </div>
   </main>
 </template>

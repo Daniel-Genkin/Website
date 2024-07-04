@@ -98,63 +98,63 @@ export var ALL_PROJECTS: Project[] = [
             ],
             technologiesUsed: [
                 {
-                    icon: "projects/thumbnails/opencv.png",
+                    icon: "thumbnails/opencv.png",
                     technology: "OpenCV"
                 },
                 {
-                    icon: "projects/thumbnails/threejs.png",
+                    icon: "thumbnails/threejs.png",
                     technology: "Three.js"
                 },
                 {
-                    icon: "projects/thumbnails/java.png",
+                    icon: "thumbnails/java.png",
                     technology: "Java"
                 },
                 {
-                    icon: "projects/thumbnails/nodejs.png",
+                    icon: "thumbnails/nodejs.png",
                     technology: "NodeJS & NPM"
                 },
                 {
-                    icon: "projects/thumbnails/typescript.jpeg",
+                    icon: "thumbnails/typescript.jpeg",
                     technology: "TypeScript & JavaScript"
                 },
                 {
-                    icon: "projects/thumbnails/unity3d.png",
+                    icon: "thumbnails/unity3d.png",
                     technology: "Unity3D"
                 },
                 {
-                    icon: "projects/thumbnails/git.png",
+                    icon: "thumbnails/git.png",
                     technology: "Git"
                 },
                 {
-                    icon: "projects/thumbnails/azure.png",
+                    icon: "thumbnails/azure.png",
                     technology: "Azure"
                 },
                 {
-                    icon: "projects/thumbnails/aws.png",
+                    icon: "thumbnails/aws.png",
                     technology: "AWS"
                 },
                 {
-                    icon: "projects/thumbnails/swift.png",
+                    icon: "thumbnails/swift.png",
                     technology: "Swift"
                 },
                 {
-                    icon: "projects/thumbnails/vscode.png",
+                    icon: "thumbnails/vscode.png",
                     technology: "VS Code"
                 },
                 {
-                    icon: "projects/thumbnails/androidstudio.png",
+                    icon: "thumbnails/androidstudio.png",
                     technology: "Android Studio"
                 },
                 {
-                    icon: "projects/thumbnails/xcode.png",
+                    icon: "thumbnails/xcode.png",
                     technology: "XCode"
                 },
                 {
-                    icon: "projects/thumbnails/vuejs.png",
+                    icon: "thumbnails/vuejs.png",
                     technology: "VueJS"
                 },
                 {
-                    icon: "projects/thumbnails/stripe.png",
+                    icon: "thumbnails/stripe.png",
                     technology: "Stripe"
                 }
             ],
@@ -187,23 +187,23 @@ export var ALL_PROJECTS: Project[] = [
             awards: [],
             technologiesUsed: [
                 {
-                    icon: "projects/thumbnails/typescript.jpeg",
+                    icon: "thumbnails/typescript.jpeg",
                     technology: "TypeScript & JavaScript"
                 },
                 {
-                    icon: "projects/thumbnails/git.png",
+                    icon: "thumbnails/git.png",
                     technology: "Git"
                 },
                 {
-                    icon: "projects/thumbnails/azure.png",
+                    icon: "thumbnails/azure.png",
                     technology: "Azure"
                 },
                 {
-                    icon: "projects/thumbnails/vscode.png",
+                    icon: "thumbnails/vscode.png",
                     technology: "VS Code"
                 },
                 {
-                    icon: "projects/thumbnails/vuejs.png",
+                    icon: "thumbnails/vuejs.png",
                     technology: "VueJS"
                 },
             ],
@@ -243,19 +243,19 @@ export var ALL_PROJECTS: Project[] = [
             awards: [],
             technologiesUsed: [
                 {
-                    icon: "projects/thumbnails/unity3d.png",
+                    icon: "thumbnails/unity3d.png",
                     technology: "Unity3D"
                 },
                 {
-                    icon: "projects/thumbnails/c#.png",
+                    icon: "thumbnails/c#.png",
                     technology: "C#"
                 },
                 {
-                    icon: "projects/thumbnails/git.png",
+                    icon: "thumbnails/git.png",
                     technology: "Git"
                 },
                 {
-                    icon: "projects/thumbnails/vs.png",
+                    icon: "thumbnails/vs.png",
                     technology: "Visual Studio"
                 }
             ],
@@ -291,19 +291,19 @@ export var ALL_PROJECTS: Project[] = [
             awards: [],
             technologiesUsed: [
                 {
-                    icon: "projects/thumbnails/opengl.png",
+                    icon: "thumbnails/opengl.png",
                     technology: "OpenGL"
                 },
                 {
-                    icon: "projects/thumbnails/c++.png",
+                    icon: "thumbnails/c++.png",
                     technology: "C++"
                 },
                 {
-                    icon: "projects/thumbnails/git.png",
+                    icon: "thumbnails/git.png",
                     technology: "Git"
                 },
                 {
-                    icon: "projects/thumbnails/vscode.png",
+                    icon: "thumbnails/vscode.png",
                     technology: "VS Code"
                 }
             ]

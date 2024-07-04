@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Card from '../elements/Card.vue';
-
 defineProps<{
   project: Project
 }>();
@@ -11,26 +9,66 @@ defineProps<{
   <div>
     <h1 id="technologiesUsed">Techologies Used</h1>
     <div class="techGrid">
-      <card 
+      <div 
         v-for="tech in project?.pageSections.technologiesUsed" 
         :key="tech.technology"
-        :caption="tech.technology"
-        :center="true">
-        {{tech.icon}}
-      </card>
+        class="card"
+        :data-title="tech.technology">
+        <img :src="tech.icon" class="icon" />
+    </div>
     </div>
   </div>
 </template>
 
-<style lag="scss" scoped>
+<style scoped>
 .techGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
 
-  * {
-    height: 350px;
-    width: 350px;
-  }
+.icon {
+  object-fit: contain;
+  width: 150px;
+  height: 150px;
+  margin-left: 25px;
+}
+
+.label {
+  text-align: center;
+  visibility: hidden;
+}
+
+.card {
+  height: 200px;
+  width: 200px;
+  margin: 24px;
+  border-radius: 25px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  background-color: #707475;
+}
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.3s ease;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    color: #cecece;
+    font-size: 150%;
+    padding: 1px 5px 2px 5px;
+    text-align: center;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+}
+[data-title] {
+    position: relative;
 }
 </style>
