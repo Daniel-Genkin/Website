@@ -15,7 +15,7 @@ function setPositionBy(amount: number): void {
   let newVal = position.value + amount;
   if (newVal >= props.content.length) {
     newVal = 0;
-  } else if (newVal <= 0) {
+  } else if (newVal < 0) {
     newVal = props.content.length - 1;
   }
   setPosition(newVal);
