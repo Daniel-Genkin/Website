@@ -36,12 +36,4 @@ function goToPage(page: string) {
 .cardIcon {
   height: 45px;
 }
-.rows {
-  display: flex;
-  flex-direction: row;
-}
-.cols {
-  display: flex;
-  flex-direction: column;
-}
 </style>

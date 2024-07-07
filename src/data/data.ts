@@ -1,7 +1,7 @@
 export var ALL_PROJECTS: Project[] = [
     {
         title: "GreenAR",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote",
+        description: "An Augmented Reality platform for Android, iOS and Web built with Java, XML, Swift, C#, Objective C, VueJS (JavaScript), OpenCV, Unity3D. The platform consists of a frontend, which use AR to superimpose videos, images, websites, and other digital media on top of physical print media, and a backend which allowed content owners to setup the AR experiences. I pitched this to educators and businesses as a means for adding interactivity and boosting engagement with educational and promotional materials. For example, bring equations or other mathematical problems to life with a live and interactive graphical representation to help students understand math. In the context of business, an example would be adding actionable buttons (such as buy now) to business cards or adding 3d models to magazines so potential customers can better visualize products.",
         pageLink: "/greenar",
         highlights: [
             {
@@ -162,7 +162,7 @@ export var ALL_PROJECTS: Project[] = [
     },
     {
         title: "Project Gameplan",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote",
+        description: "A project management platform that uses gamification techniques to boost employee motivation for task completion. Built using frontend (primarily VueJS) and backend Web (primarily Azure) technologies.",
         pageLink: "/project-gameplan",
         highlights: [
             {
@@ -211,7 +211,7 @@ export var ALL_PROJECTS: Project[] = [
     },
     {
         title: "Slappy Sandwich",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote",
+        description: "Start tapping, slapping and having fun! Slap your way to collect all the doohickeys and various slappers.How far can you get? Download and find out! Then challenge your friends! Game features: ♦ Rookie and Pro modes ♦ Cool doohickeys and slappers to collect ♦ Simple rules/controls ♦ Realistic physics ♦ Minimalistic ♦ Fun sound effects ♦ Share score with your friends. Have fun slapping! Fun for all ages!",
         pageLink: "/slappy-sandwich",
         highlights: [
             {
@@ -263,7 +263,7 @@ export var ALL_PROJECTS: Project[] = [
     },
     {
         title: "3D Spaceship Simulator",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote",
+        description: "A 3D procedurally generated space environment that the player flies through with their spaceship to reach destination planets to complete quests. This game was built without a game engine using pure C++ and OpenGL. I worked in a team of three as the lead developer.",
         pageLink: "/spaceship-simulator",
         highlights: [
             {
@@ -311,6 +311,7 @@ export var ALL_PROJECTS: Project[] = [
     }
 ];
 
+// TODO PULL FROM LINKEDIN
 export var WORK_EXPERIENCE: WorkExperience[] = [
     {
         title: "Software Engineer",
@@ -318,7 +319,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "Microsoft Corp.",
         startingDate: "Sept. 2023",
         endingDate: "ongoing",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote"
+        description: "Full-time position working on the Azure Core Files team using C/C++, XML, JSON. My team is responsible for geo-redundancy and replication for business recovery and data restoration. My work affects all layers of the tech stack, ranging from the SMB, NFS, and REST APIs down to the data storage layer."
     },
     {
         title: "Software Engineer Intern",
@@ -326,7 +327,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "Amazon Inc.",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote"
+        description: "12-week internship. My project improved advertisement second-price auction latency on the Amazon.com Ads team by > 25% and resulted in estimated savings of ~14 million dollars per year in compute resources. This team primarily used Java."
     },
     {
         title: "2x Software Engineer Intern",
@@ -334,7 +335,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "Microsoft Corp.",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote"
+        description: "Two 12-week internships. The first was working on adding NodeJS support to the C# Mono WebAssembly project (WASM). The second was adding WebTransport support to the ASP.NET Kestrel webserver. Both projects are open source and were motivated by community requests. These internships used a combination of C#, TypeScript (TS), XML, and other languages."
     },
     {
         title: "Software Engineer Apprentice",
@@ -342,7 +343,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "TeamViewer Ambgh.",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote"
+        description: "Part-time internship following a sale of the LifeAR brand. I worked on integrating the ASSIMP open-source library in the lifeAR and assistAR products to enable greater 3D model rendering support. This project acted as a bridge between the ASSIMP C++ source code and the assistAR Kotlin source code. I implemented all the components necessary to load and display the models and ultimately greatly improved both the fidelity and performance of the models that assistAR was able to load and display."
     },
     {
         title: "Software Engineer",
@@ -350,7 +351,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "Fyelabs",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote"
+        description: "Completed several frontend and backend projects using several languages, frameworks, and tools including Python, C++, JavaScript, TypeScript, HTML, CSS, SCSS, VueJS, React, React Native, and Docker."
     },
     {
         title: "Explore Intern",
@@ -358,7 +359,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "Microsoft Corp.",
         startingDate: "August. 2023",
         endingDate: "Jan 2023",
-        description: "Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote Quote"
+        description: "My personal projects are grouped under this brand. Throughout high school (2015 - 2019), I worked as a freelancer for implementing various web and mobile applications. Throughout university (2019 - 2023), I worked on the GreenAR and Project GamePlan projects."
     },
 ];
 
@@ -381,7 +382,7 @@ export var EDUCATION: EducationEntry[] = [
     }
 ]
 
-export var AWARDS: Award[] = [
+export var AWARDS: AwardEntry[] = [
     {
         year: 2023,
         title: "Graduation with Honours and Distinction",

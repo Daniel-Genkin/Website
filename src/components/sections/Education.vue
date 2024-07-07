@@ -30,10 +30,7 @@ defineProps<{
   flex-direction: row;
   justify-content: left;
 }
-.cols {
-  display: flex;
-  flex-direction: column;
-}
+
 .pill {
   margin-top: 16px;
 }

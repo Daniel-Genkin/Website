@@ -33,10 +33,6 @@ defineProps<{
 </template>
 
 <style lag="scss" scoped>
-.rows {
-  display: flex;
-  flex-direction: row;
-}
 .cols {
   display: flex;
   flex-direction: column;

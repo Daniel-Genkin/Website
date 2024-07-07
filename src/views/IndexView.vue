@@ -47,15 +47,6 @@ emits('onLoaded', {
 </template>
 
 <style lag="scss" scoped>
-.rows {
-  display: flex;
-  flex-direction: row;
-}
-.cols {
-  display: flex;
-  flex-direction: column;
-}
-
 #content {
   flex: 5;
   padding: 64px;

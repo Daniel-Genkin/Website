@@ -50,15 +50,6 @@ function goToPage(pageName: string): void {
   width: 200px;
 }
 
-.rows {
-  display: flex;
-  flex-direction: row;
-}
-.cols {
-  display: flex;
-  flex-direction: column;
-}
-
 .icon {
   height: 45px;
 }

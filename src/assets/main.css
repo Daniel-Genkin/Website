@@ -60,3 +60,12 @@ nav {
   /*width is set as user scrolls via the variable*/
   width: 0;
 }
+
+.rows {
+  display: flex;
+  flex-direction: row;
+}
+.cols {
+  display: flex;
+  flex-direction: column;
+}

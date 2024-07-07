@@ -30,10 +30,6 @@ defineProps<{
   width: 100%;
   justify-content: space-between;
 }
-.cols {
-  display: flex;
-  flex-direction: column;
-}
 
 .pill {
   width: 50%;

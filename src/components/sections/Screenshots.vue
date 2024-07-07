@@ -45,15 +45,6 @@ img {
   border-radius: 25px;
 }
 
-.rows {
-  display: flex;
-  flex-direction: row;
-}
-.cols {
-  display: flex;
-  flex-direction: column;
-}
-
 .center {
   justify-content: center;
   align-items: center;
