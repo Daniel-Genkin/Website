@@ -5,15 +5,15 @@ export var ALL_PROJECTS: Project[] = [
         pageLink: "/greenar",
         highlights: [
             {
-                icon: "projects/icons/award.svg",
+                icon: "award",
                 caption: "Connect Conference award winner"
             },
             {
-                icon: "projects/icons/3d.svg",
+                icon: "3d",
                 caption: "All-in-one augmented reality platform"
             },
             {
-                icon: "projects/icons/github.svg",
+                icon: "github",
                 caption: "Open Source"
             }
         ],
@@ -166,11 +166,11 @@ export var ALL_PROJECTS: Project[] = [
         pageLink: "/project-gameplan",
         highlights: [
             {
-                icon: "projects/icons/patent.svg",
+                icon: "patent",
                 caption: "Patent Pending"
             },
             {
-                icon: "projects/icons/task.svg",
+                icon: "task",
                 caption: "Gamification of ticketing systems"
             }
         ],
@@ -215,15 +215,15 @@ export var ALL_PROJECTS: Project[] = [
         pageLink: "/slappy-sandwich",
         highlights: [
             {
-                icon: "projects/icons/multi-platform.svg",
+                icon: "multi-platform",
                 caption: "Multi-platform"
             },
             {
-                icon: "projects/icons/3d_alt.svg",
+                icon: "3d_alt",
                 caption: "Built in Unity3D with C#"
             },
             {
-                icon: "projects/icons/github.svg",
+                icon: "github",
                 caption: "Open Source"
             }
         ],
@@ -267,11 +267,11 @@ export var ALL_PROJECTS: Project[] = [
         pageLink: "/spaceship-simulator",
         highlights: [
             {
-                icon: "projects/icons/cpp.svg",
+                icon: "cpp",
                 caption: "Built in C++ and OpenGL"
             },
             {
-                icon: "projects/icons/github.svg",
+                icon: "github",
                 caption: "Open Source"
             }
         ],

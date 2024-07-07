@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppPreviewBanner from "@/components/elements/AppPreviewBanner.vue";
 import Card from '../elements/Card.vue';
+import Icon from "../elements/Icon.vue";
 
 defineProps<{
   project: Project
@@ -23,7 +24,7 @@ function goToPage(page: string) {
         <button @click="goToPage(project.projectButton.link)">{{ project.projectButton.caption }}</button>
         <div class="rows">
           <card v-for="highlight in project.highlights" :caption="highlight.caption">
-            <img :src="highlight.icon" class="cardIcon" />
+            <icon :src="highlight.icon" class="cardIcon" :color="project.accentColor" />
           </card>
         </div>
       </div>

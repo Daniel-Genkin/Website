@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import Icon from "@/components/elements/Icon.vue";
 import RightPill from '@/components/elements/RightPill.vue';
 import router from '@/router';
 import { computed, ref } from 'vue';
+import Card from "../elements/Card.vue";
 import Slideshow from '../elements/Slideshow.vue';
 
 const props = defineProps<{
@@ -23,19 +25,19 @@ function goToPage(pageName: string): void {
     <h1>Projects</h1>
     <div id="root" class="rows">
       <right-pill id="pill" color="#3A9BD2" />
-      <slideshow :slide-count="content.length"
+      <slideshow color="#3A9BD2" 
+                 :slide-count="content.length"
                  @slide-changed="position = $event">
         <div class="rows" style="height: 350px">
-          <div class="cols">
+          <div class="cols">``
             <h2>{{ item.title }}</h2>
             <p>{{ item.description }}</p>
             <button @click="goToPage(item.pageLink)">Learn More</button>
           </div>
           <div class="cols">
-            <div class="cols" v-for="award in item.highlights" :key="award.caption">
-              <span>{{ award.icon }}</span>
-              <h3>{{ award.caption }}</h3>
-            </div>
+            <card class="cols" v-for="award in item.highlights" :key="award.caption" :center="true" :caption="award.caption">
+              <icon :src="award.icon" color="#3A9BD2" class="icon" />
+            </card>
           </div>
         </div>
       </slideshow>
@@ -55,6 +57,10 @@ function goToPage(pageName: string): void {
 .cols {
   display: flex;
   flex-direction: column;
+}
+
+.icon {
+  height: 45px;
 }
 
 </style>

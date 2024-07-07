@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import Icon from './Icon.vue';
 
 const props = defineProps<{
-  slideCount: number
+  slideCount: number,
+  color: string
 }>();
 
 const emits = defineEmits({
@@ -30,35 +32,31 @@ function setPosition(newPosition: number): void {
 
 <template>
   <div>
-    <div class="cols">
+    <div>
       <slot></slot>
       <!-- slideshow controls -->
-      <div class="rows center">
-        <button classs="arrow" @click="setPositionBy(-1)"><</button>
+      <div class="controls">
+        <icon src="chevron-left" :color="color" @click="setPositionBy(-1)"/>
         <button 
           v-for="i in slideCount" :key="i"
           @click="setPosition(i - 1)"
-          :class="['selectiondot', position == i - 1 ? 'selected' : '']">
+          class="selectiondot"
+          :style="{backgroundColor: position == i - 1 ? color : ''}">
         </button>
-        <button class="arrow" @click="setPositionBy(1)">></button>
+        <icon src="chevron-right" :color="color" @click="setPositionBy(1)"/>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.rows {
+.controls {
   display: flex;
   flex-direction: row;
-}
-.cols {
-  display: flex;
-  flex-direction: column;
-}
-
-.center {
   justify-content: center;
   align-items: center;
+  height: 50px;
+  width: 100;
 }
 
 .selectiondot {
@@ -67,16 +65,9 @@ function setPosition(newPosition: number): void {
   height: 25px;
   width: 25px;
   padding: 0;
-
-  &.selected {
-    background-color: #3A9BD2
-  }
 }
 
-.arrow {
-  background-color: none;
-  height: 35px;
-  width: 35px;
-  padding: 0;
+svg {
+  width: 45px;
 }
 </style>

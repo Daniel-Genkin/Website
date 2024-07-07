@@ -17,7 +17,8 @@ var position = ref(0);
     <h1>Screenshots</h1>
     <div id="root" class="rows">
       <right-pill id="pill" :color="color" />
-      <slideshow :slide-count="content.length"
+      <slideshow :color="color"
+                 :slide-count="content.length"
                  @slide-changed="position = $event"
                  style="width: 100%;">
         <video v-if="content[position].endsWith('.mp4')" :src="content[position]" controls>
