@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LeftPill from '@/components/elements/LeftPill.vue';
+import Pill from '@/components/elements/Pill.vue';
 
 defineProps<{
   content: WorkExperience[]
@@ -18,7 +18,9 @@ defineProps<{
         </div>
         <p>{{ item.description }}</p>
       </div>
-      <left-pill class="pill" :image-src="item.logo" :include-background="true"/>
+      <pill class="pill">
+        <img :src="item.logo" />
+      </pill>
     </div>
   </div>
 </template>
@@ -34,6 +36,11 @@ defineProps<{
 .pill {
   width: 50%;
   max-width: 250px;
+  height: 400px;
+
+  img {
+    width: 100%;
+  }
 }
 
 </style>

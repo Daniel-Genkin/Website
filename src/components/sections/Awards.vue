@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Card from '../elements/Card.vue';
+import Pill from '../elements/Pill.vue';
 
 defineProps<{
   content: AwardEntry[],
@@ -11,10 +11,12 @@ defineProps<{
   <div>
     <h1>Awards</h1>
     <div v-for="item in content" class="content">
-      <div class="cols card">
-        <card :caption="item.organization" :pillColor="color">
-          <h2 :style="{color: color}">{{ item.title }}</h2>
-        </card>
+      <div class="rows">
+        <pill :color="color" class="pill" />
+        <div class="cols">
+          <h2 :style="{color: color}">{{ item.organization }}</h2>
+          <h3>{{ item.title }}</h3>
+        </div>
         <h1 class="date">{{ item.year }}</h1>
       </div>
     </div>
@@ -22,21 +24,9 @@ defineProps<{
 </template>
 
 <style lag="scss" scoped>
-.card {
-  width: 350px;
-  position: relative;
-  z-index: -1;
-}
-
-.innerCard {
-  padding-right: 56px;
-}
-
-.date {
-  position: absolute;
-  right: -150px;
-  bottom: 0;
-  color: rgb(225, 225, 225);
+.pill {
+  height: 100%;
+  width: 45px;
 }
 
 </style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LeftPill from '@/components/elements/LeftPill.vue';
+import Pill from '@/components/elements/Pill.vue';
 
 function goToGithub() {
   window.open("https://github.com/Daniel-Genkin", '_blank')!.focus();
@@ -17,14 +17,15 @@ function goToGithub() {
           <button>LinkedIn</button>
         </div>
       </div>
-      <left-pill id="pill" image-src="me.png"/>
+      <pill id="pill" :has-bottom-decor="true">
+        <img src="@/assets/me.png" height="100%"/>
+      </pill>
     </div>
   </div>
 </template>
 
 <style lag="scss" scoped>
 #content {
-  flex: 5;
   padding: 64px;
   
   p {
@@ -33,6 +34,7 @@ function goToGithub() {
 }
 
 #pill {
-  flex: 1;
+  max-height: 600px;
+  width: 100%;
 }
 </style>

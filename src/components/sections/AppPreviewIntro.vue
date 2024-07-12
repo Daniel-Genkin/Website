@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import AppPreviewBanner from "@/components/elements/AppPreviewBanner.vue";
-import Card from '../elements/Card.vue';
-import Icon from "../elements/Icon.vue";
+import IconCard from "../elements/IconCard.vue";
+import Pill from "../elements/Pill.vue";
 
 defineProps<{
   project: Project
@@ -15,17 +14,18 @@ function goToPage(page: string) {
 <template>
   <div>
     <div id="root" class="rows">
-      <app-preview-banner 
-        :icon="project.projectLogo" 
-        :color="project.accentColor" />
+      <Pill :color="project.accentColor">
+        <img :src="project.projectLogo" />
+      </Pill>
       <div class="cols">
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
         <button @click="goToPage(project.projectButton.link)">{{ project.projectButton.caption }}</button>
         <div class="rows">
-          <card v-for="highlight in project.highlights" :caption="highlight.caption">
-            <icon :src="highlight.icon" class="cardIcon" :color="project.accentColor" />
-          </card>
+          <icon-card v-for="highlight in project.highlights" 
+                     :caption="highlight.caption" 
+                     :icon="highlight.icon" 
+                     :color="project.accentColor"/>
         </div>
       </div>
     </div>
@@ -36,4 +36,4 @@ function goToPage(page: string) {
 .cardIcon {
   height: 45px;
 }
-</style>
+</style>../elements/IconCard.vue

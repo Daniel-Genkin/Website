@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import StraightPill from "@/components/elements/StraightPill.vue";
+import Pill from "@/components/elements/Pill.vue";
 import Chevron from "../elements/Chevron.vue";
 
 defineProps<{
@@ -12,7 +12,7 @@ defineProps<{
     <h1>Education</h1>
     <div class="rows">
       <div v-for="(item, index) in content" :key="index" style="flex: 1">
-        <straight-pill class="pill" :left-rounded="index == content.length - 1">{{ item.startingDate }} - {{ item.endingDate }}</straight-pill>
+        <pill class="pill" :left-rounded="index == content.length - 1">{{ item.startingDate }} - {{ item.endingDate }}</pill>
         <ul>
           <li v-for="achievement in item.achievements" :key="achievement">
             {{ achievement }}

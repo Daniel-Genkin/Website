@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import Icon from "@/components/elements/Icon.vue";
-import RightPill from '@/components/elements/RightPill.vue';
+import Pill from '@/components/elements/Pill.vue';
 import router from '@/router';
 import { computed, ref } from 'vue';
-import Card from "../elements/Card.vue";
+import IconCard from "../elements/IconCard.vue";
 import Slideshow from '../elements/Slideshow.vue';
 
 const props = defineProps<{
@@ -17,14 +16,13 @@ var item = computed<Project>(() => props.content[position.value]);
 function goToPage(pageName: string): void {
   router.push(pageName);
 }
-
 </script>
 
 <template>
   <div>
     <h1>Projects</h1>
     <div id="root" class="rows">
-      <right-pill id="pill" color="#3A9BD2" />
+      <pill id="pill" color="#3A9BD2" />
       <slideshow color="#3A9BD2" 
                  :slide-count="content.length"
                  @slide-changed="position = $event">
@@ -35,9 +33,11 @@ function goToPage(pageName: string): void {
             <button @click="goToPage(item.pageLink)">Learn More</button>
           </div>
           <div class="cols">
-            <card class="cols" v-for="award in item.highlights" :key="award.caption" :center="true" :caption="award.caption">
-              <icon :src="award.icon" color="#3A9BD2" class="icon" />
-            </card>
+            <icon-card v-for="award in item.highlights" 
+                       :key="award.caption"
+                       :caption="award.caption"
+                       :icon="award.icon"
+                       color="#3A9BD2"/>
           </div>
         </div>
       </slideshow>
@@ -47,11 +47,7 @@ function goToPage(pageName: string): void {
 
 <style lag="scss" scoped>
 #pill {
-  width: 200px;
+  width: 100px;
 }
 
-.icon {
-  height: 45px;
-}
-
-</style>
+</style>../elements/IconCard.vue

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import StraightPill from '../elements/StraightPill.vue';
+import Pill from '../elements/Pill.vue';
 
 defineProps<{
   history: HistoryEntry[],
@@ -16,7 +16,7 @@ defineProps<{
         class="cols"
         style="margin: 0 64px;">
       <div class="rows">
-        <straight-pill class="datePill" :color="color"/>
+        <pill class="datePill" :color="color"/>
         <div class="cols">
           <h2 class="year">{{ date.year }}</h2>
           <ul>
@@ -57,4 +57,4 @@ defineProps<{
     fill: #A3A3A3;
   }
 }
-</style>
+</style>../elements/Pill.vue

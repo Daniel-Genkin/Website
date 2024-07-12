@@ -7,8 +7,8 @@ const props = defineProps<{
 }>();
 
 const loadedSVG = defineAsyncComponent(() => import(`@/assets/icons/${props.src}.vue`));
-
 </script>
+
 <template>
    <loadedSVG :color="color" />
 </template>
