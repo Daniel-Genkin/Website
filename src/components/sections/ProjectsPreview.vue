@@ -29,7 +29,7 @@ function goToPage(pageName: string): void {
                  :slide-count="content.length"
                  @slide-changed="position = $event">
         <div class="rows" style="height: 350px">
-          <div class="cols">``
+          <div class="cols">
             <h2>{{ item.title }}</h2>
             <p>{{ item.description }}</p>
             <button @click="goToPage(item.pageLink)">Learn More</button>

@@ -9,8 +9,8 @@ defineProps<{
 <template>
   <div>
     <h1>Work Experience</h1>
-    <div v-for="(item, index) in content" :key="index" class="rows">
-      <div class="cols">
+    <div v-for="(item, index) in content" :key="index" class="rows ">
+      <div class="cols content">
         <h2>{{ item.title }}</h2>
         <div class="rows">
           <p>{{ item.organization }}</p>
@@ -28,7 +28,7 @@ defineProps<{
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .pill {

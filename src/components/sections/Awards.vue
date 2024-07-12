@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div>
     <h1>Awards</h1>
-    <div v-for="item in content">
+    <div v-for="item in content" class="content">
       <div class="cols card">
         <card :caption="item.organization" :pillColor="color">
           <h2 :style="{color: color}">{{ item.title }}</h2>
