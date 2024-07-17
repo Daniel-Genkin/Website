@@ -12,11 +12,10 @@ defineProps<{
     <h1>History</h1>
     <div v-for="(date, index) in history" 
         :key="date.year"
-        class="cols"
-        style="margin: 0 64px;">
+        class="cols">
       <div class="rows">
-        <pill class="datePill" :color="color"/>
-        <div class="cols">
+        <pill class="datePill" :color="color" :half-height="false"/>
+        <div class="cols" style="width: 100%;">
           <h2 class="year">{{ date.year }}</h2>
           <ul>
             <li v-for="event in date.events" class="event">{{ event }}</li>
@@ -43,7 +42,7 @@ defineProps<{
 }
 .datePill {
   margin: 8px;
-  width: 25px;
+  width: 30px;
 }
 .divider {
   height: 45px;

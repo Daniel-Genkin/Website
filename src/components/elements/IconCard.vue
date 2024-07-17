@@ -29,9 +29,9 @@ defineProps<{
 }
 #card {
   background-color: #3D4041;
-  border-radius: 25px;
   padding: 12px;
   margin: 24px;
+  border-radius: 25px;
   border-style: solid;
   border-width: 5px;
   height: 100%;

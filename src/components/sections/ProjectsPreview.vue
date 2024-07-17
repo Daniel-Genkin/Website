@@ -31,7 +31,7 @@ function goToPage(pageName: string): void {
           <div class="cols">
             <h2>{{ item.title }}</h2>
             <p style="margin-right: 12px;">{{ item.description }}</p>
-            <div class="rows" style="flex-wrap: wrap; justify-content: center;">
+            <div class="rows wrap">
               <icon-card v-for="award in item.highlights" 
                          :key="award.caption"
                          :caption="award.caption"

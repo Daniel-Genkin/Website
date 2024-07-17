@@ -63,7 +63,7 @@ onMounted(() => {
   <main>
     <div v-if="error || project == null">An Error has occured while loading this page. Please try another one.</div>
     <div v-else>
-      <app-preview-intro :project="project" />
+      <app-preview-intro :project="project" class="content"/>
       
       <screenshots id="screenshots" 
                    v-if="sectionExists('screenshots')" 

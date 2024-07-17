@@ -16,7 +16,7 @@ var position = ref(0);
   <div>
     <h1>Screenshots</h1>
     <div id="root" class="rows">
-      <pill id="pill" :color="color" />
+      <pill id="pill" :color="color" :half-height="false" />
       <slideshow :color="color"
                  :slide-count="content.length"
                  @slide-changed="position = $event"
@@ -32,7 +32,7 @@ var position = ref(0);
 
 <style scoped>
 #pill {
-  width: 200px;
+  width: 30px;
 }
 
 video,
@@ -40,9 +40,6 @@ img {
   width: 100%;
   max-height: 500px;
   object-fit: contain;
-  background-color: #3D4041;
-  padding: 12px;
-  border-radius: 25px;
 }
 
 .center {
