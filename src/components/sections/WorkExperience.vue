@@ -9,8 +9,8 @@ defineProps<{
 <template>
   <div>
     <h1>Work Experience</h1>
-    <div v-for="(item, index) in content" :key="index" class="rows ">
-      <div class="cols content">
+    <div v-for="(item, index) in content" :key="index" class="rows content">
+      <div class="cols" style="width: 100%">
         <h2>{{ item.title }}</h2>
         <div class="rows">
           <p>{{ item.organization }}</p>
@@ -18,14 +18,16 @@ defineProps<{
         </div>
         <p>{{ item.description }}</p>
       </div>
-      <pill class="pill">
-        <img :src="item.logo" />
+      <pill class="pills">
+        <div class="iconContainer">
+          <img :src="item.logo" />
+        </div>
       </pill>
     </div>
   </div>
 </template>
 
-<style lag="scss" scoped>
+<style scoped>
 .rows {
   display: flex;
   flex-direction: row;
@@ -33,14 +35,25 @@ defineProps<{
   justify-content: center;
 }
 
-.pill {
-  width: 50%;
-  max-width: 250px;
-  height: 400px;
+.iconContainer {
+  background-color: white;
+  border-radius: 35px;
+  width: 80%;
+  left: 10%;
+  position: absolute;
+  bottom: -10px;
+  padding-top: 10%;
 
   img {
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
   }
+}
+
+.pills {
+  width: 300px;
+  height: 200px;
+  position: relative;
 }
 
 </style>

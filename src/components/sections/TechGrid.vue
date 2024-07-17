@@ -8,7 +8,7 @@ defineProps<{
 <template>
   <div>
     <h1>Techologies Used</h1>
-    <div class="techGrid">
+    <div class="techGrid content">
       <div 
         v-for="tech in technologies" 
         :key="tech.technology"

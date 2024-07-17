@@ -39,6 +39,7 @@ function sectionExists(sectionId: string): boolean {
 }
 
 onMounted(() => {
+  console.log(router.currentRoute.value.path);
   const targetProject = ALL_PROJECTS.find(x => x.pageLink === router.currentRoute.value.path);
   if (!targetProject) {
     error.value = true;
@@ -88,6 +89,6 @@ onMounted(() => {
   </main>
 </template>
 
-<style lag="scss" scoped>
+<style scoped>
 
 </style>

@@ -6,49 +6,89 @@ withDefaults(defineProps<{
     color: "#3A9BD2",
     hasBottomDecor: false
 });
+
 </script>
 
 <template>
   <div>
-    <div class="pill" 
-         :style="{
-             backgroundColor: color,
-             borderColor: `darken(${color}, 10%)`
-         }">
-         <slot ></slot>
-    </div>
-    <div v-if="hasBottomDecor" 
-         class="pill decor" 
-         :style="{
-             backgroundColor: color,
-             borderColor: `darken(${color}, 10%)`
-         }">
+    <div class="pillParent">
+      <div :class="['contents', $slots.default ? 'half' : 'full']">
+        <slot></slot>
+      </div>
+      <div :class="['pill', $slots.default ? 'half' : 'full']" 
+           :style="{
+               backgroundColor: color,
+               borderColor: `darken(${color}, 10%)`
+           }">
+      </div>
+      <div v-if="hasBottomDecor" 
+           class="pill small" 
+           :style="{
+               backgroundColor: color,
+               borderColor: `darken(${color}, 10%)`
+           }">
+      </div>
     </div>
 </div>
 </template>
 
 <style scoped>
+.contents {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  /* border-bottom-left-radius: 5.8vh;
+  border-bottom-right-radius: 5.8vh; */
+  overflow: hidden;
+}
+
+.contents.full {
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+.contents.half {
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+
 .pill {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 7px solid #353535a8;
+  outline: 8px solid #2c2d2e;
+  color: rgba(255, 255, 255, 0.739);
+  border-radius: 8vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 7px solid #353535a8;
-  outline: 8px solid #2c2d2e;
-  padding: 8px;
-  height: 100%;
-  width: 100%;
-  color: rgba(255, 255, 255, 0.739);
-  font-size: 1.5rem;
-  margin: 12px;
-  border-radius: 100vmax;
 }
 
-.decor {
-  height: 45px;
-  width: 60%;
-  margin-left: 20%;
+.pill.full {
+  top: 0;
+}
+
+.pill.half {
+  top: 50%;
+}
+.pill.small {
+  position: absolute;
+  height: 25px;
+  left: 25%;
+  right: 25%;
+  bottom: -50px;
+  z-index: -1;
+}
+
+.pillParent {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
 }
 </style>

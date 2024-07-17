@@ -25,19 +25,21 @@ function goToPage(pageName: string): void {
       <pill id="pill" color="#3A9BD2" />
       <slideshow color="#3A9BD2" 
                  :slide-count="content.length"
-                 @slide-changed="position = $event">
-        <div class="rows" style="height: 350px">
+                 @slide-changed="position = $event"
+                 class="content">
+        <div class="rows">
           <div class="cols">
             <h2>{{ item.title }}</h2>
             <p>{{ item.description }}</p>
-            <button @click="goToPage(item.pageLink)">Learn More</button>
-          </div>
-          <div class="cols">
-            <icon-card v-for="award in item.highlights" 
-                       :key="award.caption"
-                       :caption="award.caption"
-                       :icon="award.icon"
-                       color="#3A9BD2"/>
+            <div class="rows">
+              <icon-card v-for="award in item.highlights" 
+                         :key="award.caption"
+                         :caption="award.caption"
+                         :icon="award.icon"
+                         color="#3A9BD2"
+                         style="height: 150px; width: 300px;"/>
+            </div>
+            <button style="margin-top: 56px" @click="goToPage(item.pageLink)">Learn More</button>
           </div>
         </div>
       </slideshow>
@@ -45,9 +47,10 @@ function goToPage(pageName: string): void {
   </div>
 </template>
 
-<style lag="scss" scoped>
+<style scoped>
 #pill {
-  width: 100px;
+  width: 45px;
+  margin-right: 25px;
 }
 
-</style>../elements/IconCard.vue
+</style>

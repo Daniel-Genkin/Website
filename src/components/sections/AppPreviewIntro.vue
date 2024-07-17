@@ -13,7 +13,7 @@ function goToPage(page: string) {
 
 <template>
   <div>
-    <div id="root" class="rows">
+    <div id="root" class="rows content">
       <Pill :color="project.accentColor">
         <img :src="project.projectLogo" />
       </Pill>
@@ -25,15 +25,17 @@ function goToPage(page: string) {
           <icon-card v-for="highlight in project.highlights" 
                      :caption="highlight.caption" 
                      :icon="highlight.icon" 
-                     :color="project.accentColor"/>
+                     :color="project.accentColor"
+                     class="cardIcon"/>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style lag="scss" scoped>
+<style scoped>
 .cardIcon {
-  height: 45px;
+  height: 200px;
+  width: 300px;
 }
-</style>../elements/IconCard.vue
+</style>

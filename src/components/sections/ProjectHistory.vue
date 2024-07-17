@@ -5,7 +5,6 @@ defineProps<{
   history: HistoryEntry[],
   color: string
 }>();
-
 </script>
 
 <template>
@@ -13,14 +12,14 @@ defineProps<{
     <h1>History</h1>
     <div v-for="(date, index) in history" 
         :key="date.year"
-        class="cols"
+        class="cols content"
         style="margin: 0 64px;">
       <div class="rows">
         <pill class="datePill" :color="color"/>
         <div class="cols">
           <h2 class="year">{{ date.year }}</h2>
           <ul>
-            <li v-for="event in date.events">{{ event }}</li>
+            <li v-for="event in date.events" class="event">{{ event }}</li>
           </ul>
         </div>
       </div>
@@ -32,7 +31,7 @@ defineProps<{
   </div>
 </template>
 
-<style lag="scss" scoped>
+<style scoped>
 .cols {
   display: flex;
   flex-direction: column;
@@ -44,9 +43,11 @@ defineProps<{
 }
 .datePill {
   margin: 8px;
+  width: 25px;
 }
 .divider {
   height: 45px;
+  width: 25px;
   width: 8px;
   margin-left: 12px;
   background-color: #464646;
@@ -57,4 +58,7 @@ defineProps<{
     fill: #A3A3A3;
   }
 }
-</style>../elements/Pill.vue
+.event {
+  width: 100%;
+}
+</style>

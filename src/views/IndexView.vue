@@ -45,19 +45,3 @@ emits('onLoaded', {
     <!-- TODO ADD CONTACT SECTION? -->
   </main>
 </template>
-
-<style lag="scss" scoped>
-#content {
-  flex: 5;
-  padding: 64px;
-
-  p {
-    margin-left: 36px;
-  }
-}
-
-#pill {
-  flex: 1;
-}
-
-</style>

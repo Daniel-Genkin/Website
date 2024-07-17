@@ -30,7 +30,7 @@ var position = ref(0);
   </div>
 </template>
 
-<style lag="scss" scoped>
+<style scoped>
 #pill {
   width: 200px;
 }
