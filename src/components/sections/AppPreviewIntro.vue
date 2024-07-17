@@ -13,9 +13,9 @@ function goToPage(page: string) {
 
 <template>
   <div>
-    <div id="root" class="rows content">
+    <div id="root" class="rows">
       <Pill :color="project.accentColor">
-        <img :src="project.projectLogo" />
+        <img :src="project.projectLogo" style="max-width: 300px; height: 300px;"/>
       </Pill>
       <div class="cols">
         <h2>{{ project.title }}</h2>

@@ -37,11 +37,11 @@ emits('onLoaded', {
 
 <template>
   <main>
-    <index-intro id="top"/>
-    <projects-preview :content="ALL_PROJECTS" id="projects"/>
-    <work-experience :content="WORK_EXPERIENCE" id="workExperience"/>
-    <education :content="EDUCATION" id="education"/>
-    <awards :content="AWARDS" color="#3A9BD2" id="awards" />
+    <index-intro id="top" class="content" />
+    <projects-preview :content="ALL_PROJECTS" id="projects" class="content"/>
+    <work-experience :content="WORK_EXPERIENCE" id="workExperience" class="content"/>
+    <education :content="EDUCATION" id="education" class="content"/>
+    <awards :content="AWARDS" color="#3A9BD2" id="awards" class="content"/>
     <!-- TODO ADD CONTACT SECTION? -->
   </main>
 </template>

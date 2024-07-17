@@ -69,22 +69,26 @@ onMounted(() => {
                    v-if="sectionExists('screenshots')" 
                    :content="project.pageSections.screenshots" 
                    :color="project.accentColor"
-                   style="margin-top: 100px;"/>
+                   style="margin-top: 100px;"
+                   class="content"/>
       
       <project-history v-if="sectionExists('history')" 
                        :history="project.pageSections.history"
                        :color="project.accentColor"
-                       id="history" />
+                       id="history" 
+                       class="content"/>
       
       <awards v-if="sectionExists('awards')"
               :content="project.pageSections.awards" 
               :color="project.accentColor"
-              id="awards"/>
+              id="awards"
+              class="content"/>
 
       <tech-grid v-if="sectionExists('technologiesUsed')" 
                  :technologies="project.pageSections.technologiesUsed"
                  style="margin-top: 100px;"
-                 id="technologiesUsed" />
+                 id="technologiesUsed" 
+                 class="content"/>
     </div>
   </main>
 </template>

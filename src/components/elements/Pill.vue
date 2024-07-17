@@ -1,9 +1,11 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
     color: string,
+    halfHeight: boolean
     hasBottomDecor: boolean
 }>(), {
     color: "#3A9BD2",
+    halfHeight: true,
     hasBottomDecor: false
 });
 
@@ -12,10 +14,10 @@ withDefaults(defineProps<{
 <template>
   <div>
     <div class="pillParent">
-      <div :class="['contents', $slots.default ? 'half' : 'full']">
+      <div :class="['contents', halfHeight ? 'half' : 'full']">
         <slot></slot>
       </div>
-      <div :class="['pill', $slots.default ? 'half' : 'full']" 
+      <div :class="['pill', halfHeight ? 'half' : 'full']" 
            :style="{
                backgroundColor: color,
                borderColor: `darken(${color}, 10%)`
@@ -34,11 +36,8 @@ withDefaults(defineProps<{
 
 <style scoped>
 .contents {
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  right: 0;
-  top: 0;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -101,6 +100,5 @@ withDefaults(defineProps<{
   position: relative;
   height: 100%;
   width: 100%;
-  font-size: 1.5rem;
 }
 </style>

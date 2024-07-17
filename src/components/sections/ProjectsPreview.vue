@@ -22,11 +22,11 @@ function goToPage(pageName: string): void {
   <div>
     <h1>Projects</h1>
     <div id="root" class="rows">
-      <pill id="pill" color="#3A9BD2" />
+      <pill class="pills" color="#3A9BD2" :half-height="false"/>
       <slideshow color="#3A9BD2" 
                  :slide-count="content.length"
                  @slide-changed="position = $event"
-                 class="content">
+                 style="width: 100%;">
         <div class="rows">
           <div class="cols">
             <h2>{{ item.title }}</h2>
@@ -48,8 +48,8 @@ function goToPage(pageName: string): void {
 </template>
 
 <style scoped>
-#pill {
-  width: 45px;
+.pills {
+  width: 30px;
   margin-right: 25px;
 }
 

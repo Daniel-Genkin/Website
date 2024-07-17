@@ -12,7 +12,7 @@ defineProps<{
     <h1>History</h1>
     <div v-for="(date, index) in history" 
         :key="date.year"
-        class="cols content"
+        class="cols"
         style="margin: 0 64px;">
       <div class="rows">
         <pill class="datePill" :color="color"/>
