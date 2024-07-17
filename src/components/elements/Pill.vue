@@ -35,12 +35,10 @@ withDefaults(defineProps<{
 <style scoped>
 .contents {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   right: 0;
   top: 0;
-  /* border-bottom-left-radius: 5.8vh;
-  border-bottom-right-radius: 5.8vh; */
   overflow: hidden;
 }
 
@@ -50,8 +48,22 @@ withDefaults(defineProps<{
 }
 
 .contents.half {
-  border-bottom-left-radius: 25%;
-  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 85px;
+  border-bottom-right-radius: 85px;
+}
+
+@media screen and (max-width: 690px) {
+  .contents.half {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contents.half {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 }
 
 .pill {

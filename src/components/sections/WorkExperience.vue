@@ -11,10 +11,10 @@ defineProps<{
     <h1>Work Experience</h1>
     <div v-for="(item, index) in content" :key="index" class="rows content">
       <div class="cols" style="width: 100%">
-        <h2>{{ item.title }}</h2>
-        <div class="rows">
-          <p>{{ item.organization }}</p>
-          <p>{{ item.startingDate }} - {{ item.endingDate }}</p>
+        <h2 style="margin-bottom: 0">{{ item.title }}</h2>
+        <div class="cols">
+          <p style="margin: 0">{{ item.organization }}</p>
+          <p style="margin: 0">{{ item.startingDate }} - {{ item.endingDate }}</p>
         </div>
         <p>{{ item.description }}</p>
       </div>
@@ -32,7 +32,6 @@ defineProps<{
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
 }
 
 .iconContainer {
@@ -53,7 +52,6 @@ defineProps<{
 .pills {
   width: 300px;
   height: 200px;
-  position: relative;
 }
 
 </style>

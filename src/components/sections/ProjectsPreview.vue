@@ -30,14 +30,14 @@ function goToPage(pageName: string): void {
         <div class="rows">
           <div class="cols">
             <h2>{{ item.title }}</h2>
-            <p>{{ item.description }}</p>
-            <div class="rows">
+            <p style="margin-right: 12px;">{{ item.description }}</p>
+            <div class="rows" style="flex-wrap: wrap; justify-content: center;">
               <icon-card v-for="award in item.highlights" 
                          :key="award.caption"
                          :caption="award.caption"
                          :icon="award.icon"
                          color="#3A9BD2"
-                         style="height: 150px; width: 300px;"/>
+                         class="cardIcon"/>
             </div>
             <button style="margin-top: 56px" @click="goToPage(item.pageLink)">Learn More</button>
           </div>
@@ -53,4 +53,9 @@ function goToPage(pageName: string): void {
   margin-right: 25px;
 }
 
+.cardIcon {
+  height: 150px;
+  width: 300px; 
+  margin-bottom: 48px;
+}
 </style>
