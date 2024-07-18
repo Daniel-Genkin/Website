@@ -10,7 +10,7 @@ defineProps<{
   <div>
     <h1>Work Experience</h1>
     <div v-for="(item, index) in content" :key="index" class="rows container">
-      <div class="cols" style="max-width: 100%; margin-left: 12px;">
+      <div class="cols container-content">
         <h2 style="margin-bottom: 0">{{ item.title }}</h2>
         <div class="cols" style="margin-left: 12px;">
           <p style="margin: 0">{{ item.organization }}</p>
@@ -57,6 +57,11 @@ defineProps<{
   margin: 24px 0;
 }
 
+.container-content {
+  width: 100%;
+  margin-left: 12px;
+}
+
 @media screen and (max-width: 500px) {
   .container {
     flex-direction: column-reverse;
@@ -66,6 +71,11 @@ defineProps<{
   .pills {
     width: 90%;
     margin-left: 5%;
+  }
+
+  .container-content {
+    width: unset; /* I don't fully understand this but I need to swap max-width and width here to make this work properly */
+    max-width: 100%;
   }
 
 }
