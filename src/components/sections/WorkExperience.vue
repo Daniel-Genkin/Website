@@ -9,14 +9,14 @@ defineProps<{
 <template>
   <div>
     <h1>Work Experience</h1>
-    <div v-for="(item, index) in content" :key="index" class="rows">
-      <div class="cols" style="width: 100%; margin-left: 12px;">
+    <div v-for="(item, index) in content" :key="index" class="rows container">
+      <div class="cols" style="max-width: 100%; margin-left: 12px;">
         <h2 style="margin-bottom: 0">{{ item.title }}</h2>
         <div class="cols" style="margin-left: 12px;">
           <p style="margin: 0">{{ item.organization }}</p>
           <p style="margin: 0">{{ item.startingDate }} - {{ item.endingDate }}</p>
         </div>
-        <p style="margin-left: 12px;">{{ item.description }}</p>
+        <p style="margin: 0 12px;">{{ item.description }}</p>
       </div>
       <pill class="pills">
         <div class="iconContainer">
@@ -55,6 +55,19 @@ defineProps<{
   width: 350px;
   height: 150px;
   margin: 24px 0;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .pills {
+    width: 90%;
+    margin-left: 5%;
+  }
+
 }
 
 </style>

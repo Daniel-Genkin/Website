@@ -30,7 +30,7 @@ function goToPage(pageName: string): void {
         <div class="rows">
           <div class="cols">
             <h2>{{ item.title }}</h2>
-            <p style="margin-right: 12px;">{{ item.description }}</p>
+            <p style="margin: 0 12px;">{{ item.description }}</p>
             <div class="rows wrap">
               <icon-card v-for="award in item.highlights" 
                          :key="award.caption"
@@ -50,12 +50,22 @@ function goToPage(pageName: string): void {
 <style scoped>
 .pills {
   width: 30px;
-  margin-right: 25px;
 }
 
 .cardIcon {
   height: 150px;
   width: 300px; 
   margin-bottom: 48px;
+}
+@media screen and (max-width: 350px) {
+  .pills {
+    display: none;
+  }
+
+  .cardIcon {
+    height: 245px;
+    width: 200px; 
+    margin-bottom: 48px;
+  } 
 }
 </style>
