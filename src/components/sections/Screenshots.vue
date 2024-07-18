@@ -21,16 +21,31 @@ var position = ref(0);
                  :slide-count="content.length"
                  @slide-changed="position = $event"
                  style="width: 100%;">
-        <video v-if="content[position].endsWith('.mp4')" :src="content[position]" controls>
-          <span>Videos unsupported by browser</span> <!--THIS SPAN IS ALSO FOR SIZING WHEN THE VIDEO IS STILL LOADING-->
-        </video>
-        <img :src="content[position]" v-else />
+        <Transition name="fade" appear mode="out-in">
+          <div :key="position">
+            <video v-if="content[position].endsWith('.mp4')" :src="content[position]" controls>
+              <span>Videos unsupported by browser</span> <!--THIS SPAN IS ALSO FOR SIZING WHEN THE VIDEO IS STILL LOADING-->
+            </video>
+            <img :src="content[position]" v-else />
+          </div>
+        </Transition>
       </slideshow>
     </div>
   </div>
 </template>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
 #pill {
   width: 30px;
 }

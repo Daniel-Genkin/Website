@@ -13,6 +13,9 @@ withDefaults(defineProps<{
 
 const borderRadius = ref('80px');
 const pill = ref();
+const showContent = ref(false);
+
+let observer: IntersectionObserver | undefined;
 
 function onResize() {
   const width = pill.value.clientWidth;
@@ -32,10 +35,28 @@ function onResize() {
 
 onMounted(() => {
   window.addEventListener("resize", onResize);
+
+  observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          showContent.value = true;
+          observer?.disconnect();
+        }
+      },
+      {
+        root: null,
+        rootMargin: '20px',
+        threshold: 0.1
+      }
+    )
+
+    observer.observe(pill.value);
 });
 
 onUnmounted(() => {
   window.removeEventListener("resize", onResize);
+
+  observer?.disconnect();
 });
 </script>
 
@@ -43,7 +64,9 @@ onUnmounted(() => {
   <div>
     <div ref="pill" class="pillParent">
       <div :class="['contents', halfHeight ? 'half' : 'full']" :style="{borderBottomLeftRadius: borderRadius, borderBottomRightRadius: borderRadius}">
-        <slot></slot>
+        <Transition name="slide">
+          <slot v-if="showContent"></slot>
+        </Transition>
       </div>
       <div :class="['pill', halfHeight ? 'half' : 'full']" 
            :style="{
@@ -63,6 +86,17 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.slide-enter-active,
+.slide-leave-active {
+  transition: all .8s ease-in-out;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
 .contents {
   height: 100%;
   width: 100%;

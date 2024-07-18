@@ -27,27 +27,40 @@ function goToPage(pageName: string): void {
                  :slide-count="content.length"
                  @slide-changed="position = $event"
                  style="width: 100%;">
-        <div class="rows">
-          <div class="cols">
-            <h2>{{ item.title }}</h2>
-            <p style="margin: 0 12px;">{{ item.description }}</p>
-            <div class="rows wrap">
-              <icon-card v-for="award in item.highlights" 
-                         :key="award.caption"
-                         :caption="award.caption"
-                         :icon="award.icon"
-                         color="#3A9BD2"
-                         class="cardIcon"/>
+        <Transition name="fade" appear mode="out-in">
+          <div class="rows" :key="position">
+            <div class="cols">
+              <h2>{{ item.title }}</h2>
+              <p style="margin: 0 12px;">{{ item.description }}</p>
+              <div class="rows wrap">
+                <icon-card v-for="award in item.highlights" 
+                          :key="award.caption"
+                          :caption="award.caption"
+                          :icon="award.icon"
+                          color="#3A9BD2"
+                          class="cardIcon"/>
+              </div>
+              <button style="margin-top: 56px" @click="goToPage(item.pageLink)">Learn More</button>
             </div>
-            <button style="margin-top: 56px" @click="goToPage(item.pageLink)">Learn More</button>
           </div>
-        </div>
+        </Transition>
       </slideshow>
     </div>
   </div>
 </template>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
 .pills {
   width: 30px;
 }
