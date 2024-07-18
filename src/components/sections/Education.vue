@@ -54,6 +54,11 @@ defineProps<{
   .chevron {
     visibility: hidden;
   }
+
+  .pills {
+    height: 95px;
+  } 
+
 }
 
 </style>

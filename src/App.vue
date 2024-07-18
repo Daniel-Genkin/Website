@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, Transition } from 'vue';
-import { RouterLink, RouterView } from 'vue-router';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 var scrollPosition = ref("0");
 var showNav = ref(false);
@@ -41,10 +40,11 @@ function goToHash(hash: string): void {
 <template>
   <header>
     <Transition>
-      <nav ref="nav" v-if="showNav">
+      <nav v-if="showNav">
         <RouterLink to="/">Daniel Genkin</RouterLink>
-        <span style="width: 100%"></span>
-        <a v-for="menuItem in menuItems" :key="menuItem.link" @click="goToHash(menuItem.link)">{{ menuItem.label }}</a>
+        <div class="items">
+          <a v-for="menuItem in menuItems" :key="menuItem.link" @click="goToHash(menuItem.link)">{{ menuItem.label }}</a>
+        </div>
         <span id="navScrollBar" :style="{width: scrollPosition, backgroundColor: accentColor}"></span>
       </nav>
     </Transition>
@@ -53,6 +53,22 @@ function goToHash(hash: string): void {
 </template>
 
 <style scoped>
+.items * {
+  min-width: auto;
+}
+.items {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  overflow-x: scroll;
+  -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+.items::-webkit-scrollbar { 
+    display: none;
+}
 .v-enter-active,
 .v-leave-active {
   transition: all .5s ease;
@@ -65,5 +81,11 @@ function goToHash(hash: string): void {
 .v-leave-to{
   height: 0;
   opacity: 0;
+}
+
+@media screen and (max-width: 500px) { /* TODO FIND A WAY TO MAKE THIS DYNAMIC BASED ON WHAT ITEMS ARE IN THE LIST */
+  .items {
+    justify-content: unset; /* breaks scrolling */
+  }
 }
 </style>

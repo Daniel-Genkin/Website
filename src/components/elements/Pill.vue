@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue';
+
 withDefaults(defineProps<{
     color: string,
     halfHeight: boolean
@@ -9,12 +11,38 @@ withDefaults(defineProps<{
     hasBottomDecor: false
 });
 
+const borderRadius = ref('80px');
+const pill = ref();
+
+function onResize() {
+  const width = pill.value.clientWidth;
+  const height = pill.value.clientHeight;
+  const aspect = width/height;
+
+  if (aspect >= 1.06) {
+    borderRadius.value = '80px';
+
+  } else if (aspect >= 1.04) {
+    borderRadius.value = '75px';
+
+  } else {
+    borderRadius.value = '73px';
+  }
+}
+
+onMounted(() => {
+  window.addEventListener("resize", onResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", onResize);
+});
 </script>
 
 <template>
   <div>
-    <div class="pillParent">
-      <div :class="['contents', halfHeight ? 'half' : 'full']">
+    <div ref="pill" class="pillParent">
+      <div :class="['contents', halfHeight ? 'half' : 'full']" :style="{borderBottomLeftRadius: borderRadius, borderBottomRightRadius: borderRadius}">
         <slot></slot>
       </div>
       <div :class="['pill', halfHeight ? 'half' : 'full']" 
@@ -51,7 +79,7 @@ withDefaults(defineProps<{
   border-bottom-right-radius: 85px;
 }
 
-@media screen and (max-width: 690px) {
+/* @media screen and (max-width: 690px) {
   .contents.half {
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -63,13 +91,13 @@ withDefaults(defineProps<{
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
   }
-}
+} */
 
 .pill {
   border: 7px solid #353535a8;
   outline: 8px solid #2c2d2e;
   color: rgba(255, 255, 255, 0.739);
-  border-radius: 8vw;
+  border-radius: 100000000px;
   position: absolute;
   left: 0;
   right: 0;
