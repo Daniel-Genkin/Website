@@ -18,7 +18,7 @@ defineProps<{
         </div>
         <p>{{ item.description }}</p>
       </div>
-      <pill class="pills">
+      <pill class="pills" :half-height="true" color="#3A9BD2" :has-bottom-decor="false">
         <div class="iconContainer">
           <img :src="item.logo" />
         </div>

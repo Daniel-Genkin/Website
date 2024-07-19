@@ -1,15 +1,11 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue';
 
-withDefaults(defineProps<{
+defineProps<{
     color: string,
     halfHeight: boolean
     hasBottomDecor: boolean
-}>(), {
-    color: "#3A9BD2",
-    halfHeight: true,
-    hasBottomDecor: false
-});
+}>();
 
 const borderRadius = ref('80px');
 const pill = ref();

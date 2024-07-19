@@ -12,7 +12,7 @@ defineProps<{
 <template>
   <div>
     <div id="root" class="rows">
-      <pill :color="project.accentColor" id="pill" :has-bottom-decor="true">
+      <pill :color="project.accentColor" id="pill" :has-bottom-decor="true" :half-height="true">
         <img :src="project.projectLogo"/>
       </pill>
       <div class="cols fullWidth">

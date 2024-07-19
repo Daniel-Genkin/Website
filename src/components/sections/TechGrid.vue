@@ -1,7 +1,18 @@
 <script setup lang="ts">
-defineProps<{
-  technologies: TechnologyEntry[]
+
+const props = defineProps<{
+  technologies: TechnologyEntry[],
+  color: string
 }>();
+
+function onHover(e: any) {
+  e.target.style.borderColor = props.color;
+  console.log(e.target);
+}
+
+function onUnHover(e: any) {
+  e.target.style.borderColor = "transparent";
+}
 
 </script>
 
@@ -13,7 +24,9 @@ defineProps<{
         v-for="tech in technologies" 
         :key="tech.technology"
         class="card"
-        :data-title="tech.technology">
+        :data-title="tech.technology"
+        @mouseover="onHover"
+        @mouseleave="onUnHover">
         <img :src="tech.icon" class="icon" />
     </div>
     </div>
@@ -45,14 +58,14 @@ defineProps<{
   height: 200px;
   width: 200px;
   margin: 24px;
-  border-radius: 25px;
   padding: 12px;
   display: flex;
   flex-direction: column;
-}
-
-.card:hover {
-  background-color: #707475;
+  clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
+  border: 12px solid transparent;
+  border-left-style: double;
+  border-right-style: double;
+  border-radius: 60px;
 }
 
 [data-title]:hover:after {

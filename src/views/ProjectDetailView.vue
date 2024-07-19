@@ -93,6 +93,7 @@ onMounted(() => {
         v-if="sectionExists('technologiesUsed')" 
         id="technologiesUsed" 
         :technologies="project.pageSections.technologiesUsed"
+        :color="project.accentColor"
         style="margin-top: 100px;"
         class="content"/>
     </div>

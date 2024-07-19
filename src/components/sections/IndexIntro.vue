@@ -14,7 +14,7 @@ import { goToExternal } from '@/data/helpers';
           <button @click="goToExternal('https://www.linkedin.com/in/daniel-genkin-dgapps/')">LinkedIn</button>
         </div>
       </div>
-      <pill id="pill" :has-bottom-decor="true">
+      <pill id="pill" :has-bottom-decor="true" :half-height="true" color="#3A9BD2">
         <img src="@/assets/me.png" style="max-width: 300px; height: 300px;"/>
       </pill>
     </div>
