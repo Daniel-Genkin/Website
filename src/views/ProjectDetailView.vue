@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import OddSection from "@/components/elements/OddSection.vue";
 import AppPreviewIntro from "@/components/sections/AppPreviewIntro.vue";
 import Awards from '@/components/sections/Awards.vue';
 import ProjectHistory from "@/components/sections/ProjectHistory.vue";
@@ -59,44 +60,43 @@ onMounted(() => {
 </script>
 
 <template>
-  <main>
-    <div v-if="error || project == null">An Error has occured while loading this page. Please try another one.</div>
-    <div v-else>
-      <app-preview-intro 
-        :project="project" 
-        class="content"/>
-      
+  <div v-if="error || project == null">An Error has occured while loading this page. Please try another one.</div>
+  <main v-else>
+    <app-preview-intro 
+      :project="project" 
+      class="content"/>
+    
+    <odd-section>
       <screenshots 
         v-if="sectionExists('screenshots')" 
         id="screenshots" 
         :content="project.pageSections.screenshots" 
         :color="project.accentColor"
-        style="margin-top: 100px;"
         class="content"/>
-      
-      <project-history 
-        v-if="sectionExists('history')" 
-        id="history" 
-        :history="project.pageSections.history"
-        :color="project.accentColor"
-        style="margin-top: 100px;"
-        class="content"/>
-      
+    </odd-section>
+    
+    <project-history 
+      v-if="sectionExists('history')" 
+      id="history" 
+      :history="project.pageSections.history"
+      :color="project.accentColor"
+      class="content"/>
+    
+    <odd-section>
       <awards
         v-if="sectionExists('awards')"
         id="awards"
         :content="project.pageSections.awards" 
         :color="project.accentColor"
         class="content"/>
+    </odd-section>
 
-      <tech-grid 
-        v-if="sectionExists('technologiesUsed')" 
-        id="technologiesUsed" 
-        :technologies="project.pageSections.technologiesUsed"
-        :color="project.accentColor"
-        style="margin-top: 100px;"
-        class="content"/>
-    </div>
+    <tech-grid 
+      v-if="sectionExists('technologiesUsed')" 
+      id="technologiesUsed" 
+      :technologies="project.pageSections.technologiesUsed"
+      :color="project.accentColor"
+      class="content"/>
   </main>
 </template>
 
