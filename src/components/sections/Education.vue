@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div>
     <h1>Education</h1>
-    <div class="rows" style="justify-content: center;">
+    <div class="rows center">
       <div v-for="(item, index) in content" :key="index" style="flex: 1">
         <pill class="pills" :left-rounded="index == content.length - 1" :halfHeight="false">
           <h2 style="margin-left: 25px;">{{ item.startingDate }} - {{ item.endingDate }}</h2>

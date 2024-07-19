@@ -12,11 +12,11 @@ defineProps<{
     <div v-for="(item, index) in content" :key="index" class="rows container">
       <div class="cols container-content">
         <h2 style="margin-bottom: 0">{{ item.title }}</h2>
-        <div class="cols" style="margin-left: 12px;">
-          <p style="margin: 0">{{ item.organization }}</p>
-          <p style="margin: 0">{{ item.startingDate }} - {{ item.endingDate }}</p>
+        <div class="cols" style="margin: 8px 0">
+          <p>{{ item.organization }}</p>
+          <p>{{ item.startingDate }} - {{ item.endingDate }}</p>
         </div>
-        <p style="margin: 0 12px;">{{ item.description }}</p>
+        <p>{{ item.description }}</p>
       </div>
       <pill class="pills">
         <div class="iconContainer">

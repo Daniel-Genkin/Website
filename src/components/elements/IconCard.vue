@@ -15,7 +15,7 @@ defineProps<{
       borderColor: color
     }">
       <icon :src="icon" class="cardIcon" :color="color" />
-      <h3 class="caption" style="text-align: center;">{{ caption }}</h3>
+      <h3 class="caption">{{ caption }}</h3>
     </div>
   </div>
 </template>
@@ -26,6 +26,7 @@ defineProps<{
 }
 .caption {
   margin: 0;
+  text-align: center;
 }
 #card {
   background-color: #3D4041;

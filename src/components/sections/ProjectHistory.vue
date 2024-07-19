@@ -15,7 +15,7 @@ defineProps<{
         class="cols">
       <div class="rows">
         <pill class="datePill" :color="color" :half-height="false"/>
-        <div class="cols" style="width: 100%;">
+        <div class="cols fullWidth">
           <h2 class="year">{{ date.year }}</h2>
           <ul>
             <li v-for="event in date.events" class="event">{{ event }}</li>

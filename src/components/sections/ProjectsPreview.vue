@@ -26,12 +26,12 @@ function goToPage(pageName: string): void {
       <slideshow color="#3A9BD2" 
                  :slide-count="content.length"
                  @slide-changed="position = $event"
-                 style="width: 100%;">
+                 class="fullWidth">
         <Transition name="fade" appear mode="out-in">
           <div class="rows" :key="position">
             <div class="cols">
               <h2>{{ item.title }}</h2>
-              <p style="margin: 0 12px;">{{ item.description }}</p>
+              <p>{{ item.description }}</p>
               <div class="rows wrap">
                 <icon-card v-for="award in item.highlights" 
                           :key="award.caption"

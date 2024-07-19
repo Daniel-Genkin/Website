@@ -17,9 +17,9 @@ function goToPage(page: string) {
       <pill :color="project.accentColor" id="pill" :has-bottom-decor="true">
         <img :src="project.projectLogo"/>
       </pill>
-      <div class="cols" style="width: 100%;">
+      <div class="cols fullWidth">
         <h2>{{ project.title }}</h2>
-        <p style="padding: 0 12px;">{{ project.description }}</p>
+        <p>{{ project.description }}</p>
         <button @click="goToPage(project.projectButton.link)">{{ project.projectButton.caption }}</button>
         <div class="rows wrap">
           <icon-card v-for="highlight in project.highlights" 

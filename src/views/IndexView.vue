@@ -37,11 +37,34 @@ emits('onLoaded', {
 
 <template>
   <main>
-    <index-intro id="top" class="content" />
-    <projects-preview :content="ALL_PROJECTS" id="projects" class="content"/>
-    <work-experience :content="WORK_EXPERIENCE" id="workExperience" class="content"/>
-    <education :content="EDUCATION" id="education" class="content"/>
-    <awards :content="AWARDS" color="#3A9BD2" id="awards" class="content"/>
+    <index-intro 
+      id="top" 
+      class="content" />
+
+    <projects-preview
+      :content="ALL_PROJECTS" 
+      id="projects" 
+      class="content" 
+      style="margin-top: 100px;"/>
+
+    <work-experience
+      :content="WORK_EXPERIENCE" 
+      id="workExperience" 
+      class="content" 
+      style="margin-top: 100px;"/>
+
+    <education 
+      :content="EDUCATION" 
+      id="education" 
+      class="content" 
+      style="margin-top: 100px;"/>
+      
+    <awards 
+      color="#3A9BD2"
+      :content="AWARDS" 
+      id="awards" 
+      class="content" 
+      style="margin-top: 100px;"/>
     <!-- TODO ADD CONTACT SECTION? -->
   </main>
 </template>

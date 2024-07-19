@@ -42,6 +42,9 @@ h1 {
   }
 }
 
+.fullWidth {
+  width: 100%;
+}
 
 .h2 {
   color: white;
@@ -49,6 +52,7 @@ h1 {
 
 p {
   color: #bdbdbd;
+  margin: 0 12px;
 }
 
 button {
@@ -94,6 +98,11 @@ a:hover, button:hover {
   display: flex;
   flex-direction: row;
 }
+
+.center {
+  justify-content: center;
+}
+
 .cols {
   display: flex;
   flex-direction: column;

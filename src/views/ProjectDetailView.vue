@@ -63,32 +63,39 @@ onMounted(() => {
   <main>
     <div v-if="error || project == null">An Error has occured while loading this page. Please try another one.</div>
     <div v-else>
-      <app-preview-intro :project="project" class="content"/>
+      <app-preview-intro 
+        :project="project" 
+        class="content"/>
       
-      <screenshots id="screenshots" 
-                   v-if="sectionExists('screenshots')" 
-                   :content="project.pageSections.screenshots" 
-                   :color="project.accentColor"
-                   style="margin-top: 100px;"
-                   class="content"/>
+      <screenshots 
+        v-if="sectionExists('screenshots')" 
+        id="screenshots" 
+        :content="project.pageSections.screenshots" 
+        :color="project.accentColor"
+        style="margin-top: 100px;"
+        class="content"/>
       
-      <project-history v-if="sectionExists('history')" 
-                       :history="project.pageSections.history"
-                       :color="project.accentColor"
-                       id="history" 
-                       class="content"/>
+      <project-history 
+        v-if="sectionExists('history')" 
+        id="history" 
+        :history="project.pageSections.history"
+        :color="project.accentColor"
+        style="margin-top: 100px;"
+        class="content"/>
       
-      <awards v-if="sectionExists('awards')"
-              :content="project.pageSections.awards" 
-              :color="project.accentColor"
-              id="awards"
-              class="content"/>
+      <awards
+        v-if="sectionExists('awards')"
+        id="awards"
+        :content="project.pageSections.awards" 
+        :color="project.accentColor"
+        class="content"/>
 
-      <tech-grid v-if="sectionExists('technologiesUsed')" 
-                 :technologies="project.pageSections.technologiesUsed"
-                 style="margin-top: 100px;"
-                 id="technologiesUsed" 
-                 class="content"/>
+      <tech-grid 
+        v-if="sectionExists('technologiesUsed')" 
+        id="technologiesUsed" 
+        :technologies="project.pageSections.technologiesUsed"
+        style="margin-top: 100px;"
+        class="content"/>
     </div>
   </main>
 </template>

@@ -20,7 +20,7 @@ var position = ref(0);
       <slideshow :color="color"
                  :slide-count="content.length"
                  @slide-changed="position = $event"
-                 style="width: 100%;">
+                 class="fullWidth">
         <Transition name="fade" appear mode="out-in">
           <div :key="position">
             <video v-if="content[position].endsWith('.mp4')" :src="content[position]" controls>
