@@ -56,12 +56,21 @@ p {
 }
 
 button {
-  color: #D1D1D1;
-  background-color: #2C2C2C;
-  border-radius: 25px;
-  padding: 12px 24px;
-  border-style: none;
+  border: 6px solid transparent;
+  border-left-style: double;
+  border-right-style: double;
+  border-radius: 60px;
+  border-color: rgb(58, 155, 210);
+  padding: 12px 16px;
   margin: 8px;
+  color: #3A9BD2;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: #3a9ad227;
+}
+
+button:hover, button:focus {
+  background-color: #3a9ad263;
 }
 
 nav {
@@ -115,6 +124,14 @@ a:hover, button:hover {
 .content {
   width: 100%;
   max-width: 1200px;
+}
+
+.coolBorder {
+  border: 12px solid transparent;
+  border-left-style: double;
+  border-right-style: double;
+  border-radius: 60px;
+  clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
 }
 
 .verticalPill {

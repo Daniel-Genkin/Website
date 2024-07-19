@@ -18,7 +18,7 @@ defineProps<{
       <div class="cols fullWidth">
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
-        <button @click="goToExternal(project.projectButton.link)">{{ project.projectButton.caption }}</button>
+        <button :style="{borderColor: project.accentColor, color: project.accentColor}" @click="goToExternal(project.projectButton.link)">{{ project.projectButton.caption }}</button>
       </div>
     </div>
     <div class="rows wrap">
@@ -33,7 +33,7 @@ defineProps<{
 
 <style scoped>
 .cardIcon {
-  height: 150px;
+  height: 175px;
   width: 275px;
   margin-bottom: 48px;
 }

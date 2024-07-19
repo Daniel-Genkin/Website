@@ -35,15 +35,40 @@ function onLoaded(payload: OnLoadData): void {
 function goToHash(hash: string): void {
   location.hash = hash;
 }
+
+function onHover(e: any) {
+  e.target.style.color = accentColor.value;
+}
+
+function onUnHover(e: any) {
+  e.target.style.color = "white";
+}
 </script>
 
 <template>
   <header>
     <Transition>
       <nav v-if="showNav">
-        <RouterLink to="/">Daniel Genkin</RouterLink>
+        <RouterLink 
+          to="/"
+          @focusin="onHover"
+          @focusout="onUnHover"
+          @mouseover="onHover"
+          @mouseleave="onUnHover">
+            Daniel Genkin
+        </RouterLink>
         <div class="items">
-          <a v-for="menuItem in menuItems" :key="menuItem.link" @click="goToHash(menuItem.link)">{{ menuItem.label }}</a>
+          <a 
+            v-for="menuItem in menuItems" 
+            :key="menuItem.link" 
+            class="item" 
+            @click="goToHash(menuItem.link)"
+            @focusin="onHover"
+            @focusout="onUnHover"
+            @mouseover="onHover"
+            @mouseleave="onUnHover">
+              {{ menuItem.label }}
+            </a>
         </div>
         <span id="navScrollBar" :style="{width: scrollPosition, backgroundColor: accentColor}"></span>
       </nav>
@@ -53,9 +78,10 @@ function goToHash(hash: string): void {
 </template>
 
 <style scoped>
-.items * {
+.item {
   min-width: auto;
 }
+
 .items {
   width: 100%;
   height: 50px;

@@ -65,6 +65,7 @@ function setPosition(newPosition: number): void {
   height: 25px;
   width: 25px;
   padding: 0;
+  border-style: none;
 }
 
 svg {

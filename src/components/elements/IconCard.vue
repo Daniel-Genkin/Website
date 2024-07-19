@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <div>
-    <div id="card" :style="{
+    <div id="card" class="coolBorder" :style="{
       borderColor: color
     }">
       <icon :src="icon" class="cardIcon" :color="color" />
@@ -32,9 +32,6 @@ defineProps<{
   background-color: #3D4041;
   padding: 12px;
   margin: 24px;
-  border-radius: 25px;
-  border-style: solid;
-  border-width: 5px;
   height: 100%;
 }
 </style>

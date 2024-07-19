@@ -37,7 +37,7 @@ var item = computed<Project>(() => props.content[position.value]);
                           color="#3A9BD2"
                           class="cardIcon"/>
               </div>
-              <button style="margin-top: 56px" @click="goToInternal(router, item.pageLink)">Learn More</button>
+              <button style="margin-top: 56px;" @click="goToInternal(router, item.pageLink)">Learn More</button>
             </div>
           </div>
         </Transition>

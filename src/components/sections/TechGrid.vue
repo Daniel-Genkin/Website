@@ -22,7 +22,7 @@ function onUnHover(e: any) {
       <div 
         v-for="tech in technologies" 
         :key="tech.technology"
-        class="card"
+        class="card coolBorder"
         :data-title="tech.technology"
         @focusin="onHover"
         @focusout="onUnHover"
@@ -62,11 +62,6 @@ function onUnHover(e: any) {
   padding: 12px;
   display: flex;
   flex-direction: column;
-  clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
-  border: 12px solid transparent;
-  border-left-style: double;
-  border-right-style: double;
-  border-radius: 60px;
 }
 
 [data-title]:focus:after,
