@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { goToExternal } from "@/data/helpers";
 import IconCard from "../elements/IconCard.vue";
 import Pill from "../elements/Pill.vue";
 
@@ -6,9 +7,6 @@ defineProps<{
   project: Project
 }>();
 
-function goToPage(page: string) {
-  window.open(page, '_blank')!.focus();
-}
 </script>
 
 <template>
@@ -20,7 +18,7 @@ function goToPage(page: string) {
       <div class="cols fullWidth">
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
-        <button @click="goToPage(project.projectButton.link)">{{ project.projectButton.caption }}</button>
+        <button @click="goToExternal(project.projectButton.link)">{{ project.projectButton.caption }}</button>
         <div class="rows wrap">
           <icon-card v-for="highlight in project.highlights" 
                      :caption="highlight.caption" 

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Pill from '@/components/elements/Pill.vue';
+import { goToInternal } from '@/data/helpers';
 import router from '@/router';
 import { computed, ref } from 'vue';
 import IconCard from "../elements/IconCard.vue";
@@ -12,10 +13,6 @@ const props = defineProps<{
 var position = ref(0);
 
 var item = computed<Project>(() => props.content[position.value]);
-
-function goToPage(pageName: string): void {
-  router.push(pageName);
-}
 </script>
 
 <template>
@@ -40,7 +37,7 @@ function goToPage(pageName: string): void {
                           color="#3A9BD2"
                           class="cardIcon"/>
               </div>
-              <button style="margin-top: 56px" @click="goToPage(item.pageLink)">Learn More</button>
+              <button style="margin-top: 56px" @click="goToInternal(router, item.pageLink)">Learn More</button>
             </div>
           </div>
         </Transition>
