@@ -111,20 +111,6 @@ onUnmounted(() => {
   border-bottom-right-radius: 85px;
 }
 
-/* @media screen and (max-width: 690px) {
-  .contents.half {
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .contents.half {
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-  }
-} */
-
 .pill {
   border: 7px solid #353535a8;
   outline: 8px solid #2c2d2e;

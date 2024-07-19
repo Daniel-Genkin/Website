@@ -24,6 +24,8 @@ function onUnHover(e: any) {
         :key="tech.technology"
         class="card"
         :data-title="tech.technology"
+        @focusin="onHover"
+        @focusout="onUnHover"
         @mouseover="onHover"
         @mouseleave="onUnHover">
         <img :src="tech.icon" class="icon" />
@@ -67,6 +69,7 @@ function onUnHover(e: any) {
   border-radius: 60px;
 }
 
+[data-title]:focus:after,
 [data-title]:hover:after {
     opacity: 1;
     transition: all 0.3s ease;

@@ -19,14 +19,14 @@ defineProps<{
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
         <button @click="goToExternal(project.projectButton.link)">{{ project.projectButton.caption }}</button>
-        <div class="rows wrap">
-          <icon-card v-for="highlight in project.highlights" 
-                     :caption="highlight.caption" 
-                     :icon="highlight.icon" 
-                     :color="project.accentColor"
-                     class="cardIcon"/>
-        </div>
       </div>
+    </div>
+    <div class="rows wrap">
+      <icon-card v-for="highlight in project.highlights" 
+                 :caption="highlight.caption" 
+                 :icon="highlight.icon" 
+                 :color="project.accentColor"
+                 class="cardIcon"/>
     </div>
   </div>
 </template>
@@ -68,13 +68,4 @@ defineProps<{
     margin-right: 5%;
   }
 }
-
-/* @media screen and (max-width: 600px) {
-  .cardIcon {
-    height: 245px;
-    width: 200px; 
-    margin-bottom: 48px;
-  } 
-} */
-
 </style>

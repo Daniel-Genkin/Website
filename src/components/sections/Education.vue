@@ -27,12 +27,6 @@ defineProps<{
 </template>
 
 <style scoped>
-.rows {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-}
-
 .pills {
   height: 55px;
   top: 0;
@@ -51,7 +45,6 @@ defineProps<{
   .pills {
     height: 95px;
   } 
-
 }
 
 </style>

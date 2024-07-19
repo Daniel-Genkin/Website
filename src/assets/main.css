@@ -116,3 +116,16 @@ a:hover, button:hover {
   width: 100%;
   max-width: 1200px;
 }
+
+.verticalPill {
+  width: 30px;
+  min-width: 30px;
+  margin-right: 12px;
+}
+
+@media screen and (max-width: 400px) {
+  .verticalPill {
+    width: 20px;
+    min-width: 20px;
+  }
+}

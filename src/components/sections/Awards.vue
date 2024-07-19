@@ -11,8 +11,8 @@ defineProps<{
   <div>
     <h1>Awards</h1>
     <div v-for="item in content" style="margin-bottom: 25px;">
-      <div class="rows center">
-        <pill :color="color" class="pills" :half-height="false" :has-bottom-decor="false"/>
+      <div class="rows">
+        <pill :color="color" class="verticalPill" :half-height="false" :has-bottom-decor="false"/>
         <div class="cols fullWidth">
           <h2 :style="{color: color, margin: 0}">{{ item.title }}</h2>
           <h3>{{ item.organization }}</h3>
@@ -24,9 +24,5 @@ defineProps<{
 </template>
 
 <style scoped>
-.pills {
-  width: 40px;
-  margin-right: 25px;
-}
 
 </style>
