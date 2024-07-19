@@ -23,8 +23,10 @@ defineProps<{
 <style scoped>
 .techGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .icon {

@@ -13,7 +13,7 @@ defineProps<{
     <div v-for="item in content" style="margin-bottom: 25px;">
       <div class="rows" style="justify-content: center;">
         <pill :color="color" class="pills" :half-height="false"/>
-        <div class="cols" style="width: 400px;">
+        <div class="cols" style="width: 100%;">
           <h2 :style="{color: color, margin: 0}">{{ item.title }}</h2>
           <h3>{{ item.organization }}</h3>
         </div>
@@ -25,7 +25,7 @@ defineProps<{
 
 <style scoped>
 .pills {
-  width: 30px;
+  width: 40px;
   margin-right: 25px;
 }
 

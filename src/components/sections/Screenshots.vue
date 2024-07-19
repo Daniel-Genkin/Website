@@ -80,4 +80,11 @@ img {
   width: 35px;
   padding: 0;
 }
+
+@media screen and (max-width: 450px) {
+  #pill {
+    display: none;
+  }
+}
+
 </style>

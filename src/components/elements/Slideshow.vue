@@ -56,7 +56,7 @@ function setPosition(newPosition: number): void {
   justify-content: center;
   align-items: center;
   height: 50px;
-  width: 100;
+  width: 100%;
 }
 
 .selectiondot {
@@ -73,5 +73,16 @@ svg {
 
 .chevron:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .selectiondot {
+    height: 15px;
+    width: 15px;
+  } 
+  svg {
+    width: 25px;
+  }
+
 }
 </style>

@@ -101,6 +101,8 @@ onUnmounted(() => {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: end;
 }
 
 .contents.full {

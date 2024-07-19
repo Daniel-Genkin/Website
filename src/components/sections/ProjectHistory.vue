@@ -46,7 +46,6 @@ defineProps<{
 }
 .divider {
   height: 45px;
-  width: 25px;
   width: 8px;
   margin-left: 12px;
   background-color: #464646;
@@ -58,6 +57,17 @@ defineProps<{
   }
 }
 .event {
-  width: 100%;
+  max-width: 100%;
+  padding-right: 12px;
+}
+
+@media screen and (max-width: 400px) {
+  .datePill {
+    width: 25px;
+  }
+
+  .divider {
+    margin-left: 8px;
+  }
 }
 </style>
