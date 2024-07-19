@@ -68,6 +68,10 @@ function setPosition(newPosition: number): void {
   border-style: none;
 }
 
+.selectiondot:hover, .selectiondot:focus {
+  background-color: #686868;
+}
+
 svg {
   width: 45px;
 }

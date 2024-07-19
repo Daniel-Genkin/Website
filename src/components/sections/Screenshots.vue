@@ -57,30 +57,6 @@ img {
   object-fit: contain;
 }
 
-.center {
-  justify-content: center;
-  align-items: center;
-}
-
-.selectiondot {
-  background-color: #3D4041;
-  border-radius: 10000px;
-  height: 25px;
-  width: 25px;
-  padding: 0;
-
-  &.selected {
-    background-color: #3A9BD2
-  }
-}
-
-.arrow {
-  background-color: none;
-  height: 35px;
-  width: 35px;
-  padding: 0;
-}
-
 @media screen and (max-width: 450px) {
   #pill {
     display: none;
