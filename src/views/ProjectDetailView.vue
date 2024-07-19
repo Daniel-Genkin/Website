@@ -5,8 +5,8 @@ import ProjectHistory from "@/components/sections/ProjectHistory.vue";
 import Screenshots from "@/components/sections/Screenshots.vue";
 import TechGrid from '@/components/sections/TechGrid.vue';
 import { ALL_PROJECTS } from '@/data/data';
-import router from '@/router';
 import { onMounted, ref } from 'vue';
+import { useRouter } from "vue-router";
 
 const emits = defineEmits({
   onLoaded(payload: OnLoadData) { return true }
@@ -34,12 +34,11 @@ function parseMenuItems(project: Project): MenuItem[] {
 
 // Note that sectionName must start with a #
 function sectionExists(sectionId: string): boolean {
-  console.log(menuItems.value, sectionId);
   return menuItems.value.findIndex(item => item.link === sectionId) !== -1;
 }
 
 onMounted(() => {
-  console.log(router.currentRoute.value.path);
+  const router = useRouter();
   const targetProject = ALL_PROJECTS.find(x => x.pageLink === router.currentRoute.value.path);
   if (!targetProject) {
     error.value = true;
