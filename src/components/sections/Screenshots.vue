@@ -16,7 +16,7 @@ var position = ref(0);
   <div>
     <h1>Screenshots</h1>
     <div id="root" class="rows">
-      <pill id="pill" :color="color" :half-height="false" />
+      <pill id="pill" :color="color" :half-height="false" :has-bottom-decor="false"/>
       <slideshow :color="color"
                  :slide-count="content.length"
                  @slide-changed="position = $event"

@@ -7,7 +7,6 @@ const props = defineProps<{
 
 function onHover(e: any) {
   e.target.style.borderColor = props.color;
-  console.log(e.target);
 }
 
 function onUnHover(e: any) {

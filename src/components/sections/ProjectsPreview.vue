@@ -19,7 +19,7 @@ var item = computed<Project>(() => props.content[position.value]);
   <div>
     <h1>Projects</h1>
     <div id="root" class="rows">
-      <pill class="pills" color="#3A9BD2" :half-height="false"/>
+      <pill class="pills" color="#3A9BD2" :half-height="false" :has-bottom-decor="false"/>
       <slideshow color="#3A9BD2" 
                  :slide-count="content.length"
                  @slide-changed="position = $event"

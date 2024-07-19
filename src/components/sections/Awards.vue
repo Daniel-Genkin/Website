@@ -12,7 +12,7 @@ defineProps<{
     <h1>Awards</h1>
     <div v-for="item in content" style="margin-bottom: 25px;">
       <div class="rows center">
-        <pill :color="color" class="pills" :half-height="false"/>
+        <pill :color="color" class="pills" :half-height="false" :has-bottom-decor="false"/>
         <div class="cols fullWidth">
           <h2 :style="{color: color, margin: 0}">{{ item.title }}</h2>
           <h3>{{ item.organization }}</h3>
