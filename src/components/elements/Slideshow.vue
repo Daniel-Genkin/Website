@@ -36,14 +36,22 @@ function setPosition(newPosition: number): void {
       <slot></slot>
       <!-- slideshow controls -->
       <div class="controls">
-        <icon class="chevron" src="chevron-left" :color="color" @click="setPositionBy(-1)"/>
+        <icon 
+          class="chevron" 
+          src="chevron-left" 
+          :color="color" 
+          @click="setPositionBy(-1)"/>
         <button 
           v-for="i in slideCount" :key="i"
           @click="setPosition(i - 1)"
           class="selectiondot"
           :style="{backgroundColor: position == i - 1 ? color : ''}">
         </button>
-        <icon class="chevron" src="chevron-right" :color="color" @click="setPositionBy(1)"/>
+        <icon 
+          class="chevron" 
+          src="chevron-right" 
+          :color="color" 
+          @click="setPositionBy(1)"/>
       </div>
     </div>
   </div>

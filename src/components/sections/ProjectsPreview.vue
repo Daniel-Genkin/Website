@@ -19,23 +19,28 @@ var item = computed<Project>(() => props.content[position.value]);
   <div>
     <h1>Projects</h1>
     <div id="root" class="rows">
-      <pill class="pills" color="#3A9BD2" :half-height="false" :has-bottom-decor="false"/>
-      <slideshow color="#3A9BD2" 
-                 :slide-count="content.length"
-                 @slide-changed="position = $event"
-                 class="fullWidth">
-        <Transition name="fade" appear mode="out-in">
+      <pill 
+        class="pills" 
+        color="#3A9BD2" 
+        :half-height="false" 
+        :has-bottom-decor="false"/>
+      <slideshow 
+        color="#3A9BD2" 
+        :slide-count="content.length"
+        @slide-changed="position = $event"
+        class="fullWidth">
+        <Transition name="slide-fade" appear mode="out-in">
           <div class="rows" :key="position">
             <div class="cols">
               <h2>{{ item.title }}</h2>
               <p>{{ item.description }}</p>
               <div class="rows wrap">
                 <icon-card v-for="award in item.highlights" 
-                          :key="award.caption"
-                          :caption="award.caption"
-                          :icon="award.icon"
-                          color="#3A9BD2"
-                          class="cardIcon"/>
+                  :key="award.caption"
+                  :caption="award.caption"
+                  :icon="award.icon"
+                  color="#3A9BD2"
+                  class="cardIcon"/>
               </div>
               <button style="margin-top: 56px;" @click="goToInternal(router, item.pageLink)">Learn More</button>
             </div>
@@ -47,17 +52,6 @@ var item = computed<Project>(() => props.content[position.value]);
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
-}
-
 .pills {
   width: 30px;
 }

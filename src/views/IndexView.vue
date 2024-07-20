@@ -66,6 +66,5 @@ emits('onLoaded', {
       :content="AWARDS" 
       id="awards" 
       class="content" />
-    <!-- TODO ADD CONTACT SECTION? -->
   </main>
 </template>

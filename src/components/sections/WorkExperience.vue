@@ -9,7 +9,10 @@ defineProps<{
 <template>
   <div>
     <h1>Work Experience</h1>
-    <div v-for="(item, index) in content" :key="index" class="rows container">
+    <div 
+      v-for="(item, index) in content" 
+      :key="index" 
+      class="rows container">
       <div class="cols container-content">
         <h2 style="margin-bottom: 0">{{ item.title }}</h2>
         <div class="cols" style="margin: 8px 0">
@@ -18,7 +21,11 @@ defineProps<{
         </div>
         <p>{{ item.description }}</p>
       </div>
-      <pill class="pills" :half-height="true" color="#3A9BD2" :has-bottom-decor="false">
+      <pill 
+        class="pills" 
+        color="#3A9BD2" 
+        :half-height="true" 
+        :has-bottom-decor="false">
         <div class="iconContainer">
           <img :src="item.logo" />
         </div>

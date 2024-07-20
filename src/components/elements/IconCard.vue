@@ -11,10 +11,16 @@ defineProps<{
 
 <template>
   <div>
-    <div id="card" class="coolBorder" :style="{
-      borderColor: color
-    }">
-      <icon :src="icon" class="cardIcon" :color="color" />
+    <div 
+      id="card"
+      class="coolBorder"
+      :style="{
+        borderColor: color
+      }">
+      <icon
+        :src="icon" 
+        class="cardIcon"
+        :color="color" />
       <h3 class="caption">{{ caption }}</h3>
     </div>
   </div>

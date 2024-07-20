@@ -66,9 +66,8 @@ onMounted(() => {
       :project="project" 
       class="content"/>
     
-    <odd-section>
-      <screenshots 
-        v-if="sectionExists('screenshots')" 
+    <odd-section v-if="sectionExists('screenshots')" >
+      <screenshots
         id="screenshots" 
         :content="project.pageSections.screenshots" 
         :color="project.accentColor"
@@ -82,9 +81,8 @@ onMounted(() => {
       :color="project.accentColor"
       class="content"/>
     
-    <odd-section>
+    <odd-section v-if="sectionExists('awards')">
       <awards
-        v-if="sectionExists('awards')"
         id="awards"
         :content="project.pageSections.awards" 
         :color="project.accentColor"

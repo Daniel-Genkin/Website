@@ -16,12 +16,17 @@ var position = ref(0);
   <div>
     <h1>Screenshots</h1>
     <div id="root" class="rows">
-      <pill id="pill" class="verticalPill" :color="color" :half-height="false" :has-bottom-decor="false"/>
+      <pill 
+        id="pill" 
+        class="verticalPill" 
+        :color="color" 
+        :half-height="false" 
+        :has-bottom-decor="false"/>
       <slideshow :color="color"
-                 :slide-count="content.length"
-                 @slide-changed="position = $event"
-                 class="fullWidth">
-        <Transition name="fade" appear mode="out-in">
+        :slide-count="content.length"
+        @slide-changed="position = $event"
+        class="fullWidth">
+        <Transition name="slide-fade" appear mode="out-in">
           <div :key="position">
             <video v-if="content[position].endsWith('.mp4')" :src="content[position]" controls>
               <span>Videos unsupported by browser</span> <!--THIS SPAN IS ALSO FOR SIZING WHEN THE VIDEO IS STILL LOADING-->
@@ -35,17 +40,6 @@ var position = ref(0);
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
-}
-
 #pill {
   width: 30px;
 }

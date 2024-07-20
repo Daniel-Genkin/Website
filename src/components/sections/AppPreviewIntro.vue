@@ -12,21 +12,33 @@ defineProps<{
 <template>
   <div>
     <div id="root" class="rows">
-      <pill :color="project.accentColor" id="pill" :has-bottom-decor="true" :half-height="true">
+      <pill
+        id="pill"
+        :color="project.accentColor"
+        :has-bottom-decor="true"
+        :half-height="true">
         <img :src="project.projectLogo"/>
       </pill>
       <div class="cols fullWidth">
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
-        <button :style="{borderColor: project.accentColor, color: project.accentColor}" @click="goToExternal(project.projectButton.link)">{{ project.projectButton.caption }}</button>
+        <button 
+          :style="{
+            borderColor: project.accentColor, 
+            color: project.accentColor
+          }"
+          @click="goToExternal(project.projectButton.link)">
+            {{ project.projectButton.caption }}
+          </button>
       </div>
     </div>
     <div class="rows wrap">
-      <icon-card v-for="highlight in project.highlights" 
-                 :caption="highlight.caption" 
-                 :icon="highlight.icon" 
-                 :color="project.accentColor"
-                 class="cardIcon"/>
+      <icon-card 
+        v-for="highlight in project.highlights" 
+        :caption="highlight.caption" 
+        :icon="highlight.icon" 
+        :color="project.accentColor"
+        class="cardIcon"/>
     </div>
   </div>
 </template>

@@ -11,9 +11,17 @@ defineProps<{
   <div>
     <h1>Education</h1>
     <div class="rows center">
-      <div v-for="(item, index) in content" :key="index" style="flex: 1">
-        <pill class="pills" :left-rounded="index == content.length - 1" :half-height="false" :has-bottom-decor="false" color="#3A9BD2">
-          <h2 style="margin-left: 25px;">{{ item.startingDate }} - {{ item.endingDate }}</h2>
+      <div 
+        v-for="(item, index) in content" 
+        :key="index"
+        style="flex: 1">
+        <pill 
+          class="pills" 
+          color="#3A9BD2"
+          :left-rounded="index == content.length - 1"
+          :half-height="false"
+          :has-bottom-decor="false">
+          <h2 style="margin-left: 25px; font-size: 1.2rem;">{{ item.startingDate }} - {{ item.endingDate }}</h2>
         </pill>
         <ul>
           <li v-for="achievement in item.achievements" :key="achievement">
@@ -21,7 +29,11 @@ defineProps<{
           </li>
         </ul>
       </div>
-      <chevron class="chevron" width="35px" color="#3A9BD2" :include-margin="true"/>
+      <chevron
+        class="chevron"
+        width="35px"
+        color="#3A9BD2"
+        :include-margin="true"/>
     </div>
   </div>
 </template>

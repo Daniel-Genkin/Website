@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue';
+import TransitionIn from './TransitionIn.vue';
 
 defineProps<{
     color: string,
@@ -9,9 +10,6 @@ defineProps<{
 
 const borderRadius = ref('80px');
 const pill = ref();
-const showContent = ref(false);
-
-let observer: IntersectionObserver | undefined;
 
 function onResize() {
   const width = pill.value.clientWidth;
@@ -31,68 +29,46 @@ function onResize() {
 
 onMounted(() => {
   window.addEventListener("resize", onResize);
-
-  observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          showContent.value = true;
-          observer?.disconnect();
-        }
-      },
-      {
-        root: null,
-        rootMargin: '20px',
-        threshold: 0.1
-      }
-    )
-
-    observer.observe(pill.value);
 });
 
 onUnmounted(() => {
   window.removeEventListener("resize", onResize);
-
-  observer?.disconnect();
 });
 </script>
 
 <template>
   <div>
     <div ref="pill" class="pillParent">
-      <div :class="['contents', halfHeight ? 'half' : 'full']" :style="{borderBottomLeftRadius: borderRadius, borderBottomRightRadius: borderRadius}">
-        <Transition name="slide">
-          <slot v-if="showContent"></slot>
-        </Transition>
+      <div 
+        :class="['contents', halfHeight ? 'half' : 'full']"
+        :style="{
+          borderBottomLeftRadius: borderRadius,
+          borderBottomRightRadius: borderRadius
+        }">
+        <transition-in transition="slide-up">
+          <slot></slot>
+        </transition-in>
       </div>
-      <div :class="['pill', halfHeight ? 'half' : 'full']" 
-           :style="{
-               backgroundColor: color,
-               borderColor: `darken(${color}, 10%)`
-           }">
+      <div 
+        :class="['pill', halfHeight ? 'half' : 'full']" 
+        :style="{
+          backgroundColor: color,
+          borderColor: `darken(${color}, 10%)`
+        }">
       </div>
-      <div v-if="hasBottomDecor" 
-           class="pill small" 
-           :style="{
-               backgroundColor: color,
-               borderColor: `darken(${color}, 10%)`
-           }">
+      <div 
+        v-if="hasBottomDecor" 
+        class="pill small" 
+        :style="{
+          backgroundColor: color,
+          borderColor: `darken(${color}, 10%)`
+        }">
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.slide-enter-active,
-.slide-leave-active {
-  transition: all .8s ease-in-out;
-}
-
-.slide-enter-from,
-.slide-leave-to {
-  transform: translateY(10px);
-  opacity: 0;
-}
-
 .contents {
   height: 100%;
   width: 100%;
