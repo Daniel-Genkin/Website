@@ -62,12 +62,13 @@ function onUnHover(e: any) {
   padding: 12px;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
 }
 
 [data-title]:focus:after,
 [data-title]:hover:after {
     opacity: 1;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
     visibility: visible;
 }
 [data-title]:after {
