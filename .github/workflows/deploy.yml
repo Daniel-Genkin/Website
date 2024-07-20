@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   call-build:
-    uses: ./build.yaml
+    uses: build.yaml
     
   deploy:
     environment:
