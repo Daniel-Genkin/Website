@@ -23,12 +23,14 @@ function onUnHover(e: any) {
         v-for="tech in technologies" 
         :key="tech.technology"
         class="card coolBorder"
-        :data-title="tech.technology"
-        @focusin="onHover"
-        @focusout="onUnHover"
+        @pointerdown="onHover"
+        @pointerup="onUnHover"
         @mouseover="onHover"
-        @mouseleave="onUnHover">
-        <img :src="tech.icon" class="icon" />
+        @mouseleave="onUnHover"
+        :data-title="tech.technology">
+        <img 
+          :src="tech.icon" 
+          class="icon"/>
     </div>
     </div>
   </div>
@@ -40,6 +42,7 @@ function onUnHover(e: any) {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
   max-width: 100%;
+  justify-items: center;
   overflow-x: hidden;
 }
 
