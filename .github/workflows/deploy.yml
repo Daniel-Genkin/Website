@@ -28,7 +28,6 @@ jobs:
     - name: Deploy
       run: |
         cd dist
-        git config --global user.name "Auto Deploy"
         git add .
         git commit -m "Auto Deployment"
         git push -f https://Daniel-Genkin:${{ secrets.GITHUB_TOKEN }}@github.com/Daniel-Genkin/Website.git main:prod
