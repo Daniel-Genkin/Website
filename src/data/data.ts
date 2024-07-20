@@ -43,7 +43,7 @@ export var ALL_PROJECTS: Project[] = [
                 {
                     year: "2016",
                     events: [
-                        "Switched to using the EasyAR augmented reality framework and developing the app natively for Android for maximum control and to minimize app download size. The Android app was built using Java. EasyAR has several beenfits including adding support for displaying images and 3D models on-top of the tracked targets."
+                        "Switched to using the EasyAR augmented reality framework and developing the app natively for Android for maximum control and to minimize app download size. The Android app was built using Java. EasyAR has several benefits including adding support for displaying images and 3D models on-top of the tracked targets."
                     ]
                 },
                 {
@@ -62,7 +62,7 @@ export var ALL_PROJECTS: Project[] = [
                 {
                     year: "2019",
                     events: [
-                        "Started developing my own Augmented Reality framework to avoid the limitations of EasyAR. Namely, to gain the ability to convert the mobile app based platform to a progressive web app as user feedback indicated that users did not want to download an app.",
+                        "Started developing my own Augmented Reality framework to avoid the limitations of EasyAR. Namely, to gain the ability to convert the mobile app-based platform to a progressive web app as user feedback indicated that users did not want to download an app.",
                         "Most Promising Startup award and People's Choice Award at the CONNECT educational technology conference"
                     ]
                 },
@@ -75,7 +75,7 @@ export var ALL_PROJECTS: Project[] = [
                 {
                     year: "Present",
                     events: [
-                        "Working on implementing the custom augmented reality framework which will be released as open-source when completed. This custom framework will use OpenCV to recognize targets and and ThreeJS to display content."
+                        "Working on implementing the custom augmented reality framework which will be released as open source when completed. This custom framework will use OpenCV to recognize targets and and ThreeJS to display content."
                     ]
                 }
             ],
