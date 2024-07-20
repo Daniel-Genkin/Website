@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   call-build:
-    uses: build.yaml
+    uses: ./.github/workflows/build.yaml
     
   deploy:
     environment:
