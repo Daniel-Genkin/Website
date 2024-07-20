@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue';
+import { goToHash } from './data/helpers';
 
 var scrollPosition = ref("0");
 var showNav = ref(false);
@@ -32,10 +33,6 @@ function onLoaded(payload: OnLoadData): void {
   accentColor.value = payload.accentColor ?? "#3A9BD2";
 }
 
-function goToHash(hash: string): void {
-  location.hash = hash;
-}
-
 function onHover(e: any) {
   e.target.style.color = accentColor.value;
 }
@@ -49,32 +46,20 @@ function onUnHover(e: any) {
   <header>
     <Transition>
       <nav v-if="showNav">
-        <RouterLink 
-          to="/"
-          @focusin="onHover"
-          @focusout="onUnHover"
-          @mouseover="onHover"
-          @mouseleave="onUnHover">
-            Daniel Genkin
+        <RouterLink to="/" @focusin="onHover" @focusout="onUnHover" @mouseover="onHover" @mouseleave="onUnHover">
+          Daniel Genkin
         </RouterLink>
         <div class="items">
-          <a 
-            v-for="menuItem in menuItems" 
-            :key="menuItem.link" 
-            class="item" 
-            @click="goToHash(menuItem.link)"
-            @focusin="onHover"
-            @focusout="onUnHover"
-            @mouseover="onHover"
-            @mouseleave="onUnHover">
-              {{ menuItem.label }}
-            </a>
+          <a v-for="menuItem in menuItems" :key="menuItem.link" class="item" @click="goToHash(menuItem.link)"
+            @focusin="onHover" @focusout="onUnHover" @mouseover="onHover" @mouseleave="onUnHover">
+            {{ menuItem.label }}
+          </a>
         </div>
-        <span id="navScrollBar" :style="{width: scrollPosition, backgroundColor: accentColor}"></span>
+        <span id="navScrollBar" :style="{ width: scrollPosition, backgroundColor: accentColor }"></span>
       </nav>
     </Transition>
   </header>
-  <RouterView @scroll="handleScroll" @onLoaded="onLoaded"/>
+  <RouterView @scroll="handleScroll" @onLoaded="onLoaded" />
 </template>
 
 <style scoped>
@@ -89,12 +74,14 @@ function onUnHover(e: any) {
   flex-direction: row;
   justify-content: end;
   overflow-x: scroll;
-  -ms-overflow-style: none; 
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-.items::-webkit-scrollbar { 
-    display: none;
+
+.items::-webkit-scrollbar {
+  display: none;
 }
+
 .v-enter-active,
 .v-leave-active {
   transition: all .5s ease;
@@ -104,14 +91,17 @@ function onUnHover(e: any) {
 }
 
 .v-enter-from,
-.v-leave-to{
+.v-leave-to {
   height: 0;
   opacity: 0;
 }
 
-@media screen and (max-width: 500px) { /* TODO FIND A WAY TO MAKE THIS DYNAMIC BASED ON WHAT ITEMS ARE IN THE LIST */
+@media screen and (max-width: 500px) {
+
+  /* TODO FIND A WAY TO MAKE THIS DYNAMIC BASED ON WHAT ITEMS ARE IN THE LIST */
   .items {
-    justify-content: unset; /* breaks scrolling */
+    justify-content: unset;
+    /* breaks scrolling */
   }
 }
 </style>

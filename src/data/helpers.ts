@@ -7,3 +7,7 @@ export function goToExternal(url: string): void {
 export function goToInternal(router: Router, pageName: string): void {
     router.push(pageName);
 }
+
+export function goToHash(hash: string): void {
+    location.hash = hash;
+}
