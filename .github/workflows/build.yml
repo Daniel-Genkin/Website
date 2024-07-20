@@ -38,4 +38,4 @@ jobs:
         git config --global user.email "autodeploy@example.com"
         git add .
         git commit -m "Auto Deployment"
-        git push -f https://Daniel-Genkin:${{ secrets.GITHUB_TOKEN }}@github.com/Daniel-Genkin/Website.git main
+        git push -f https://Daniel-Genkin:${{ secrets.GITHUB_TOKEN }}@github.com/Daniel-Genkin/Website.git main:prod
