@@ -317,48 +317,56 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         title: "Software Engineer",
         logo: "company-logos/microsoft.png",
         organization: "Microsoft Corp.",
-        startingDate: "Sept. 2023",
-        endingDate: "ongoing",
+        startingDate: "September 2023",
+        endingDate: "Ongoing",
         description: "Full-time position working on the Azure Core Files team using C/C++, XML, JSON. My team is responsible for geo-redundancy and replication for business recovery and data restoration. My work affects all layers of the tech stack, ranging from the SMB, NFS, and REST APIs down to the data storage layer."
     },
     {
         title: "Software Engineer Intern",
         logo: "company-logos/amazon.png",
         organization: "Amazon Inc.",
-        startingDate: "August. 2023",
-        endingDate: "Jan 2023",
+        startingDate: "September 2022",
+        endingDate: "December 2022",
         description: "12-week internship. My project improved advertisement second-price auction latency on the Amazon.com Ads team by > 25% and resulted in estimated savings of ~14 million dollars per year in compute resources. This team primarily used Java."
     },
     {
         title: "2x Software Engineer Intern",
         logo: "company-logos/microsoft.png",
         organization: "Microsoft Corp.",
-        startingDate: "August. 2023",
-        endingDate: "Jan 2023",
+        startingDate: "May 2021 & 2022",
+        endingDate:"August 2021 & 2022",
         description: "Two 12-week internships. The first was working on adding NodeJS support to the C# Mono WebAssembly project (WASM). The second was adding WebTransport support to the ASP.NET Kestrel webserver. Both projects are open source and were motivated by community requests. These internships used a combination of C#, TypeScript (TS), XML, and other languages."
     },
     {
-        title: "Software Engineer Apprentice",
+        title: "Software Engineer Intern",
         logo: "company-logos/teamviewer.png",
         organization: "TeamViewer Ambgh.",
-        startingDate: "August. 2023",
-        endingDate: "Jan 2023",
+        startingDate: "August 2021",
+        endingDate: "February 2022",
         description: "Part-time internship following a sale of the LifeAR brand. I worked on integrating the ASSIMP open-source library in the lifeAR and assistAR products to enable greater 3D model rendering support. This project acted as a bridge between the ASSIMP C++ source code and the assistAR Kotlin source code. I implemented all the components necessary to load and display the models and ultimately greatly improved both the fidelity and performance of the models that assistAR was able to load and display."
-    },
-    {
-        title: "Software Engineer",
-        logo: "company-logos/fyelabs.png",
-        organization: "Fyelabs",
-        startingDate: "August. 2023",
-        endingDate: "Jan 2023",
-        description: "Completed several frontend and backend projects using several languages, frameworks, and tools including Python, C++, JavaScript, TypeScript, HTML, CSS, SCSS, VueJS, React, React Native, and Docker."
     },
     {
         title: "Explore Intern",
         logo: "company-logos/microsoft.png",
         organization: "Microsoft Corp.",
-        startingDate: "August. 2023",
-        endingDate: "Jan 2023",
+        startingDate: "May 2020",
+        endingDate: "August 2020",
+        description: "12-week internship. Working on researching and implementing a new UI for Visual Studio. This internship involved project management (PM), software development (SWE) and testing. The software development was implemented in the C#, C++, XML languages."
+    },
+    {
+        title: "Research Assistant/Developer",
+        logo: "company-logos/fyelabs.png",
+        organization: "Fyelabs",
+        startingDate: "March 2020",
+        endingDate: "August 2022",
+        description: "Completed several frontend and backend projects using several languages, frameworks, and tools including Python, C++, JavaScript, TypeScript, HTML, CSS, SCSS, VueJS, React, React Native, and Docker."
+    },
+    {
+        title: "Founder, Developer, and Designer",
+        logo: "company-logos/dgapps.png",
+        organization: "DGApps",
+        startingDate: "September 2015",
+        endingDate: "September 2023",
         description: "My personal projects are grouped under this brand. Throughout high school (2015 - 2019), I worked as a freelancer for implementing various web and mobile applications. Throughout university (2019 - 2023), I worked on the GreenAR and Project GamePlan projects."
     },
 ];
