@@ -1,0 +1,1 @@
+import{d as e,o as t,c as s,a as n}from"./index-C6DNLJTZ.js";const c=["fill"],r=n("path",{d:"M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"},null,-1),a=[r],i=e({__name:"chevron-left",props:{color:{}},setup(l){return(o,_)=>(t(),s("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:o.color},a,8,c))}});export{i as default};
