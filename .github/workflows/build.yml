@@ -1,0 +1,41 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: "build"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    permissions:
+      contents: write
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        npm install
+        npm run build
+
+    - name: Save To Repo
+      run: |
+        cd dist
+        git config --global user.name "Auto-Deploy"
+        git config --global user.email "autodeploy@example.com"
+        git add .
+        git commit -m "Auto Deployment"
+        git push -f https://Daniel-Genkin:${{ secrets.GITHUB_TOKEN }}@github.com/Daniel-Genkin/Website.git main
