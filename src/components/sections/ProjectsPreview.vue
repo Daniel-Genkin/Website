@@ -61,7 +61,7 @@ var item = computed<Project>(() => props.content[position.value]);
   width: 300px; 
   margin-bottom: 48px;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
   .pills {
     display: none;
   }

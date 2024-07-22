@@ -3,13 +3,13 @@
 </script>
 
 <template>
-    <div id="background">
+    <div class="oddBackground">
       <slot></slot>
     </div>
 </template>
 
 <style scoped>
-#background {
+.oddBackground {
   width: 100%;
   margin-bottom: 100px;
   margin-top: 75px;
@@ -22,13 +22,13 @@
 }
 
 @media screen and (max-width: 700px) {
-  #background {
+  .oddBackground {
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
   }
 }
 
 @media screen and (max-width: 500px) {
-  #background {
+  .oddBackground {
     clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
   }
 }
