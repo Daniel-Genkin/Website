@@ -20,4 +20,16 @@
   background-color: #303030;
   clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 92%);
 }
+
+@media screen and (max-width: 700px) {
+  #background {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #background {
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
+  }
+}
 </style>
