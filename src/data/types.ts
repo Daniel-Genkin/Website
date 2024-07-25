@@ -23,10 +23,11 @@ type Project = {
         caption: string
     }[],
     projectLogo: string,
-    projectButton: {
+    projectButtons: {
         link: string,
-        caption: string
-    }
+        caption: string,
+        disabled: boolean
+    }[]
     accentColor: string,
     pageSections: {
         screenshots: string[],

@@ -91,8 +91,12 @@ button {
   background-color: #46464627;
 }
 
-button:hover, button:focus {
+button:hover:enabled, button:focus:enabled {
   background-color: #92929227;
+}
+
+:disabled {
+  background-color: unset;
 }
 
 nav {

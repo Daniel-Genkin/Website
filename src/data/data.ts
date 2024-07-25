@@ -14,14 +14,17 @@ export var ALL_PROJECTS: Project[] = [
             },
             {
                 icon: "github",
-                caption: "Open Source"
+                caption: "Open Source (eventually when the MVP is ready)"
             }
         ],
         projectLogo: "projects/greenar/logo.png",
-        projectButton: {
-            link: "TODO",
-            caption: "View on Github"
-        },
+        projectButtons: [
+            {
+                link: "TODO",
+                caption: "View on Github (coming soon)",
+                disabled: true
+            }
+        ],
         accentColor: "#059B14",
         pageSections: {
             screenshots: [
@@ -175,10 +178,18 @@ export var ALL_PROJECTS: Project[] = [
             }
         ],
         projectLogo: "projects/project-gameplan/logo.png",
-        projectButton: {
-            link: "TODO",
-            caption: "View on Github"
-        },
+        projectButtons: [
+            {
+                link: "TODO",
+                caption: "View on Github (after patent granted)",
+                disabled: true
+            },
+            {
+                link: "TODO",
+                caption: "Online Demo (after patent granted)",
+                disabled: true
+            }
+        ],
         accentColor: "#FEDF14",
         pageSections: {
             screenshots: [
@@ -224,14 +235,22 @@ export var ALL_PROJECTS: Project[] = [
             },
             {
                 icon: "github",
-                caption: "Open Source"
+                caption: "Open Source (eventually)"
             }
         ],
         projectLogo: "projects/slappy-sandwich/logo.png",
-        projectButton: {
-            link: "TODO",
-            caption: "View on Github"
-        },
+        projectButtons: [
+            {
+                link: "https://play.google.com/store/apps/details?id=apps.daniel.com.slappysandwich",
+                caption: "View on Google Play",
+                disabled: false
+            },
+            {
+                link: "TODO",
+                caption: "Github (eventually)",
+                disabled: true
+            }
+        ],
         accentColor: "#D8621A",
         pageSections: {
             screenshots: [
@@ -276,10 +295,13 @@ export var ALL_PROJECTS: Project[] = [
             }
         ],
         projectLogo: "projects/spaceship-sim/0.png",
-        projectButton: {
-            link: "https://github.com/Daniel-Genkin/Spaceship-Simulator",
-            caption: "View on Github"
-        },
+        projectButtons: [
+            {
+                link: "https://github.com/Daniel-Genkin/Spaceship-Simulator",
+                caption: "View on Github",
+                disabled: false
+            }
+        ],
         accentColor: "#AEFFFF",
         pageSections: {
             screenshots: [

@@ -23,12 +23,15 @@ defineProps<{
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
         <button 
+          v-for="button in project.projectButtons"
+          :key="button.link"
           :style="{
-            borderColor: project.accentColor, 
-            color: project.accentColor
+            borderColor: !button.disabled ? project.accentColor : '#535353', 
+            color: !button.disabled ? project.accentColor : '#535353'
           }"
-          @click="goToExternal(project.projectButton.link)">
-            {{ project.projectButton.caption }}
+          :disabled="button.disabled"
+          @click="goToExternal(button.link)">
+            {{ button.caption }}
           </button>
       </div>
     </div>
