@@ -71,6 +71,7 @@ function setPosition(newPosition: number): void {
   height: 25px;
   width: 25px;
   padding: 0;
+  margin: 0 4px;
   border-style: none;
 }
 

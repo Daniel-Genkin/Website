@@ -77,7 +77,8 @@ p {
   font-size: 1.2rem;
 }
 
-button {
+button,
+.button {
   border: 6px solid transparent;
   border-left-style: double;
   border-right-style: double;
@@ -89,14 +90,22 @@ button {
   font-size: 1.3rem;
   font-weight: 600;
   background-color: #46464627;
+  text-decoration: none;
+  text-align: center;
 }
 
-button:hover:enabled, button:focus:enabled {
+button:disabled:hover,
+button:disabled:focus,
+.button.disabled:hover, 
+.button.disabled:focus {
+  background-color: #46464627;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   background-color: #92929227;
-}
-
-:disabled {
-  background-color: unset;
 }
 
 nav {

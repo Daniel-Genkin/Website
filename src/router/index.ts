@@ -1,9 +1,9 @@
-import { ALL_PROJECTS } from '@/data/data'
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/IndexView.vue'
+import { ALL_PROJECTS } from '@/data/data';
+import { createRouter, createWebHashHistory } from 'vue-router';
+import HomeView from '../views/IndexView.vue';
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history:  createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -31,7 +31,7 @@ const router = createRouter({
       component: () => import('../views/ProjectDetailView.vue')
     }
   ]
-})
+});
 
 // prevent navigating to non existant project pages
 router.beforeEach((to, from) => {
@@ -41,6 +41,6 @@ router.beforeEach((to, from) => {
     }
   }
   return true;
-})
+});
 
-export default router
+export default router;

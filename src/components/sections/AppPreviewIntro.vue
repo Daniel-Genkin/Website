@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { goToExternal } from "@/data/helpers";
 import IconCard from "../elements/IconCard.vue";
 import Pill from "../elements/Pill.vue";
 
@@ -22,17 +21,18 @@ defineProps<{
       <div class="cols fullWidth">
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
-        <button 
+        <a 
           v-for="button in project.projectButtons"
           :key="button.link"
           :style="{
             borderColor: !button.disabled ? project.accentColor : '#535353', 
             color: !button.disabled ? project.accentColor : '#535353'
           }"
-          :disabled="button.disabled"
-          @click="goToExternal(button.link)">
+          :href="button.link"
+          target="_blank"
+          :class="['button', button.disabled ? 'disabled' : '']">
             {{ button.caption }}
-          </button>
+        </a>
       </div>
     </div>
     <div class="rows wrap">

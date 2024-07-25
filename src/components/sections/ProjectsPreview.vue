@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import Pill from '@/components/elements/Pill.vue';
-import { goToInternal } from '@/data/helpers';
-import router from '@/router';
 import { computed, ref } from 'vue';
+import { RouterLink } from 'vue-router';
 import IconCard from "../elements/IconCard.vue";
 import Slideshow from '../elements/Slideshow.vue';
 
@@ -42,7 +41,7 @@ var item = computed<Project>(() => props.content[position.value]);
                   color="#3A9BD2"
                   class="cardIcon"/>
               </div>
-              <button style="margin-top: 56px;" @click="goToInternal(router, item.pageLink)">Learn More</button>
+              <RouterLink :to="item.pageLink" class="button" style="margin-top: 56px;">Learn More</RouterLink>
             </div>
           </div>
         </Transition>

@@ -17,23 +17,23 @@ emits('onLoaded', {
   menuItems: [
     {
       label: 'Projects',
-      link: '#projects'
+      link: 'projects'
     },
     {
       label: 'Work Experience',
-      link: '#workExperience'
+      link: 'workExperience'
     },
     {
       label: 'Education',
-      link: '#education'
+      link: 'education'
     },
     {
       label: 'Awards',
-      link: '#awards'
+      link: 'awards'
     },
     {
       label: 'Entrepreneurship',
-      link: '#entrepreneurship'
+      link: 'entrepreneurship'
     }
   ],
   accentColor: "#3A9BD2",
