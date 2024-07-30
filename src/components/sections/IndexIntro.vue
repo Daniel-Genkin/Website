@@ -7,7 +7,7 @@ import Pill from '@/components/elements/Pill.vue';
     <div id="root" class="rows">
       <div class="cols" id="info">
         <h2>Daniel Genkin</h2>
-        <p>I am passionate about Software Development & Computer Design. My passion started at a young age when my father introduced me to coding. Since that moment, I have founded and participated in several startups, worked in a range of companies ranging from medium sized (e.g. TeamViewer Ambgh.) to some of the largest tech companies (e.g. Microsoft, Amazon), met some extremely talented and interesting people, and helped to develop/improve/maintain some very important and influential software products. I am always open to learning new things and having new experiences.</p>
+        <p>I am passionate about Software Development & Computer Design. My passion started at a young age when my father introduced me to coding. Since that moment, I have founded and participated in several startups, worked in a range of companies from medium sized to some of the largest tech companies, met some extremely talented and interesting people, and helped to develop/improve/maintain some very important and influential software products. I am always open to learning new things and having new experiences.</p>
         <div class="rows" id="buttonContainer">
           <a class="button" href="https://github.com/Daniel-Genkin" target="_blank">Github</a>
           <a class="button" href="https://www.linkedin.com/in/daniel-genkin-dgapps/" target="_blank">LinkedIn</a>
