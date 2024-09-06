@@ -25,6 +25,10 @@ emits('onLoaded', {
       link: 'workExperience'
     },
     {
+      label: 'Patents',
+      link: 'patents'
+    },
+    {
       label: 'Education',
       link: 'education'
     },
