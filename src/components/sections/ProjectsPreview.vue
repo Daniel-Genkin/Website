@@ -31,7 +31,7 @@ var item = computed<Project>(() => props.content[position.value]);
         <Transition name="slide-fade" appear mode="out-in">
           <div class="rows" :key="position">
             <div class="cols">
-              <h2>{{ item.title }}</h2>
+              <h2 style="margin-left: 12px">{{ item.title }}</h2>
               <p>{{ item.description }}</p>
               <div class="rows wrap">
                 <icon-card v-for="award in item.highlights" 

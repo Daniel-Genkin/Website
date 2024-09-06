@@ -1,7 +1,15 @@
 type AwardEntry = {
     year: number,
-    title: string
+    title: string,
     organization: string
+}
+
+type PatentEntry = {
+    id: string,
+    year: number,
+    link: string,
+    title: string,
+    abstract: string
 }
 
 type TechnologyEntry = {

@@ -170,7 +170,7 @@ export var ALL_PROJECTS: Project[] = [
         highlights: [
             {
                 icon: "patent",
-                caption: "Patent Pending"
+                caption: "Patented US-20240296410-A1"
             },
             {
                 icon: "task",
@@ -429,3 +429,13 @@ export var AWARDS: AwardEntry[] = [
         organization: "Niagara Entrepreneur of the Year Awards"
     }
 ];
+
+export var PATENTS: PatentEntry[] = [
+    {
+        id: "US 20240296410 A1",
+        link: "https://ppubs.uspto.gov/pubwebapp/external.html?q=(US-20240296410-A1).did.&db=US-PGPUB",
+        title: "Boosting User Productivity Of Productivity Platforms By Leveraging Gamification",
+        year: 2023,
+        abstract: "This patent describes a productivity software solution that boosts user engagement and motivation by associating the value of tasks/jobs assigned to users with rewards. Users of the solution can complete tasks to earn points, then redeem the points for physical (e.g., merchandise) or virtual rewards. Virtual rewards can be used to customize components of user profiles (e.g., mascots or profile images) to allow the user to personalize their experience. Simultaneously, the productivity software solution keeps track of the completed tasks and assigns users a level/rank which they can use to compete against other users on leaderboards. Overall, this results in a gamified experience for the software users that provides instant rewards and boosts motivation for task completion, increases engagement of users with their tasks/jobs and yields a more enjoyable and productive experience."
+    }
+]

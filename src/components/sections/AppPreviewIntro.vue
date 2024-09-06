@@ -37,7 +37,7 @@ defineProps<{
         </button>
       </div>
     </div>
-    <div class="rows wrap">
+    <div id="highlights" class="rows wrap">
       <icon-card 
         v-for="highlight in project.highlights" 
         :caption="highlight.caption" 
@@ -69,6 +69,10 @@ defineProps<{
   max-height: 300px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#highlights {
+  margin-bottom: 24px;
 }
 
 @media screen and (max-width: 780px) {
