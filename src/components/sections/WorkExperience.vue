@@ -19,7 +19,7 @@ defineProps<{
           <p>{{ item.organization }}</p>
           <p>{{ item.startingDate }} - {{ item.endingDate }}</p>
         </div>
-        <p>{{ item.description }}</p>
+        <p v-html="item.description"></p>
       </div>
       <pill 
         class="pills" 

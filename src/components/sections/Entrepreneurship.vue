@@ -21,7 +21,7 @@ import Pill from '../elements/Pill.vue';
           <br />
           <li>Several others including some utility applications to implement some new functionality (such as theft detection or in-pocket detection) to mobile devices and some games (such as Slappy Sandwhich).</li>
         </ul>
-        <p>Unfortunately, most of the projects are not maintained anymore due to lack of time. However more information can be found on the archived <a href="https://dgapps.ca">DGApps website</a>.</p>
+        <p>Unfortunately, most of the projects are not maintained anymore due to lack of time. However more information can be found on the archived <a href="https://daniel-genkin.github.io/">DGApps website</a> (formerly dgapps.ca).</p>
         <br />
         <p>DGApps also provided freelance services and built several websites including the <a href="https://selc.ed.brocku.ca/">Science Education and Local Communities website</a> and a <a href="https://secure3.ed.brocku.ca/dolanamogadime/">personal website for Dolana Mogadime</a>.</p>
         <br />

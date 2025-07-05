@@ -339,8 +339,16 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         title: "Software Engineer",
         logo: "company-logos/microsoft.png",
         organization: "Microsoft Corp.",
-        startingDate: "September 2023",
+        startingDate: "November 2024",
         endingDate: "Ongoing",
+        description: "Full-time position working on the OpenAI Billing team. On this team I am the primary developer/owner of the billing pipeline service health monitoring and alerting. I also created a system that uses AI to summarize service incidents and create reports and guides for on-call engineers to prevent and resolve such incidents in the future: <a href=\"https://aka.ms/icm2tsg-blog\">learn more</a>."
+    },
+    {
+        title: "Software Engineer",
+        logo: "company-logos/microsoft.png",
+        organization: "Microsoft Corp.",
+        startingDate: "September 2023",
+        endingDate: "November 2024",
         description: "Full-time position working on the Azure Core Files team using C/C++, XML, JSON. My team is responsible for geo-redundancy and replication for business recovery and data restoration. My work affects all layers of the tech stack, ranging from the SMB, NFS, and REST APIs down to the data storage layer."
     },
     {
