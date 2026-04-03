@@ -6,9 +6,10 @@ import Entrepreneurship from "@/components/sections/Entrepreneurship.vue";
 import IndexIntro from '@/components/sections/IndexIntro.vue';
 import Patents from '@/components/sections/Patents.vue';
 import ProjectsPreview from '@/components/sections/ProjectsPreview.vue';
+import Publications from '@/components/sections/Publications.vue';
 import WorkExperience from '@/components/sections/WorkExperience.vue';
 
-import { ALL_PROJECTS, AWARDS, EDUCATION, PATENTS, WORK_EXPERIENCE } from '@/data/data';
+import { ALL_PROJECTS, AWARDS, EDUCATION, PATENTS, PUBLICATIONS, WORK_EXPERIENCE } from '@/data/data';
 
 const emits = defineEmits({
   onLoaded(payload: OnLoadData) { return true }
@@ -35,6 +36,10 @@ emits('onLoaded', {
     {
       label: 'Awards',
       link: 'awards'
+    },
+    {
+      label: 'Publications',
+      link: 'publications'
     },
     {
       label: 'Entrepreneurship',
@@ -70,6 +75,10 @@ emits('onLoaded', {
       </div>
     </odd-section>
 
-    <entrepreneurship id="entrepreneurship" class="content" />
+    <publications color="#3A9BD2" :content="PUBLICATIONS" id="publications" class="content" />
+
+    <odd-section>
+      <entrepreneurship id="entrepreneurship" class="content" />
+    </odd-section>
   </main>
 </template>

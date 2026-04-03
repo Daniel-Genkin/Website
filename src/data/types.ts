@@ -12,6 +12,14 @@ type PatentEntry = {
     abstract: string
 }
 
+type PublicationEntry = {
+    year: number,
+    location: string,
+    link: string,
+    title: string,
+    abstract: string
+}
+
 type TechnologyEntry = {
     icon: string,
     technology: string

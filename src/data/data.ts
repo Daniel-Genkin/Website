@@ -417,6 +417,13 @@ export var EDUCATION: EducationEntry[] = [
             "McMaster University Bachelors of Applied Science an Computer Science CO-OP Honours program",
             "McMaster University Business minor"
         ]
+    },
+    {
+        startingDate: "2026",
+        endingDate: "Present",
+        achievements: [
+            "University of Washington Masters of Computer Science and Engineering (PMP)"
+        ]
     }
 ]
 
@@ -446,4 +453,28 @@ export var PATENTS: PatentEntry[] = [
         year: 2023,
         abstract: "This patent describes a productivity software solution that boosts user engagement and motivation by associating the value of tasks/jobs assigned to users with rewards. Users of the solution can complete tasks to earn points, then redeem the points for physical (e.g., merchandise) or virtual rewards. Virtual rewards can be used to customize components of user profiles (e.g., mascots or profile images) to allow the user to personalize their experience. Simultaneously, the productivity software solution keeps track of the completed tasks and assigns users a level/rank which they can use to compete against other users on leaderboards. Overall, this results in a gamified experience for the software users that provides instant rewards and boosts motivation for task completion, increases engagement of users with their tasks/jobs and yields a more enjoyable and productive experience."
     }
+]
+
+export var PUBLICATIONS: PublicationEntry[] = [
+    {
+        link: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-tsgen-automated-tsg-generation--scale-%E2%80%93-built-by-ai/4508191",
+        location: "Microsoft Foundry Blog",
+        title: "Introducing TSGen: Automated TSG Generation @ Scale – Built by AI",
+        year: 2026,
+        abstract: "Transforming Cloud Incident Management Through Intelligent Automation"
+    },
+    {
+        link: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/the-future-of-ai-autonomous-agents-for-identifying-the-root-cause-of-cloud-servi/4412494",
+        location: "Microsoft Foundry Blog",
+        title: "The Future of AI: Autonomous Agents for Identifying the Root Cause of Cloud Service Incidents",
+        year: 2025,
+        abstract: "The Future of AI blog series is an evolving collection of posts from the AI Futures team in collaboration with subject matter experts across Microsoft. In this series, we explore tools and technologies that will drive the next generation of AI. Explore more at: https://aka.ms/the-future-of-ai "
+    },
+    {
+        link: "https://devblogs.microsoft.com/dotnet/experimental-webtransport-over-http-3-support-in-kestrel/",
+        location: "Microsoft Dev Blogs",
+        title: "Experimental WebTransport over HTTP/3 support in Kestrel",
+        year: 2022,
+        abstract: "Chris R. writes about my internship project to implement WebTransport over HTTP/3 in .NET 7 under his mentorship"
+    },
 ]
