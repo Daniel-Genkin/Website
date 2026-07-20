@@ -457,10 +457,19 @@ export var PATENTS: PatentEntry[] = [
 
 export var PUBLICATIONS: PublicationEntry[] = [
     {
+        link: "https://dl.acm.org/doi/10.1145/3803437.3805239",
+        location: "Association for Computing Machinery (ACM)",
+        title: "TSGen: Automated Troubleshooting Guide Generation",
+        year: 2026,
+        type: "paper",
+        abstract: "Maintaining up-to-date troubleshooting guides (TSGs) is critical for the reliability of cloud systems, yet manual maintenance often leads to inefficiencies and outdated documentation. This paper proposes TSGen, an automated pipeline for generating high-quality, structured TSGs from historical incident reports using large language models (LLMs). Our approach consists of three stages: (1) filtering and classifying incident data into diagnostically relevant categories, (2) distilling core incidents to ensure diversity and generalizability, and (3) organizing the distilled knowledge into a directed acyclic graph (DAG) that captures root causes and resolutions in a structured manner. By leveraging real-world incident discussions, TSGen produces dynamic and reusable guides tailored for live troubleshooting. Experiments on real-world incidents from Microsoft demonstrate that TSGen achieves 54.8% incident coverage and approximately 3× higher retrieval accuracy compared to baselines. Furthermore, the system supports iterative updates, allowing guides to evolve alongside dynamic cloud environments. Human evaluation shows that on-call engineers rate these generated TSGs significantly higher than human-crafted ones."
+    },
+    {
         link: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-tsgen-automated-tsg-generation--scale-%E2%80%93-built-by-ai/4508191",
         location: "Microsoft Foundry Blog",
         title: "Introducing TSGen: Automated TSG Generation @ Scale – Built by AI",
         year: 2026,
+        type: "article",
         abstract: "Transforming Cloud Incident Management Through Intelligent Automation"
     },
     {
@@ -468,6 +477,7 @@ export var PUBLICATIONS: PublicationEntry[] = [
         location: "Microsoft Foundry Blog",
         title: "The Future of AI: Autonomous Agents for Identifying the Root Cause of Cloud Service Incidents",
         year: 2025,
+        type: "article",
         abstract: "The Future of AI blog series is an evolving collection of posts from the AI Futures team in collaboration with subject matter experts across Microsoft. In this series, we explore tools and technologies that will drive the next generation of AI. Explore more at: https://aka.ms/the-future-of-ai "
     },
     {
@@ -475,6 +485,7 @@ export var PUBLICATIONS: PublicationEntry[] = [
         location: "Microsoft Dev Blogs",
         title: "Experimental WebTransport over HTTP/3 support in Kestrel",
         year: 2022,
+        type: "article",
         abstract: "Chris R. writes about my internship project to implement WebTransport over HTTP/3 in .NET 7 under his mentorship"
     },
 ]

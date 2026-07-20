@@ -17,7 +17,8 @@ type PublicationEntry = {
     location: string,
     link: string,
     title: string,
-    abstract: string
+    abstract: string,
+    type: 'article' | 'paper'
 }
 
 type TechnologyEntry = {
