@@ -21,11 +21,6 @@ type PublicationEntry = {
     type: 'article' | 'paper'
 }
 
-type TechnologyEntry = {
-    icon: string,
-    technology: string
-}
-
 type HistoryEntry = {
     year: string,
     events: string[]
@@ -33,11 +28,13 @@ type HistoryEntry = {
 
 type Project = {
     title: string,
+    spotlightTitle?: string,
     description: string,
+    features?: string,
     pageLink: string,
     highlights: {
-        icon: string,
-        caption: string
+        caption: string,
+        shortCaption?: string
     }[],
     projectLogo: string,
     projectButtons: {
@@ -50,7 +47,7 @@ type Project = {
         screenshots: string[],
         history: HistoryEntry[],
         awards: AwardEntry[],
-        technologiesUsed: TechnologyEntry[],
+        technologiesUsed: string[],
     }
 };
 
@@ -69,13 +66,50 @@ type EducationEntry = {
     achievements: string[]
 }
 
-type OnLoadData = {
-    menuItems: MenuItem[], 
-    accentColor?: string,
-    hasError: boolean
+type SiteSection = {
+    id: string,
+    title: string,
+    icon: string
 }
 
-type MenuItem = {
+type RichTextPart = {
+    text: string,
+    href?: string
+}
+
+type RichTextBlock = {
+    type: 'paragraph' | 'list',
+    parts?: RichTextPart[],
+    items?: string[]
+}
+
+type AchievementDisplay = {
+    year: number,
+    title: string,
+    source: string,
+    link?: string,
+    icon: string
+}
+
+type ProjectDetailsContent = {
     label: string,
-    link: string
+    close: string,
+    closeSymbol: string,
+    technology: string,
+    platform: string,
+    status: string,
+    features: string,
+    inProduction: string,
+    inDevelopment: string,
+    fallbackPlatform: string,
+    fallbackStatus: string,
+    screenshotLabel: string,
+    previousScreenshot: string,
+    nextScreenshot: string,
+    galleryArrow: string,
+    technologiesUsed: string,
+    history: string,
+    awards: string,
+    notFound: string,
+    returnHome: string
 }

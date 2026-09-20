@@ -1,20 +1,22 @@
+import portraitUrl from '@/assets/me.png';
+import { PROJECT_DETAILS_CONTENT } from './projectDetails';
+
 export var ALL_PROJECTS: Project[] = [
     {
         title: "GreenAR",
+        spotlightTitle: "GreenAR",
         description: "An Augmented Reality platform for Android, iOS and Web built with Java, XML, Swift, C#, Objective C, VueJS (JavaScript), OpenCV, Unity3D. The platform consists of a frontend, which use AR to superimpose videos, images, websites, and other digital media on top of physical print media, and a backend which allowed content owners to setup the AR experiences. I pitched this to educators and businesses as a means for adding interactivity and boosting engagement with educational and promotional materials. For example, bring equations or other mathematical problems to life with a live and interactive graphical representation to help students understand math. In the context of business, an example would be adding actionable buttons (such as buy now) to business cards or adding 3d models to magazines so potential customers can better visualize products.",
         pageLink: "/greenar",
         highlights: [
             {
-                icon: "award",
                 caption: "Connect Conference award winner"
             },
             {
-                icon: "3d",
                 caption: "All-in-one augmented reality platform"
             },
             {
-                icon: "github",
-                caption: "Open Source (eventually when the MVP is ready)"
+                caption: "Open Source (eventually when the MVP is ready)",
+                shortCaption: "Open Source"
             }
         ],
         projectLogo: "projects/greenar/logo.png",
@@ -25,7 +27,7 @@ export var ALL_PROJECTS: Project[] = [
                 disabled: true
             }
         ],
-        accentColor: "#059B14",
+        accentColor: "var(--color-project-greenar)",
         pageSections: {
             screenshots: [
                 "projects/greenar/promo.mp4",
@@ -99,81 +101,19 @@ export var ALL_PROJECTS: Project[] = [
                     organization: "CONNECT Educational Technology Conference"
                 }
             ],
-            technologiesUsed: [
-                {
-                    icon: "thumbnails/opencv.png",
-                    technology: "OpenCV"
-                },
-                {
-                    icon: "thumbnails/threejs.png",
-                    technology: "Three.js"
-                },
-                {
-                    icon: "thumbnails/java.png",
-                    technology: "Java"
-                },
-                {
-                    icon: "thumbnails/nodejs.png",
-                    technology: "NodeJS & NPM"
-                },
-                {
-                    icon: "thumbnails/typescript.jpeg",
-                    technology: "TypeScript & JavaScript"
-                },
-                {
-                    icon: "thumbnails/unity3d.png",
-                    technology: "Unity3D"
-                },
-                {
-                    icon: "thumbnails/git.png",
-                    technology: "Git"
-                },
-                {
-                    icon: "thumbnails/azure.png",
-                    technology: "Azure"
-                },
-                {
-                    icon: "thumbnails/aws.png",
-                    technology: "AWS"
-                },
-                {
-                    icon: "thumbnails/swift.png",
-                    technology: "Swift"
-                },
-                {
-                    icon: "thumbnails/vscode.png",
-                    technology: "VS Code"
-                },
-                {
-                    icon: "thumbnails/androidstudio.png",
-                    technology: "Android Studio"
-                },
-                {
-                    icon: "thumbnails/xcode.png",
-                    technology: "XCode"
-                },
-                {
-                    icon: "thumbnails/vuejs.png",
-                    technology: "VueJS"
-                },
-                {
-                    icon: "thumbnails/stripe.png",
-                    technology: "Stripe"
-                }
-            ],
+            technologiesUsed: ["OpenCV", "Three.js", "Java", "NodeJS & NPM", "TypeScript & JavaScript", "Unity3D", "Git", "Azure", "AWS", "Swift", "VS Code", "Android Studio", "XCode", "VueJS", "Stripe"],
         }
     },
     {
         title: "Project Gameplan",
+        spotlightTitle: "Project Gameplan",
         description: "A project management platform that uses gamification techniques to boost employee motivation for task completion. Built using frontend (primarily VueJS) and backend Web (primarily Azure) technologies.",
         pageLink: "/project-gameplan",
         highlights: [
             {
-                icon: "patent",
                 caption: "Patented US-20240296410-A1"
             },
             {
-                icon: "task",
                 caption: "Gamification of ticketing systems"
             }
         ],
@@ -190,52 +130,31 @@ export var ALL_PROJECTS: Project[] = [
                 disabled: true
             }
         ],
-        accentColor: "#FEDF14",
+        accentColor: "var(--color-project-gameplan)",
         pageSections: {
             screenshots: [
             ],
             history: [],
             awards: [],
-            technologiesUsed: [
-                {
-                    icon: "thumbnails/typescript.jpeg",
-                    technology: "TypeScript & JavaScript"
-                },
-                {
-                    icon: "thumbnails/git.png",
-                    technology: "Git"
-                },
-                {
-                    icon: "thumbnails/azure.png",
-                    technology: "Azure"
-                },
-                {
-                    icon: "thumbnails/vscode.png",
-                    technology: "VS Code"
-                },
-                {
-                    icon: "thumbnails/vuejs.png",
-                    technology: "VueJS"
-                },
-            ],
+            technologiesUsed: ["TypeScript & JavaScript", "Git", "Azure", "VS Code", "VueJS"],
         }
     },
     {
         title: "Slappy Sandwich",
-        description: "Start tapping, slapping and having fun! Slap your way to collect all the doohickeys and various slappers.How far can you get? Download and find out! Then challenge your friends! Game features: ♦ Rookie and Pro modes ♦ Cool doohickeys and slappers to collect ♦ Simple rules/controls ♦ Realistic physics ♦ Minimalistic ♦ Fun sound effects ♦ Share score with your friends. Have fun slapping! Fun for all ages!",
+        spotlightTitle: "Slappy Sandwich",
+        description: "Start tapping, slapping and having fun! Slap your way to collect all the doohickeys and various slappers. How far can you get? Download and find out, then challenge your friends!",
+        features: "Rookie and Pro modes; cool doohickeys and slappers to collect; simple rules and controls; realistic physics; minimalistic presentation; fun sound effects; score sharing; fun for all ages.",
         pageLink: "/slappy-sandwich",
         highlights: [
             {
-                icon: "multi-platform",
                 caption: "Multi-platform"
             },
             {
-                icon: "3d_alt",
                 caption: "Built in Unity3D with C#"
             },
             {
-                icon: "github",
-                caption: "Open Source (eventually)"
+                caption: "Open Source (eventually)",
+                shortCaption: "Open Source"
             }
         ],
         projectLogo: "projects/slappy-sandwich/logo.png",
@@ -251,7 +170,7 @@ export var ALL_PROJECTS: Project[] = [
                 disabled: true
             }
         ],
-        accentColor: "#D8621A",
+        accentColor: "var(--color-project-slappy)",
         pageSections: {
             screenshots: [
                 "projects/slappy-sandwich/0.jpg",
@@ -260,37 +179,19 @@ export var ALL_PROJECTS: Project[] = [
             ],
             history: [],
             awards: [],
-            technologiesUsed: [
-                {
-                    icon: "thumbnails/unity3d.png",
-                    technology: "Unity3D"
-                },
-                {
-                    icon: "thumbnails/csharp.png",
-                    technology: "C#"
-                },
-                {
-                    icon: "thumbnails/git.png",
-                    technology: "Git"
-                },
-                {
-                    icon: "thumbnails/vs.png",
-                    technology: "Visual Studio"
-                }
-            ],
+            technologiesUsed: ["Unity3D", "C#", "Git", "Visual Studio"],
         }
     },
     {
         title: "3D Spaceship Simulator",
+        spotlightTitle: "Spaceship Simulator",
         description: "A 3D procedurally generated space environment that the player flies through with their spaceship to reach destination planets to complete quests. This game was built without a game engine using pure C++ and OpenGL. I worked in a team of three as the lead developer.",
         pageLink: "/spaceship-simulator",
         highlights: [
             {
-                icon: "cpp",
                 caption: "Built in C++ and OpenGL"
             },
             {
-                icon: "github",
                 caption: "Open Source"
             }
         ],
@@ -302,7 +203,7 @@ export var ALL_PROJECTS: Project[] = [
                 disabled: false
             }
         ],
-        accentColor: "#AEFFFF",
+        accentColor: "var(--color-project-spaceship)",
         pageSections: {
             screenshots: [
                 "projects/spaceship-sim/0.png",
@@ -311,24 +212,7 @@ export var ALL_PROJECTS: Project[] = [
             ],
             history: [],
             awards: [],
-            technologiesUsed: [
-                {
-                    icon: "thumbnails/opengl.png",
-                    technology: "OpenGL"
-                },
-                {
-                    icon: "thumbnails/c++.png",
-                    technology: "C++"
-                },
-                {
-                    icon: "thumbnails/git.png",
-                    technology: "Git"
-                },
-                {
-                    icon: "thumbnails/vscode.png",
-                    technology: "VS Code"
-                }
-            ]
+            technologiesUsed: ["OpenGL", "C++", "Git", "VS Code"]
         }
     }
 ];
@@ -341,7 +225,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "Microsoft Corp.",
         startingDate: "November 2024",
         endingDate: "Ongoing",
-        description: "Full-time position working on the OpenAI Billing team. On this team I am the primary developer/owner of the billing pipeline service health monitoring and alerting. I also created a system that uses AI to summarize service incidents and create reports and guides for on-call engineers to prevent and resolve such incidents in the future: <a href=\"https://aka.ms/icm2tsg-blog\">learn more</a>."
+        description: "Full-time position working on the OpenAI Billing team. On this team I am the primary developer/owner of the billing pipeline service health monitoring and alerting. I also created a system that uses AI to summarize service incidents and create reports and guides for on-call engineers to prevent and resolve such incidents in the future. <a href=\"https://aka.ms/icm2tsg-blog\">Project blog</a>."
     },
     {
         title: "Software Engineer",
@@ -365,7 +249,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "Microsoft Corp.",
         startingDate: "May 2021 & 2022",
         endingDate:"August 2021 & 2022",
-        description: "Two 12-week internships. The first was working on adding NodeJS support to the C# Mono WebAssembly project (WASM). The second was adding WebTransport support to the ASP.NET Kestrel webserver. Both projects are open source and were motivated by community requests. These internships used a combination of C#, TypeScript (TS), XML, and other languages."
+        description: "Two 12-week internships. The first was working on adding NodeJS support to the C# Mono WebAssembly project (WASM). The second was adding WebTransport support to the ASP.NET Kestrel webserver. Both projects are open source and were motivated by community requests. These internships used a combination of C#, TypeScript (TS), XML, and other languages. <a href=\"https:/https://devblogs.microsoft.com/dotnet/experimental-webtransport-over-http-3-support-in-kestrel/\">Project blog</a>."
     },
     {
         title: "Software Engineer Intern",
@@ -420,7 +304,7 @@ export var EDUCATION: EducationEntry[] = [
     },
     {
         startingDate: "2026",
-        endingDate: "Present",
+        endingDate: "Ongoing",
         achievements: [
             "University of Washington Masters of Computer Science and Engineering (PMP)"
         ]
@@ -489,3 +373,111 @@ export var PUBLICATIONS: PublicationEntry[] = [
         abstract: "Chris R. writes about my internship project to implement WebTransport over HTTP/3 in .NET 7 under his mentorship"
     },
 ]
+
+export const SITE_CONTENT = {
+    name: {
+        first: "Daniel",
+        last: "Genkin",
+        full: "Daniel Genkin"
+    },
+    hero: {
+        portrait: portraitUrl,
+        portraitAlt: "Daniel Genkin",
+        introduction: "I am passionate about Software Development & Computer Design. My passion started at a young age when my father introduced me to coding. Since that moment, I have founded and participated in several startups, worked in a range of companies from medium sized to some of the largest tech companies, met some extremely talented and interesting people, and helped to develop, improve, and maintain important and influential software products. I am always open to learning new things and having new experiences."
+    },
+    socialLinks: [
+        {
+            label: "LinkedIn",
+            href: "https://www.linkedin.com/in/daniel-genkin-dgapps/",
+            icon: "/figma/linkedin.svg"
+        },
+        {
+            label: "GitHub",
+            href: "https://github.com/Daniel-Genkin",
+            icon: "/figma/github.svg"
+        }
+    ],
+    controls: {
+        loadMore: "Show more",
+        showLess: "Show less",
+        loadMoreIcon: "/figma/plus.svg?v=1",
+        showLessIcon: "/figma/minus.svg?v=1",
+        scrollToTop: "Back to top",
+        scrollToTopSymbol: "↑",
+        projectArrow: "↗",
+        projectActionArrow: "→",
+        logoSuffix: "logo",
+        previewSuffix: "preview"
+    },
+    projectDetails: PROJECT_DETAILS_CONTENT
+} as const;
+
+export const HOME_SECTIONS: Record<string, SiteSection> = {
+    projects: { id: "projects", title: "Project Spotlight", icon: "/figma/section-projects.png" },
+    work: { id: "workExperience", title: "Work Experience", icon: "/figma/section-work.png" },
+    achievements: { id: "achievements", title: "Achievements and Publications", icon: "/figma/section-achievements.png" },
+    education: { id: "education", title: "Education", icon: "/figma/section-education.png" },
+    entrepreneurship: { id: "entrepreneurship", title: "Entrepreneurship", icon: "/figma/section-entrepreneurship.png" }
+};
+
+export const PROJECT_ORDER = ["Slappy Sandwich", "GreenAR", "Project Gameplan", "3D Spaceship Simulator"];
+
+export const ACHIEVEMENTS: AchievementDisplay[] = [
+    ...PATENTS.map((item) => ({
+        year: item.year,
+        title: item.title,
+        source: `US Patent ${item.id}`,
+        link: item.link,
+        icon: "/figma/patent.svg"
+    })),
+    ...PUBLICATIONS.map((item) => ({
+        year: item.year,
+        title: item.title,
+        source: item.location,
+        link: item.link,
+        icon: item.type === "paper" ? "/figma/patent.svg" : "/figma/article.svg"
+    })),
+    ...AWARDS.map((item) => ({
+        year: item.year,
+        title: item.title,
+        source: item.organization,
+        icon: "/figma/award.svg"
+    }))
+].sort((first, second) => second.year - first.year);
+
+export const ENTREPRENEURSHIP_CONTENT: RichTextBlock[] = [
+    {
+        type: "paragraph",
+        parts: [{ text: "Between 2015 and 2023, I founded and participated in several start-up ventures centered around using technology to solve every-day problems. The most notable of these ventures, DGApps, was founded in 2015 as a portfolio to publish all my projects. Some of these projects included:" }]
+    },
+    {
+        type: "list",
+        items: [
+            "LifeAR (rebranded as GreenAR) - A universal augmented reality mobile application that allows for embedding digital content on physical real-world objects to improve engagement and communication effectiveness. For example, using LifeAR, content owners would be able to link a standard small business card to display a video when the app is used to scan the card. The platform included a mobile viewer and a content-management backend that allowed paying users to update content in real time.",
+            "HandTrack - A mobile application that used built-in accelerometer sensors or a virtual joystick to move the mouse pointer on one or more connected computers over Wi-Fi or Bluetooth, enabling a more natural three-dimensional input method.",
+            "Several utility applications and games, including theft detection, in-pocket detection, and Slappy Sandwich."
+        ]
+    },
+    {
+        type: "paragraph",
+        parts: [
+            { text: "Most of the projects are no longer maintained due to time constraints. More information is available on the archived " },
+            { text: "DGApps website", href: "https://daniel-genkin.github.io/" },
+            { text: " (formerly dgapps.ca)." }
+        ]
+    },
+    {
+        type: "paragraph",
+        parts: [
+            { text: "DGApps also provided freelance services and built the " },
+            { text: "Science Education and Local Communities website", href: "https://selc.ed.brocku.ca/" },
+            { text: " and a " },
+            { text: "personal website for Dolana Mogadime", href: "https://secure3.ed.brocku.ca/dolanamogadime/" },
+            { text: "." }
+        ]
+    },
+    {
+        type: "paragraph",
+        parts: [{ text: "Aside from DGApps, I participated in several business incubator programs and joined or assisted startups in augmented and virtual reality, social media and matchmaking, fitness, and education. Most are no longer operating, but each provided valuable opportunities to learn, grow, and develop my skills." }]
+    }
+];

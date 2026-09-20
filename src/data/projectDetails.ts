@@ -1,0 +1,22 @@
+export const PROJECT_DETAILS_CONTENT: ProjectDetailsContent = {
+  label: 'Project spotlight / details',
+  close: 'Close project details',
+  closeSymbol: '×',
+  technology: 'Technology',
+  platform: 'Platform',
+  status: 'Status',
+  features: 'Project features',
+  inProduction: 'In production',
+  inDevelopment: 'In development',
+  fallbackPlatform: 'Multi-platform',
+  fallbackStatus: 'Active',
+  screenshotLabel: 'View screenshot',
+  previousScreenshot: 'Previous screenshot',
+  nextScreenshot: 'Next screenshot',
+  galleryArrow: '/figma/gallery-chevron.svg',
+  technologiesUsed: 'Technologies used',
+  history: 'Project history',
+  awards: 'Awards',
+  notFound: 'Project not found.',
+  returnHome: 'Return home'
+};

@@ -1,39 +1,24 @@
-# danielgenkin-website
+# Daniel Genkin Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue 3 and Vite portfolio site.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Development
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Run the production checks with:
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Structure
 
-```sh
-npm run lint
-```
+- `src/data/` owns site copy, links, project records, and section configuration.
+- `src/components/elements/` contains the reusable visual primitives.
+- `src/views/` contains the home and project-detail compositions.
+- `src/assets/main.css` owns global design tokens and shared styles.
+- `public/` contains media referenced by the data records.
