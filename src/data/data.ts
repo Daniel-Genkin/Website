@@ -225,7 +225,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "Microsoft Corp.",
         startingDate: "November 2024",
         endingDate: "Ongoing",
-        description: "Full-time position working on the OpenAI Billing team. On this team I am the primary developer/owner of the billing pipeline service health monitoring and alerting. I also created a system that uses AI to summarize service incidents and create reports and guides for on-call engineers to prevent and resolve such incidents in the future. <a href=\"https://aka.ms/icm2tsg-blog\">Project blog</a>."
+        description: "Full-time position working on the OpenAI Billing team. On this team I am the primary developer/owner of the billing pipeline service health monitoring and alerting. I also created a system that uses AI to summarize service incidents and create reports and guides for on-call engineers to prevent and resolve such incidents in the future. <a href=\"https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/the-future-of-ai-autonomous-agents-for-identifying-the-root-cause-of-cloud-servi/4412494\">Project blog</a>."
     },
     {
         title: "Software Engineer",
@@ -249,7 +249,7 @@ export var WORK_EXPERIENCE: WorkExperience[] = [
         organization: "Microsoft Corp.",
         startingDate: "May 2021 & 2022",
         endingDate:"August 2021 & 2022",
-        description: "Two 12-week internships. The first was working on adding NodeJS support to the C# Mono WebAssembly project (WASM). The second was adding WebTransport support to the ASP.NET Kestrel webserver. Both projects are open source and were motivated by community requests. These internships used a combination of C#, TypeScript (TS), XML, and other languages. <a href=\"https:/https://devblogs.microsoft.com/dotnet/experimental-webtransport-over-http-3-support-in-kestrel/\">Project blog</a>."
+        description: "Two 12-week internships. The first was working on adding NodeJS support to the C# Mono WebAssembly project (WASM). The second was adding WebTransport support to the ASP.NET Kestrel webserver. Both projects are open source and were motivated by community requests. These internships used a combination of C#, TypeScript (TS), XML, and other languages. <a href=\"https://devblogs.microsoft.com/dotnet/experimental-webtransport-over-http-3-support-in-kestrel/\">Project blog</a>."
     },
     {
         title: "Software Engineer Intern",

@@ -189,8 +189,7 @@ img, video { display: block; max-width: 100%; }
 .portrait-bracket-top { top: calc(var(--hero-frame-inset-top) - var(--space-2)); left: calc(var(--hero-frame-inset-left) - var(--space-2)); border-top: var(--space-1) solid var(--color-line); border-left: var(--space-1) solid var(--color-line); }
 .portrait-bracket-bottom { right: calc(-1 * var(--space-2)); bottom: calc(-1 * var(--space-2)); border-right: var(--space-1) solid var(--color-accent); border-bottom: var(--space-1) solid var(--color-accent); }
 .portrait { position: relative; z-index: var(--z-content); width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
-.hero h1 { display: flex; flex-direction: column; margin: var(--space-5) 0 0 calc(-1 * var(--space-3)); color: var(--color-text); font-size: var(--font-size-hero); font-weight: var(--font-weight-black); line-height: var(--line-height-tight); }
-.hero h1 span:first-child { color: var(--color-accent); }
+.hero h1 { display: flex; flex-direction: column; margin: var(--space-5) 0 0 calc(-1 * var(--space-3)); color: var(--color-ice); font-size: var(--font-size-hero); font-weight: var(--font-weight-black); line-height: var(--line-height-tight); }
 .hero-copy { z-index: var(--z-controls); width: min(var(--content-hero-width), calc(100% - var(--space-14))); margin: var(--space-8) auto 0; padding: var(--space-10) var(--space-10) var(--space-10) var(--space-11); color: var(--color-muted); font-size: var(--font-size-body); font-weight: var(--font-weight-semibold); line-height: var(--line-height-body); }
 .portfolio-section { width: min(var(--content-max-width), calc(100% - var(--space-17))); margin: 0 auto; padding: var(--space-16) 0 var(--space-18); }
 .section-heading { display: flex; align-items: center; gap: var(--space-8); margin-bottom: var(--space-11); }
@@ -210,7 +209,7 @@ img, video { display: block; max-width: 100%; }
 .project-arrow { position: absolute; right: var(--space-5); bottom: var(--space-5); display: grid; place-items: center; width: var(--space-11); height: var(--space-11); border: var(--border-width) solid var(--color-line); border-radius: var(--radius-control); color: var(--active-accent); background: var(--color-control); font-family: var(--font-mono); font-size: var(--font-size-subtitle); }
 .experience-list { display: flex; flex-direction: column; gap: var(--space-7); }
 .experience-row { display: flex; align-items: flex-start; gap: var(--space-12); width: min(var(--content-experience-width), 100%); margin: 0 auto; }
-.experience-row.offset { transform: translateX(var(--space-15)); }
+.experience-row.offset { margin-top: calc(-1 * var(--space-7)); padding-left: var(--space-15); }
 .employer-logo { flex: 0 0 var(--employer-logo-size); width: var(--employer-logo-size); height: var(--employer-logo-size); border: 0; border-radius: var(--radius-control); }
 .employer-logo img { width: 100%; height: 100%; object-fit: contain; }
 .experience-card { --active-accent: var(--color-line); flex: 1; min-height: var(--experience-card-min-height); padding: var(--space-8) var(--space-9) var(--space-8) var(--space-11); }
@@ -336,7 +335,7 @@ footer .icon-button { width: var(--space-18); height: var(--control-height); col
 
 @media (max-width: 900px) {
   .project-grid { gap: var(--space-13) var(--space-10); }
-  .experience-row.offset { transform: none; }
+  .experience-row.offset { padding-left: 0; }
   .section-heading img { width: var(--section-icon-tablet); height: var(--section-icon-tablet); }
   .section-heading h2 { font-size: var(--font-size-dialog-title); }
 }
@@ -367,7 +366,7 @@ footer .icon-button { width: var(--space-18); height: var(--control-height); col
   .site-header { padding: 0 var(--space-5) 0 var(--space-7); }
   .site-name { font-size: var(--font-size-body); }
   .hero { min-height: var(--hero-min-height-mobile); padding-top: var(--space-13); }
-  .social-links a { width: var(--icon-button-size); padding: 0; justify-content: center; font-size: 0; }
+  .social-links a { width: var(--icon-button-size); padding: 0; justify-content: center; gap: 0; font-size: 0; }
   .hero-identity { align-items: flex-end; }
   .hero-portrait-stage { width: var(--hero-portrait-width-mobile); height: var(--hero-portrait-height-mobile); }
   .hero h1 { margin: 0 0 var(--space-9) calc(-1 * var(--space-4)); font-size: var(--font-size-section); }
@@ -437,19 +436,14 @@ footer .icon-button { width: var(--space-18); height: var(--control-height); col
     --font-size-hero-compact: 1.75rem;
     --font-size-copy-compact: .8125rem;
   }
-  .site-header { min-height: var(--space-14); padding-right: var(--space-4); padding-left: var(--space-5); }
-  .site-name { font-size: var(--font-size-caption); }
-  .social-links { gap: var(--space-2); }
-  .social-links a { width: var(--space-12); min-height: var(--space-12); }
-  .social-links img { width: var(--space-8); height: var(--space-8); }
   .hero { min-height: 0; padding-top: var(--space-8); }
   .hero-identity { flex-direction: column-reverse; align-items: center; }
   .hero-portrait-stage { width: var(--hero-portrait-width-compact); height: var(--hero-portrait-height-compact); }
   .hero h1 { flex-direction: row; gap: var(--space-3); align-items: center; margin: 0 0 var(--space-4); font-size: var(--font-size-hero-compact); line-height: var(--line-height-heading); text-align: center; }
   .hero-copy { font-size: var(--font-size-copy-compact); }
-  .section-heading { gap: var(--space-3); margin-left: calc(-1 * var(--space-3)); }
+  .section-heading { flex-direction: column; align-items: flex-start; gap: var(--space-3); margin-left: 0; }
   .section-heading img { width: var(--space-15); height: var(--space-15); }
-  .section-heading h2 { max-width: calc(100% - var(--space-15)); font-size: var(--font-size-section); word-break: break-all; }
+  .section-heading h2 { max-width: 100%; font-size: var(--font-size-section); }
   .project-console { grid-template-columns: var(--project-image-compact) 1fr; gap: var(--space-4); }
   .project-console > img { width: var(--project-image-compact); height: var(--project-image-compact); }
   .employer-logo { flex-basis: var(--space-12); width: var(--space-12); height: var(--space-12); }

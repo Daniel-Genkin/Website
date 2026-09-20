@@ -16,6 +16,27 @@ const achievementExpansionHeight = computed(() => showAllAchievements.value
   ? `${achievementExpansionContent.value?.scrollHeight ?? 0}px`
   : '0px');
 const featuredProjects = computed(() => [...ALL_PROJECTS].sort((first, second) => PROJECT_ORDER.indexOf(first.title) - PROJECT_ORDER.indexOf(second.title)));
+const monthIndexes = new Map([
+  ['January', 0], ['February', 1], ['March', 2], ['April', 3], ['May', 4], ['June', 5],
+  ['July', 6], ['August', 7], ['September', 8], ['October', 9], ['November', 10], ['December', 11]
+]);
+const getStartTimestamp = (startingDate: string) => {
+  const [month] = startingDate.split(' ');
+  const years = startingDate.match(/\d{4}/g)?.map(Number) ?? [0];
+  return new Date(Math.max(...years), monthIndexes.get(month) ?? 0).getTime();
+};
+const groupedWorkExperience = computed(() => {
+  const companyGroups = WORK_EXPERIENCE.reduce((groups, item) => {
+    const positions = groups.get(item.organization);
+    positions ? positions.push(item) : groups.set(item.organization, [item]);
+    return groups;
+  }, new Map<string, (typeof WORK_EXPERIENCE)[number][]>());
+
+  return [...companyGroups.values()]
+    .map((positions) => [...positions].sort((first, second) => getStartTimestamp(second.startingDate) - getStartTimestamp(first.startingDate)))
+    .sort((first, second) => getStartTimestamp(second[0].startingDate) - getStartTimestamp(first[0].startingDate))
+    .flatMap((positions) => positions.map((item, index) => ({ item, indented: index > 0 })));
+});
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 const updateScrollState = () => { isScrolled.value = window.scrollY > 0; };
 
@@ -81,12 +102,14 @@ onUnmounted(() => window.removeEventListener('scroll', updateScrollState));
       <SectionHeading :section="HOME_SECTIONS.work" />
       <div class="experience-list">
         <article
-          v-for="(item, index) in WORK_EXPERIENCE"
+          v-for="{ item, indented } in groupedWorkExperience"
           :key="`${item.organization}-${item.startingDate}`"
           class="experience-row"
-          :class="{ offset: index % 3 !== 0 }"
+          :class="{ offset: indented }"
         >
-          <div class="employer-logo"><img :src="`/${item.logo}`" :alt="item.organization" /></div>
+          <div class="employer-logo">
+            <img v-if="!indented" :src="`/${item.logo}`" :alt="item.organization" />
+          </div>
           <div
             class="experience-card surface-panel accent-panel"
             :class="{ ongoing: item.endingDate === 'Ongoing' }"
