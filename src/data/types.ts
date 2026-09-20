@@ -104,6 +104,8 @@ type ProjectDetailsContent = {
     fallbackPlatform: string,
     fallbackStatus: string,
     screenshotLabel: string,
+    openImageSpotlight: string,
+    closeImageSpotlight: string,
     previousScreenshot: string,
     nextScreenshot: string,
     galleryArrow: string,

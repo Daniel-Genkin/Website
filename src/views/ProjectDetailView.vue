@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ALL_PROJECTS, SITE_CONTENT } from '@/data/data';
 import { PROJECT_DETAILS_CONTENT } from '@/data/projectDetails';
-import { computed, ref, watch } from 'vue';
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 const route = useRoute();
 const router = useRouter();
@@ -16,6 +16,7 @@ const {
 } = PROJECT_DETAILS_CONTENT;
 const selectedScreenshotIndex = ref(0);
 const mediaAspectRatio = ref('16 / 9');
+const isImageSpotlightOpen = ref(false);
 const project = computed(() => ALL_PROJECTS.find((item) => item.pageLink === route.path));
 const technologies = computed(() => project.value?.pageSections.technologiesUsed.join(', ') ?? '');
 const features = computed(() => project.value?.features ?? project.value?.highlights.map((item) => item.caption).join('; ') ?? '');
@@ -36,7 +37,17 @@ function updateMediaAspectRatio(event: Event) {
   if (width > 0 && height > 0) mediaAspectRatio.value = `${width} / ${height}`;
 }
 
-watch(() => route.path, () => { selectedScreenshotIndex.value = 0; });
+function handleKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape') isImageSpotlightOpen.value = false;
+}
+
+watch(() => route.path, () => {
+  selectedScreenshotIndex.value = 0;
+  isImageSpotlightOpen.value = false;
+});
+
+onMounted(() => window.addEventListener('keydown', handleKeydown));
+onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
 </script>
 
 <template>
@@ -79,9 +90,8 @@ watch(() => route.path, () => { selectedScreenshotIndex.value = 0; });
           <p class="overview">{{ project.description }}</p>
 
           <div v-if="preview" class="project-media">
-            <div class="project-media-stage" :style="{ aspectRatio: mediaAspectRatio }">
+            <div v-if="isVideo" class="project-media-stage" :style="{ aspectRatio: mediaAspectRatio }">
               <video
-                v-if="isVideo"
                 :src="`/${preview}`"
                 muted
                 autoplay
@@ -90,13 +100,21 @@ watch(() => route.path, () => { selectedScreenshotIndex.value = 0; });
                 controls
                 @loadedmetadata="updateMediaAspectRatio"
               ></video>
+            </div>
+            <button
+              v-else
+              class="project-media-stage project-media-trigger"
+              type="button"
+              :style="{ aspectRatio: mediaAspectRatio }"
+              :aria-label="projectDetailsContent.openImageSpotlight"
+              @click="isImageSpotlightOpen = true"
+            >
               <img
-                v-else
                 :src="`/${preview}`"
                 :alt="`${project.title} ${SITE_CONTENT.controls.previewSuffix}`"
                 @load="updateMediaAspectRatio"
               />
-            </div>
+            </button>
           </div>
           <div v-if="project.pageSections.screenshots.length > 1" class="gallery-controls">
             <button
@@ -188,4 +206,24 @@ watch(() => route.path, () => { selectedScreenshotIndex.value = 0; });
     <p>{{ projectDetailsContent.notFound }}</p>
     <RouterLink to="/">{{ projectDetailsContent.returnHome }}</RouterLink>
   </main>
+  <Teleport to="body">
+    <div
+      v-if="project && preview && !isVideo && isImageSpotlightOpen"
+      class="image-spotlight"
+      role="dialog"
+      aria-modal="true"
+      :aria-label="projectDetailsContent.openImageSpotlight"
+      @click.self="isImageSpotlightOpen = false"
+    >
+      <img :src="`/${preview}`" :alt="`${project.title} ${SITE_CONTENT.controls.previewSuffix}`" />
+      <button
+        class="image-spotlight-close icon-button"
+        type="button"
+        :aria-label="projectDetailsContent.closeImageSpotlight"
+        @click="isImageSpotlightOpen = false"
+      >
+        {{ projectDetailsContent.closeSymbol }}
+      </button>
+    </div>
+  </Teleport>
 </template>

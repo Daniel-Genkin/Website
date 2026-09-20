@@ -4,10 +4,11 @@ import HeroParticles from '@/components/elements/HeroParticles.vue';
 import RichTextContent from '@/components/elements/RichTextContent.vue';
 import SectionHeading from '@/components/elements/SectionHeading.vue';
 import { ACHIEVEMENTS, ALL_PROJECTS, EDUCATION, ENTREPRENEURSHIP_CONTENT, HOME_SECTIONS, PROJECT_ORDER, SITE_CONTENT, WORK_EXPERIENCE } from '@/data/data';
-import { computed, ref } from 'vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
 import { RouterLink } from 'vue-router';
 
 const showAllAchievements = ref(false);
+const isScrolled = ref(false);
 const achievementExpansionContent = ref<HTMLElement>();
 const featuredAchievements = computed(() => ACHIEVEMENTS.slice(0, 4));
 const additionalAchievements = computed(() => ACHIEVEMENTS.slice(4));
@@ -16,19 +17,30 @@ const achievementExpansionHeight = computed(() => showAllAchievements.value
   : '0px');
 const featuredProjects = computed(() => [...ALL_PROJECTS].sort((first, second) => PROJECT_ORDER.indexOf(first.title) - PROJECT_ORDER.indexOf(second.title)));
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+const updateScrollState = () => { isScrolled.value = window.scrollY > 0; };
+
+onMounted(() => {
+  updateScrollState();
+  window.addEventListener('scroll', updateScrollState, { passive: true });
+});
+
+onUnmounted(() => window.removeEventListener('scroll', updateScrollState));
 
 </script>
 
 <template>
   <main class="portfolio">
-    <section class="hero">
-      <HeroParticles />
-      <div class="social-links">
+    <header class="site-header" :class="{ scrolled: isScrolled }">
+      <strong class="site-name">{{ SITE_CONTENT.name.full }}</strong>
+      <nav class="social-links" aria-label="Social links">
         <a v-for="link in SITE_CONTENT.socialLinks" :key="link.href" :href="link.href" target="_blank" rel="noreferrer">
           <img :src="link.icon" alt="" />
           {{ link.label }}
         </a>
-      </div>
+      </nav>
+    </header>
+    <section class="hero">
+      <HeroParticles />
       <div class="hero-identity">
         <div class="hero-portrait-stage">
           <span class="portrait-panel" aria-hidden="true"></span>

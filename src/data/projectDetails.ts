@@ -11,6 +11,8 @@ export const PROJECT_DETAILS_CONTENT: ProjectDetailsContent = {
   fallbackPlatform: 'Multi-platform',
   fallbackStatus: 'Active',
   screenshotLabel: 'View screenshot',
+  openImageSpotlight: 'Open image spotlight',
+  closeImageSpotlight: 'Close image spotlight',
   previousScreenshot: 'Previous screenshot',
   nextScreenshot: 'Next screenshot',
   galleryArrow: '/figma/gallery-chevron.svg',
